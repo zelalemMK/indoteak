@@ -1,0 +1,28 @@
+.header {
+  background-color: black;
+  color: white;
+  font-family: 'Syne', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  height: 50px;  /* adjust as needed */
+}
+
+.menu-btn {
+  display: none;
+}
+
+.header-menus ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header-menus li {
+  cursor: pointer;
+}
