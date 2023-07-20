@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from './indoteak.png';
 import './header.css'
 
@@ -10,11 +10,11 @@ function Header() {
             <HeaderMenu />
     </header>
 }
-function HeaderMenu() {
+function HeaderMenu({links}) {
     return (
         <nav className="header-menus">
             <ul>
-                <li>PRODUCTS</li>
+                <li><a href="http://localhost:3000/edit">PRODUCTS</a></li>
                 <li>LOOKBOOK</li>
                 <li>INSPIRATION</li>
                 <li>TRADE</li>

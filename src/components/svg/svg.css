@@ -1,0 +1,17 @@
+/* svg.css */
+.button-grid {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 0.625rem;
+  width: 12.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button-grid .color-button {
+  width: 100%;
+  height: 3.125rem;
+  border: none;
+  cursor: pointer;
+}

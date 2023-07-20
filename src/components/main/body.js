@@ -1,6 +1,8 @@
 import React, { useState }  from "react";
 import "./main.css"
-
+import rectangle from "./rectangle.svg"
+import ChooseColor from "../svg/patterns";
+import ChooseDesign from './choose_design'
 
 
 const MainBody = () => {
@@ -34,20 +36,10 @@ const MainBody = () => {
     );
 }
 
-
-const ChooseDesign = () => {
-    return (
-        <div>
-        <DesignPatterns />
-
-        </div>
-    );
-}
-
 const DesignPatterns = () => {
     return (
         <div className="design-patterns">
-            <div className="pattern-box"></div>
+            <img src={rectangle} alt="design-1" />
             <div className="pattern-box"></div>
             <div className="pattern-box"></div>
             <div className="pattern-box"></div>
@@ -57,14 +49,6 @@ const DesignPatterns = () => {
   );
 }
 
-const ChooseColor = () => {
-    return (
-    <div>
-        <DisplayDesignChosen />
-        <ColorSection />
-    </div>
-    );
-}
 
 const DisplayDesignChosen = () => {
     const placeholderImage = "https://via.placeholder.com/500";
@@ -75,21 +59,6 @@ const DisplayDesignChosen = () => {
   );
 }
 
-const ColorSection = () => {
-      const colors = ['#FF5733', '#900C3F', '#C70039', '#FFC300', '#DAF7A6', '#581845', '#4A235A', '#5B2C6F', '#7D3C98', '#2E4053', '#1B4F72', '#21618C', '#2874A6', '#2E86C1', '#AED6F1', '#EAF2F8'];
-
-  return (
-    <div className="color-section">
-      {colors.map((color, index) => (
-        <div 
-          key={index}
-          className="color-box"
-          style={{backgroundColor: color}}
-        />
-      ))}
-    </div>
-  );
-}
 
 const ChooseFinish = () => {
   return (
