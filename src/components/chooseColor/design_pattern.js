@@ -1,5 +1,4 @@
-function Design1({ colorMap, setColor }) {
-
+const DesignPattern = ({ colorMap, setColor }) => {
   const polygons = [
     { id: "one", points: "0,0 25,0 0,50" },
     { id: "two", points: "0,50 25,50 25,0" },
@@ -21,7 +20,7 @@ function Design1({ colorMap, setColor }) {
 
   return (
     <svg
-      viewBox="0 0 400 400"
+      viewBox="0 0 100 100"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -31,15 +30,12 @@ function Design1({ colorMap, setColor }) {
             key={polygon.id}
             id={polygon.id}
             points={polygon.points}
-            fill="white"
-            // fill={colorMap[polygon.id] || "white"} // use white as default color
+            fill={colorMap[polygon.id] || "white"} // use white as default color
             onClick={() => setColor(polygon.id)}
           />
         ))}
       </g>
     </svg>
   );
-}
-
-
-export default Design1;
+};
+export default DesignPattern;

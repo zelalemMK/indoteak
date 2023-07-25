@@ -1,10 +1,8 @@
-// ChooseDesign.js
 import React, { useState } from "react";
-import Design1 from "./sgv_designs/design1";
-// import Pattern2 from "./patterns/Pattern2";
-import './choose_design.css'
+import Design1 from "../sgv_designs/design1"; 
+import "./choose_design.css";
 
-const ChooseDesign = ({ onSelect }) => {
+const ChooseDesign = ({ onDesignSelect }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
@@ -29,8 +27,12 @@ const ChooseDesign = ({ onSelect }) => {
   return (
     <div className="design-container">
       {displayedPatterns.map((Pattern, index) => (
-        <div className="design-item" key={index} onClick={() => onSelect(Pattern)}>
-          <Pattern  />
+        <div
+          className="design-item"
+          key={index}
+          onClick={() => onDesignSelect(Pattern)}
+        >
+          <Pattern />
         </div>
       ))}
       <button onClick={previousPage} disabled={page === 0}>
@@ -47,4 +49,3 @@ const ChooseDesign = ({ onSelect }) => {
 };
 
 export default ChooseDesign;
-

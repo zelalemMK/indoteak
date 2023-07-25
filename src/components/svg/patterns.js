@@ -73,7 +73,7 @@ const DesignPattern = ({ colorMap, setColor }) => {
 
   return (
     <svg
-      viewBox="0 0 400 400"
+      viewBox="0 0 100 100"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -83,7 +83,7 @@ const DesignPattern = ({ colorMap, setColor }) => {
             key={polygon.id}
             id={polygon.id}
             points={polygon.points}
-            fill={colorMap[polygon.id] || "white"} // use white as default color
+            fill={colorMap[polygon.id]|| "white"} // use white as default color
             onClick={() => setColor(polygon.id)}
           />
         ))}

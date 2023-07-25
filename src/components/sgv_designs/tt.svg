@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" height="200" width="200">
+    <!-- First triangle with 90 degree on the left upper corner -->
+    <polygon id="polygon1" points="5,5 5,195 95,5" style="fill:#FF0000; stroke:black;" />
+
+    <!-- Second triangle with 90 degree on the bottom but halfway corner -->
+    <polygon id="polygon2" points="105,195 195,195 105,5" style="fill:#00FF00; stroke:black;" />
+
+    <!-- Third triangle with 90 degree on the halfway but upper corner -->
+    <polygon id="polygon3" points="5,195 90,5 95,195" style="fill:#0000FF; stroke:black;" />
+
+    <!-- Last triangle with 90 degree on the upper right corner -->
+    <polygon id="polygon4" points="195,5 195,195 105,5" style="fill:#FFFF00; stroke:black;" />
+</svg>
