@@ -57,6 +57,33 @@ function ColorGrid ({setSelectedColor,resetColors,
 
 
 function Design1({colorMap, setColor }) {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      xmlns="https://www.w3.org/2000/svg"
+    >
+      <g id="first" className="one" stroke="black" stroke-width=".5">
+        <polygon id="one" points="0,0 25,0 0,50" fill="white" />
+        <polygon id="two" points="0,50 25,50 25,0" fill="white" />
+        <polygon id="three" points="25,0 50,0 50,50" fill="white" />
+        <polygon id="four" points="25,0 25,50 50,50" fill="white" />
+        <polygon id="five" points="50,0 75,0 50,50" fill="white" />
+        <polygon id="six" points="75,0 75,50 50,50" fill="white" />
+        <polygon id="seven" points="75,0 75,50 100,50" fill="white" />
+        <polygon id="eight" points="75,0 100,0 100,50" fill="white" />
+        <polygon id="nine" points="0,100 25,100 0,50" fill="white" />
+        <polygon id="ten" points="0,50 25,50 25,100" fill="white" />
+        <polygon id="eleven" points="25,100 50,100 50,50" fill="white" />
+        <polygon id="twelve" points="25,100 25,50 50,50" fill="white" />
+        <polygon id="thirteen" points="50,100 75,100 50,50" fill="white" />
+        <polygon id="fourteen" points="75,100 75,50 50,50" fill="white" />
+        <polygon id="fifteen" points="75,100 75,50 100,50" fill="white" />
+        <polygon id="sixteen" points="75,100 100,100 100,50" fill="white" />
+      </g>
+    </svg>
+  );
 }
 
 export default Design1;
+export {ColorButton};

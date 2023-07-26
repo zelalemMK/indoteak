@@ -1,0 +1,41 @@
+/* Design grid container */
+.design-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Design grid */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Design items */
+.design-grid .design-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 17%;
+}
+/* Buttons at the bottom */
+.button {
+  width: 100px;
+  height: 40px;
+  margin-top: 20px; /* To give some space above the button */
+}

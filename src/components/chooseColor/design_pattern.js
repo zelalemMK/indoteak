@@ -1,4 +1,25 @@
-const DesignPattern = ({ colorMap, setColor }) => {
+const defaultColorMap = [
+    { id: "one", fill:"white" },
+    { id: "two", fill:"white" },
+    { id: "three", fill:"white"},
+    { id: "four", fill:"white" },
+    { id: "five", fill:"white" },
+    { id: "six", fill:"white" },
+    { id: "seven", fill:"white" },
+    { id: "eight", fill:"white" },
+    { id: "nine", fill:"white" },
+    { id: "ten", fill:"white" },
+    { id: "eleven", fill:"white" },
+    { id: "twelve", fill:"white" },
+    { id: "thirteen", fill:"white" },
+    { id: "fourteen", fill:"white" },
+    { id: "fifteen", fill:"white"  },
+    { id: "sixteen", fill:"white" },
+]
+
+
+const DesignPattern = ({ colorMap = defaultColorMap, setColor }) => {
+
   const polygons = [
     { id: "one", points: "0,0 25,0 0,50" },
     { id: "two", points: "0,50 25,50 25,0" },
@@ -18,6 +39,9 @@ const DesignPattern = ({ colorMap, setColor }) => {
     { id: "sixteen", points: "75,100 100,100 100,50" },
   ];
 
+  function tempSetColor(id) {console.log(id)}
+  if (!setColor) { setColor = tempSetColor}
+
   return (
     <svg
       viewBox="0 0 100 100"
@@ -25,17 +49,22 @@ const DesignPattern = ({ colorMap, setColor }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="first" className="one" stroke="black" strokeWidth=".5">
-        {polygons.map((polygon) => (
-          <polygon
-            key={polygon.id}
-            id={polygon.id}
-            points={polygon.points}
-            fill={colorMap[polygon.id] || "white"} // use white as default color
-            onClick={() => setColor(polygon.id)}
-          />
-        ))}
+        {polygons.map((polygon) => {
+          let color = colorMap.find((value) => value.id === polygon.id);
+          console.log(colorMap)
+          return (
+            <polygon
+              key={polygon.id}
+              id={polygon.id}
+              points={polygon.points}
+              fill={color ? color.fill : "white"} // use color from colorMap if it exists
+              onClick={() => setColor(polygon.id)}
+            />
+          );
+        })}
       </g>
     </svg>
   );
+
 };
 export default DesignPattern;

@@ -3,10 +3,14 @@ import ColorGrid from "./color_grid";
 import DesignPattern from "./design_pattern";
 
 
-function ChooseColor() {
-  const [colorMap, setColorMap] = useState({});
+function ChooseColor({ DesignComponent, colorMap, setColorMap, defaultColorMap }) {
+  // const [colorMap, setColorMap] = useState({});
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraserActive, setEraserActive] = useState(false);
+  
+  if(!colorMap) { colorMap = defaultColorMap}
+
+
 
   const setColor = (id) => {
     if (selectedColor) {
@@ -36,7 +40,7 @@ function ChooseColor() {
 
   return (
     <div>
-      <DesignPattern colorMap={colorMap} setColor={handlePolygonClick} />
+      <DesignComponent colorMap={colorMap} setColor={handlePolygonClick} />
       <ColorGrid
         setSelectedColor={setSelectedColor}
         resetColors={resetColors}
