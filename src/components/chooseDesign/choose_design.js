@@ -40,7 +40,7 @@ const ChooseDesign = ({ onDesignSelect, colorMap }) => {
             key={nanoid()}
             onClick={() => onDesignSelect(pattern.id)}
           >
-            <pattern.Component colorMap={colorMap} /*setColor={()=> console.log("color")} */ />
+            <pattern.Component colorMap={colorMap} setColor={()=> console.log("color")} />
           </div>
           );
           })}
