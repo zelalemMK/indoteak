@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import ColorGrid from "./color_grid";
-import DesignPattern from "./design_pattern";
 
 
-function ChooseColor({ DesignComponent, colorMap, setColorMap, defaultColorMap }) {
-  // const [colorMap, setColorMap] = useState({});
+import './choose_color.css'
+
+
+function ChooseColor({ DesignComponent, colorMap, setColorMap }) {
+
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraserActive, setEraserActive] = useState(false);
   
-  if(!colorMap) { colorMap = defaultColorMap}
-
-
 
   const setColor = (id) => {
     if (selectedColor) {
@@ -39,14 +38,18 @@ function ChooseColor({ DesignComponent, colorMap, setColorMap, defaultColorMap }
   };
 
   return (
-    <div>
-      <DesignComponent colorMap={colorMap} setColor={handlePolygonClick} />
-      <ColorGrid
-        setSelectedColor={setSelectedColor}
-        resetColors={resetColors}
-        setEraserActive={setEraserActive}
-        eraserActive={eraserActive}
-      />
+    <div className="container">
+      <div className="pattern">
+        <DesignComponent colorMap={colorMap} setColor={handlePolygonClick} />
+      </div>
+      <div className="color-grid">
+        {/* <ColorGrid
+          setSelectedColor={setSelectedColor}
+          resetColors={resetColors}
+          setEraserActive={setEraserActive}
+          eraserActive={eraserActive}
+        /> */}
+      </div>
     </div>
   );
 }

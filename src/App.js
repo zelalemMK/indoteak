@@ -3,14 +3,13 @@ import "./App.css";
 import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/choose_design";
 import ChooseColor from "./components/chooseColor/choose_color";
-// import ChooseFinish from "./components/h";
-// import Design1 from "./components/sgv_designs/design1";
 import DesignPattern from './components/svg/patterns'
 // import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
 function App() {
+  const designWrapper = () =>  (DesignPattern)
   const [step, setStep] = useState(1);
-  const [selectedDesign, setSelectedDesign] = useState(DesignPattern);
+  const [selectedDesign, setSelectedDesign] = useState(designWrapper);
 
   const defaultColorMap = [
     { id: "one", fill: "white" },
@@ -42,29 +41,28 @@ function App() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  function designSelect(design) {
+  function designSelect(designWrapper) {
     // console.log(design);
-    setSelectedDesign(design);
+    setSelectedDesign(designWrapper);
     setStep(2);
   }
 
   return (
-    // <div>
-    //   <Header />
-    //   {/* <ChooseDesign /> */}
-    // <ChooseColor />
-    //   <ChooseFinish />
-    // </div>
+
     <div>
-      <Header />
+      {/* <Header /> */}
       {step === 1 && (
-        <ChooseDesign onDesignSelect={designSelect} colorMap={colorMap} nextStep={nextStep} />
+        <ChooseDesign
+          onDesignSelect={() => designSelect(designWrapper)}
+          colorMap={colorMap}
+          nextStep={nextStep}
+        />
       )}
       {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
           defaultColorMap={defaultColorMap}
-          colorMap={colorMap}
+          // colorMap={colorMap}
           setColor={setColorMap}
           nextStep={nextStep}
           prevStep={prevStep}

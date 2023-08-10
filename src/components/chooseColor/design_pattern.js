@@ -1,24 +1,6 @@
-const defaultColorMap = [
-    { id: "one", fill:"white" },
-    { id: "two", fill:"white" },
-    { id: "three", fill:"white"},
-    { id: "four", fill:"white" },
-    { id: "five", fill:"white" },
-    { id: "six", fill:"white" },
-    { id: "seven", fill:"white" },
-    { id: "eight", fill:"white" },
-    { id: "nine", fill:"white" },
-    { id: "ten", fill:"white" },
-    { id: "eleven", fill:"white" },
-    { id: "twelve", fill:"white" },
-    { id: "thirteen", fill:"white" },
-    { id: "fourteen", fill:"white" },
-    { id: "fifteen", fill:"white"  },
-    { id: "sixteen", fill:"white" },
-]
+import { nanoid } from "nanoid";
 
-
-const DesignPattern = ({ colorMap = defaultColorMap, setColor }) => {
+const DesignPattern = ({ colorMap, setColor }) => {
 
   const polygons = [
     { id: "one", points: "0,0 25,0 0,50" },
@@ -39,8 +21,6 @@ const DesignPattern = ({ colorMap = defaultColorMap, setColor }) => {
     { id: "sixteen", points: "75,100 100,100 100,50" },
   ];
 
-  function tempSetColor(id) {console.log(id)}
-  if (!setColor) { setColor = tempSetColor}
 
   return (
     <svg
@@ -54,7 +34,7 @@ const DesignPattern = ({ colorMap = defaultColorMap, setColor }) => {
           console.log(colorMap)
           return (
             <polygon
-              key={polygon.id}
+              key={nanoid()}
               id={polygon.id}
               points={polygon.points}
               fill={color ? color.fill : "white"} // use color from colorMap if it exists

@@ -1,0 +1,4 @@
+body {
+    height: 100vh; /* Setting the height to 100% of the viewport height */
+    max-height: 100vh;
+}

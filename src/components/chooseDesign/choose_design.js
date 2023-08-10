@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import Design1 from "../sgv_designs/design1";
 import DesignPattern from "../chooseColor/design_pattern";
+
+import { nanoid } from "nanoid";
 import "./choose_design.css";
 
 const ChooseDesign = ({ onDesignSelect, colorMap }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
-  const patterns = Array(18).fill(DesignPattern);
+  const patterns = Array.from({length:18}, (v, i) => ({
+    id:"design"+(i+1), 
+    Component:DesignPattern
+  }));
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
   );
 
+  
   const nextPage = () => {
     if ((page + 1) * patternsPerPage < patterns.length) {
       setPage(page + 1);
@@ -28,15 +33,17 @@ const ChooseDesign = ({ onDesignSelect, colorMap }) => {
   return (
     <div className="design-container">
       <div className="design-grid">
-        {displayedPatterns.map((Pattern, index) => (
+        {displayedPatterns.map((pattern, index) => {
+          return (
           <div
             className="design-item"
-            key={index}
-            onClick={() => onDesignSelect(Pattern)}
+            key={nanoid()}
+            onClick={() => onDesignSelect(pattern.id)}
           >
-            <Pattern colorMap={colorMap} setColor={()=> console.log("color")}/>
+            <pattern.Component colorMap={colorMap} /*setColor={()=> console.log("color")} */ />
           </div>
-        ))}
+          );
+          })}
       </div>
       <div className="button-container">
         <button className="button" onClick={previousPage} disabled={page === 0}>
