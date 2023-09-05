@@ -92,7 +92,7 @@ const DesignPattern = ({ colorMap, setColor }) => {
   );
 };
 
-function ChooseColor() {
+function ChooseColorWithDesign() {
   const [colorMap, setColorMap] = useState({});
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraserActive, setEraserActive] = useState(false);
@@ -124,16 +124,17 @@ function ChooseColor() {
   };
 
   return (
-    <div>
-      <DesignPattern colorMap={colorMap} setColor={handlePolygonClick} />
+    <div className="container">
+      <DesignPattern className="design" colorMap={colorMap} setColor={handlePolygonClick} />
       <ColorGrid
         setSelectedColor={setSelectedColor}
         resetColors={resetColors}
         setEraserActive={setEraserActive}
         eraserActive={eraserActive}
+        className="color-grid"
       />
     </div>
   );
 };
 
-export default ChooseColor;
+export default ChooseColorWithDesign;
