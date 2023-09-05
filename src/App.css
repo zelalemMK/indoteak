@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 html, body {
     height: 100%;
     width: 100%;

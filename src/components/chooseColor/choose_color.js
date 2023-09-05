@@ -38,7 +38,7 @@ function ChooseColor({ DesignComponent, colorMap, setColorMap }) {
   };
 
   return (
-    <div className="container">
+    <div className="choose-color-container">
       <div className="pattern">
         <DesignComponent colorMap={colorMap} setColor={handlePolygonClick} />
       </div>

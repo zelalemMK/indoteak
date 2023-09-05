@@ -1,14 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/choose_design";
 import ChooseColor from "./components/chooseColor/choose_color";
-import DesignPattern from './components/svg/patterns'
-// import ChooseColorWithDesign from './components/svg/patterns'
-import ChooseFinish from "./components/chooseFinish/chooseFinish";
+import Taylor from './components/svg/patterns';
+
 
 function App() {
-  const designWrapper = () =>  (DesignPattern)
+
+  // Disable screen rotation
+
+    useEffect(() => {
+      const lockOrientation = async () => {
+        if (window.screen.orientation) {
+          try {
+            await window.screen.orientation.lock("portrait");
+            console.log("Screen orientation locked to portrait mode.");
+          } catch (error) {
+            console.error(
+              `An error occurred while trying to lock the orientation: ${error}`
+            );
+          }
+        }
+      };
+
+      lockOrientation();
+    }, []);
+
+
+
+  const designWrapper = () =>  (Taylor)
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(designWrapper);
 
