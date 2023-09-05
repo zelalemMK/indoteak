@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 
-const DesignPattern = ({ colorMap, setColor }) => {
+
+const Taylor = ({ colorMap, setColor }) => {
   const polygons = [
     { id: "one", points: "0,0 25,0 0,50" },
     { id: "two", points: "0,50 25,50 25,0" },
@@ -44,4 +45,4 @@ const DesignPattern = ({ colorMap, setColor }) => {
     </svg>
   );
 };
-export default DesignPattern;
+export default Taylor;

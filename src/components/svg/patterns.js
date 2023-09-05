@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./svg.css";
+// import "./svg.css";
 
 const ColorButton = ({ color, setSelectedColor }) => (
   <button

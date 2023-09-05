@@ -4,7 +4,7 @@ import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/choose_design";
 import ChooseColor from "./components/chooseColor/choose_color";
 import DesignPattern from './components/svg/patterns'
-import ChooseColorWithDesign from './components/svg/patterns'
+// import ChooseColorWithDesign from './components/svg/patterns'
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
 function App() {

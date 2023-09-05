@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import DesignPattern from "../chooseColor/design_pattern";
+// import Taylor from "../chooseColor/design_pattern";
+import Taylor from "../svg/Taylor";
 
 import { nanoid } from "nanoid";
 import "./choose_design.css";
@@ -10,7 +11,7 @@ const ChooseDesign = ({ onDesignSelect, colorMap }) => {
 
   const patterns = Array.from({length:18}, (v, i) => ({
     id:"design"+(i+1), 
-    Component:DesignPattern
+    Component:Taylor
   }));
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,

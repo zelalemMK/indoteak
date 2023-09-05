@@ -1,5 +1,29 @@
 .header {
   background-color: black;
+  padding-left: 15%;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+.logo {
+  width: 80%;
+} 
+
+@media screen and (max-width: 390px) {
+  .logo {
+    width: 50%;
+  }
+    li {
+      display: none;
+    }
+}
+
+
+/*
+.header {
+  background-color: black;
   color: white;
   font-family: 'Syne', sans-serif;
   display: flex;
@@ -10,7 +34,7 @@
 }
 
 .logo {
-  height: 50px;  /* adjust as needed */
+  height: 50px;  
 }
 
 .menu-btn {
@@ -27,3 +51,4 @@
 .header-menus li {
   cursor: pointer;
 }
+*/
