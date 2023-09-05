@@ -63,10 +63,6 @@ function App() {
         <ChooseColor
           DesignComponent={selectedDesign}
           defaultColorMap={defaultColorMap}
-          // colorMap={colorMap}
-          setColor={setColorMap}
-          nextStep={nextStep}
-          prevStep={prevStep}
         />
       )}
       {/* {step === 3 && selectedDesign && (
