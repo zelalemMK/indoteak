@@ -13,6 +13,8 @@ import PennyRound from "./assets/designs/PennyRound";
 import Taylor from "./assets/designs/Taylor";
 import Tommy from "./assets/designs/Tommy";
 import Twister from "./assets/designs/Twister";
+import Rectanlge from "./assets/designs/Rectangle";
+import Fields from "./assets/designs/Fields";
 
 function App() {
 
@@ -79,7 +81,7 @@ function App() {
 
   return (
     <div>
-      <Twister />
+      <Fields />
       {/* {<Header />} */}
       {/* {step === 1 && (
         <ChooseDesign
