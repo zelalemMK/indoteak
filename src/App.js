@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from './components/header/header'
-import ChooseDesign from "./components/chooseDesign/choose_design";
-import ChooseColor from "./components/chooseColor/choose_color";
+import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import Taylor from './components/svg/patterns';
 
 
@@ -72,7 +71,7 @@ function App() {
   return (
 
     <div>
-      {<Header />}
+      {/* {<Header />} */}
       {step === 1 && (
         <ChooseDesign
           onDesignSelect={() => designSelect(designWrapper)}
@@ -80,12 +79,12 @@ function App() {
           nextStep={nextStep}
         />
       )}
-      {step === 2 && selectedDesign && (
+      {/* {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
           defaultColorMap={defaultColorMap}
         />
-      )}
+      )} */}
       {/* {step === 3 && selectedDesign && (
         <ChooseFinish
           DesignComponent={selectedDesign}

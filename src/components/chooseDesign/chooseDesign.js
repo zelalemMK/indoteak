@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Taylor from "../svg/Taylor";
 
 import { nanoid } from "nanoid";
-import "./choose_design.css";
+import "./chooseDesign.css";
 
 const ChooseDesign = ({ onDesignSelect, colorMap }) => {
   const [page, setPage] = useState(0);
