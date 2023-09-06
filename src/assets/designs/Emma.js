@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 export default function Emma() {
@@ -26,10 +27,10 @@ export default function Emma() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value, index) => {
+      {values.map((value) => {
         return (
           <polygon
-            key={index}
+            key={nanoid()}
             points={value.points}
             fill="#fff"
             stroke="#000"

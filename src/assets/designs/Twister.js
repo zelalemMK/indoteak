@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 export default function Twister() {
@@ -43,10 +44,10 @@ export default function Twister() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((values, index) => {
+      {values.map((values) => {
         return (
           <path
-            key={index}
+            key={nanoid()}
             d={values.d}
             fill="#fff"
             stroke="#000"

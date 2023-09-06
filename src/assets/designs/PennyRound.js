@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 export default function PennyRound() {
@@ -143,10 +144,10 @@ export default function PennyRound() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value, index) => {
+      {values.map((value) => {
         return (
           <circle
-            key={index}
+            key={nanoid()}
             cx={value.cx}
             cy={value.cy}
             r="3.8"

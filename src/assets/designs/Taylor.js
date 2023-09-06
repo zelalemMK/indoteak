@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 export default function Taylor() {
@@ -23,10 +24,10 @@ export default function Taylor() {
   return (
     <svg id="aaf0937a-9efc-4c47-ab2b-02d02e216d31" data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      {values.map((value, index) => {
+      {values.map((value) => {
         return (
           <polygon
-            key={index}
+            key={nanoid()}
             points={value.points}
             fill="#fff"
             stroke="#000"

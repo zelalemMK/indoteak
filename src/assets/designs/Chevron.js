@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 
@@ -18,9 +19,9 @@ export default function Chevron() {
       viewBox="0 0 100 100"
     >
       <title>Chevron</title>
-      {values.map((value, index) => {   return (
+      {values.map((value) => {   return (
           <polygon
-            key={index}
+            key={nanoid()}
             points={value.points}
             fill="#fff"
             stroke="#000"

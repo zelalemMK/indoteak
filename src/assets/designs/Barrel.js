@@ -1,4 +1,5 @@
 import React from "react";
+import { nanoid } from "nanoid";
 
 export default function Barrel() {  const values = [
     { d: "M17.9,20.6c0,5.8-3.9,8-3.9,8H4.8S.9,26.4,.9,20.6s3.9-8,3.9-8H14S17.9,14.8,17.9,20.6Z"    },
@@ -39,10 +40,10 @@ export default function Barrel() {  const values = [
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value, index) => {
+      {values.map((value) => {
         return (
           <path
-            key={index}
+            key={nanoid()}
             d={value.d}
             fill="white"
             stroke="#000"

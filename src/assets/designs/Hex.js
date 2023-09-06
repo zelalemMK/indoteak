@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 
@@ -48,10 +49,10 @@ export default function Hex() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value, index) => {
+      {values.map((value) => {
         return (
           <path
-            key={index}
+            key={nanoid()}
             d={value.d}
             fill={"white"}
             stroke={"black"}

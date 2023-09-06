@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 
 export default function Tommy() {
@@ -23,10 +24,10 @@ export default function Tommy() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((values, index) => {
+      {values.map((values) => {
         return (
           <polygon
-            key={index}
+            key={nanoid()}
             points={values.points}
             fill="#fff"
             stroke="#000"
