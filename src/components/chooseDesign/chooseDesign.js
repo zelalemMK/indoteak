@@ -5,7 +5,7 @@ import Taylor from "../svg/Taylor";
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
 
-const ChooseDesign = ({ onDesignSelect, colorMap }) => {
+const ChooseDesign = () => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
@@ -39,9 +39,9 @@ const ChooseDesign = ({ onDesignSelect, colorMap }) => {
           <div
             className="design-item"
             key={nanoid()}
-            onClick={() => onDesignSelect(pattern.id)}
+            onClick={() => alert(`printed at chooseDesign.js ${pattern.id}`)}
           >
-            <pattern.Component colorMap={colorMap} setColor={()=> console.log("color")} />
+            <pattern.Component setColor={()=> console.log("color")} />
           </div>
           );
           })}

@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 
 
-const Taylor = ({ colorMap, setColor }) => {
+const Taylor = () => {
   const polygons = [
     { id: "one", points: "0,0 25,0 0,50" },
     { id: "two", points: "0,50 25,50 25,0" },
@@ -29,15 +29,13 @@ const Taylor = ({ colorMap, setColor }) => {
     >
       <g id="first" className="one" stroke="black" strokeWidth=".5">
         {polygons.map((polygon) => {
-          let color = colorMap.find((value) => value.id === polygon.id);
-          console.log(colorMap);
           return (
             <polygon
               key={nanoid()}
               id={polygon.id}
               points={polygon.points}
-              fill={color ? color.fill : "white"} // use color from colorMap if it exists
-              onClick={() => setColor(polygon.id)}
+              fill={"white"} 
+              onClick={() => alert(`printed at taylor.js ${polygon.id}`)}
             />
           );
         })}

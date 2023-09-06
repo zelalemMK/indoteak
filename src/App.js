@@ -2,8 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
-import Taylor from './components/svg/patterns';
-
+// import Taylor from './components/svg/patterns';
+import Barrel from "./assets/designs/Barrel";
+import Chevron from "./assets/designs/Chevron";
+import Emma from "./assets/designs/Emma";
+import Frank from "./assets/designs/Frank";
+import Herringbone from "./assets/designs/Herringbone";
+import Hex from "./assets/designs/Hex";
+import PennyRound from "./assets/designs/PennyRound";
+import Taylor from "./assets/designs/Taylor";
+import Tommy from "./assets/designs/Tommy";
+import Twister from "./assets/designs/Twister";
 
 function App() {
 
@@ -69,16 +78,16 @@ function App() {
   }
 
   return (
-
     <div>
+      <Twister />
       {/* {<Header />} */}
-      {step === 1 && (
+      {/* {step === 1 && (
         <ChooseDesign
           onDesignSelect={() => designSelect(designWrapper)}
           colorMap={colorMap}
           nextStep={nextStep}
         />
-      )}
+      )} */}
       {/* {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
