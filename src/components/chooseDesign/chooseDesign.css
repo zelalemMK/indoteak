@@ -1,0 +1,32 @@
+.design-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+
+    border: 1px solid red;
+}
+
+.design-grid {
+    border: 1px solid blue;
+    width: 80vw;
+    height: 70vh;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.design-item {
+    width: 60%;
+    height: 45%;
+
+    border: 1px solid pink;
+}
+
+.button-container {
+    border: 1px solid black;
+}
+
+

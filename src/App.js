@@ -81,15 +81,14 @@ function App() {
 
   return (
     <div>
-      <Fields />
       {/* {<Header />} */}
-      {/* {step === 1 && (
+      {step === 1 && (
         <ChooseDesign
           onDesignSelect={() => designSelect(designWrapper)}
           colorMap={colorMap}
           nextStep={nextStep}
         />
-      )} */}
+      )}
       {/* {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
