@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Rectanlge() {
+export default function Rectanlge({ selectedColor}) {
   const values = [
     { x: "0", y: "0" },
     { x: "25.5", y: "0" },
@@ -31,7 +31,7 @@ export default function Rectanlge() {
             height={49}
             stroke="black"
             strokeWidth="0.3"
-            fill="white"
+            fill={selectedColor || "white"}
           />
         );
       })}

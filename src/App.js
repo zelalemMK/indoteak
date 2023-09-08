@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
+import ChooseColor from "./components/chooseColor/chooseColor";
+
+
 // import Taylor from './components/svg/patterns';
 import Barrel from "./assets/designs/Barrel";
 import Chevron from "./assets/designs/Chevron";
@@ -18,30 +21,8 @@ import Fields from "./assets/designs/Fields";
 
 function App() {
 
-  // Disable screen rotation
-
-    useEffect(() => {
-      const lockOrientation = async () => {
-        if (window.screen.orientation) {
-          try {
-            await window.screen.orientation.lock("portrait");
-            console.log("Screen orientation locked to portrait mode.");
-          } catch (error) {
-            console.error(
-              `An error occurred while trying to lock the orientation: ${error}`
-            );
-          }
-        }
-      };
-
-      lockOrientation();
-    }, []);
-
-
-
-  const designWrapper = () =>  (Taylor)
   const [step, setStep] = useState(1);
-  const [selectedDesign, setSelectedDesign] = useState(designWrapper);
+  const [selectedDesign, setSelectedDesign] = useState(null);
 
   const defaultColorMap = [
     { id: "one", fill: "white" },
@@ -73,9 +54,9 @@ function App() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  function designSelect(designWrapper) {
+  function designSelect(design) {
     // console.log(design);
-    setSelectedDesign(designWrapper);
+    setSelectedDesign(design);
     setStep(2);
   }
 
@@ -84,17 +65,19 @@ function App() {
       {/* {<Header />} */}
       {step === 1 && (
         <ChooseDesign
-          onDesignSelect={() => designSelect(designWrapper)}
+          selectedDesign={selectedDesign}
+          onDesignSelect={setSelectedDesign}
+          onClick={() => setSelectedDesign()}
           colorMap={colorMap}
           nextStep={nextStep}
         />
       )}
-      {/* {step === 2 && selectedDesign && (
+      {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
           defaultColorMap={defaultColorMap}
         />
-      )} */}
+      )}
       {/* {step === 3 && selectedDesign && (
         <ChooseFinish
           DesignComponent={selectedDesign}

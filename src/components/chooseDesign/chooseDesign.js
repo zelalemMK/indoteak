@@ -18,7 +18,7 @@ import Twister from "../../assets/designs/Twister";
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
 
-const ChooseDesign = () => {
+const ChooseDesign = ({selectedDesign, onDesignSelect, nextStep}) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
@@ -37,7 +37,8 @@ const ChooseDesign = () => {
     { id: "design12", Component: Taylor },
     { id: "design13", Component: Tommy },
     { id: "design14", Component: Twister },
-  ]
+  ];
+  
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
@@ -64,7 +65,8 @@ const ChooseDesign = () => {
           <div
             className="design-item"
             key={nanoid()}
-            onClick={() => alert(`printed at chooseDesign.js ${pattern.id}`)}
+            onClick={() => {nextStep(); onDesignSelect(pattern.Component);
+                console.log(pattern.Component)}}
           >
             <pattern.Component setColor={()=> console.log("color")} />
           </div>
