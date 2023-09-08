@@ -18,7 +18,7 @@ import Twister from "../../assets/designs/Twister";
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
 
-const ChooseDesign = ({selectedDesign, onDesignSelect, nextStep}) => {
+const ChooseDesign = ({onDesignSelect, nextStep}) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
@@ -38,7 +38,26 @@ const ChooseDesign = ({selectedDesign, onDesignSelect, nextStep}) => {
     { id: "design13", Component: Tommy },
     { id: "design14", Component: Twister },
   ];
-  
+
+//   const patterns = [
+//   { id: "design1", Component: () => <Amsterdam /> },
+//   { id: "design2", Component: () => <Amy /> },
+//   { id: "design3", Component: () => <Barrel /> },
+//   { id: "design4", Component: () => <Chevron /> },
+//   { id: "design5", Component: () => <Emma /> },
+//   { id: "design6", Component: () => <Frank /> },
+//   { id: "design7", Component: () => <Fields /> },
+//   { id: "design8", Component: () => <Herringbone /> },
+//   { id: "design9", Component: () => <Hex /> },
+//   { id: "design10", Component: () => <PennyRound /> },
+//   { id: "design11", Component: () => <Rectanlge /> },
+//   { id: "design12", Component: () => <Taylor /> },
+//   { id: "design13", Component: () => <Tommy /> },
+//   { id: "design14", Component: () => <Twister /> },
+// ];
+
+
+
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
@@ -60,7 +79,7 @@ const ChooseDesign = ({selectedDesign, onDesignSelect, nextStep}) => {
   return (
     <div className="design-container">
       <div className="design-grid">
-        {displayedPatterns.map((pattern, index) => {
+        {displayedPatterns.map((pattern) => {
           return (
           <div
             className="design-item"
@@ -68,7 +87,7 @@ const ChooseDesign = ({selectedDesign, onDesignSelect, nextStep}) => {
             onClick={() => {nextStep(); onDesignSelect(pattern.Component);
                 console.log(pattern.Component)}}
           >
-            <pattern.Component setColor={()=> console.log("color")} />
+            <pattern.Component />
           </div>
           );
           })}

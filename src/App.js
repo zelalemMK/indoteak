@@ -22,7 +22,7 @@ import Fields from "./assets/designs/Fields";
 function App() {
 
   const [step, setStep] = useState(1);
-  const [selectedDesign, setSelectedDesign] = useState(null);
+  const [selectedDesign, setSelectedDesign] = useState(Fields);
 
   const defaultColorMap = [
     { id: "one", fill: "white" },
@@ -66,18 +66,21 @@ function App() {
       {step === 1 && (
         <ChooseDesign
           selectedDesign={selectedDesign}
-          onDesignSelect={setSelectedDesign}
+          onDesignSelect={designSelect}
           onClick={() => setSelectedDesign()}
           colorMap={colorMap}
           nextStep={nextStep}
         />
       )}
-      {step === 2 && selectedDesign && (
+      {/* {step === 2 && ( */}
+      <>
         <ChooseColor
           DesignComponent={selectedDesign}
-          defaultColorMap={defaultColorMap}
+          // defaultColorMap={defaultColorMap}
         />
-      )}
+        {/* {console.log(typeof selectedDesign)} */}
+      </>
+      {/* )} */}
       {/* {step === 3 && selectedDesign && (
         <ChooseFinish
           DesignComponent={selectedDesign}
