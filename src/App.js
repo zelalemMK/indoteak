@@ -22,6 +22,7 @@ import Fields from "./assets/designs/Fields";
 function App() {
 
   const [step, setStep] = useState(1);
+  const [colorMap, setColorMap] = useState({});
   const [selectedDesign, setSelectedDesign] = useState(null);
 
   //next step buttons designs out of time
@@ -52,6 +53,8 @@ function App() {
       {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
+          colorMap={colorMap}
+          setColorMap={selectedDesign}
         />
       )}
       {/* {step === 3 && selectedDesign && (

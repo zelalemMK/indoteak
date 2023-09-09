@@ -1,4 +1,3 @@
-
 const ColorButton = ({ color, setSelectedColor }) => (
   <button
     className="color-button"
