@@ -24,28 +24,7 @@ function App() {
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
 
-  const defaultColorMap = [
-    { id: "one", fill: "white" },
-    { id: "two", fill: "white" },
-    { id: "three", fill: "white" },
-    { id: "four", fill: "white" },
-    { id: "five", fill: "white" },
-    { id: "six", fill: "white" },
-    { id: "seven", fill: "white" },
-    { id: "eight", fill: "white" },
-    { id: "nine", fill: "white" },
-    { id: "ten", fill: "white" },
-    { id: "eleven", fill: "white" },
-    { id: "twelve", fill: "white" },
-    { id: "thirteen", fill: "white" },
-    { id: "fourteen", fill: "white" },
-    { id: "fifteen", fill: "white" },
-    { id: "sixteen", fill: "white" },
-  ];
-  const [colorMap, setColorMap] = useState(defaultColorMap);
-
-  
-
+  //next step buttons designs out of time
   const nextStep = () => {
     setStep((prevStep) => prevStep + 1);
   };
@@ -54,11 +33,10 @@ function App() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  function designSelect(design) {
-    // console.log(design);
-    setSelectedDesign(design);
-    setStep(2);
-  }
+  // function designSelect(design) {
+  //   setSelectedDesign(design);
+  //   setStep(2);
+  // }
 
   return (
     <div>
@@ -68,14 +46,12 @@ function App() {
           selectedDesign={selectedDesign}
           onDesignSelect={setSelectedDesign}
           onClick={() => setSelectedDesign()}
-          colorMap={colorMap}
           nextStep={nextStep}
         />
       )}
       {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
-          defaultColorMap={defaultColorMap}
         />
       )}
       {/* {step === 3 && selectedDesign && (
