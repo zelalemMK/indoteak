@@ -3,11 +3,9 @@ import "./App.css";
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 
-
 function App() {
-
   const [step, setStep] = useState(1);
-  const [selectedDesign, setSelectedDesign] = useState(Fields);
+  const [selectedDesign, setSelectedDesign] = useState(null);
 
   //next step buttons designs out of time
   const nextStep = () => {
@@ -29,15 +27,12 @@ function App() {
           prevStep={prevStep}
         />
       )}
-      {/* {step === 2 && ( */}
-      <>
+      {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
           setColorMap={selectedDesign}
         />
-        {/* {console.log(typeof selectedDesign)} */}
-      </>
-      {/* )} */}
+      )}
       {/* {step === 3 && selectedDesign && (
         <ChooseFinish
           DesignComponent={selectedDesign}
