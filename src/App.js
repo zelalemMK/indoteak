@@ -5,6 +5,7 @@ import ChooseColor from "./components/chooseColor/chooseColor";
 
 
 function App() {
+  
 
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
