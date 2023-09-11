@@ -17,6 +17,7 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
       viewBox="0 0 100 100"
     >
       {values.map((value, index) => {
+        console.log(typeof handlePolygonClick);
         const id = `path-${index}`;
         return (
           <path
@@ -26,7 +27,7 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
             fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
-            onClick={() => handlePolygonClick(id)}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
@@ -7,7 +7,6 @@ import ChooseColor from "./components/chooseColor/chooseColor";
 function App() {
 
   const [step, setStep] = useState(1);
-  const [colorMap, setColorMap] = useState({});
   const [selectedDesign, setSelectedDesign] = useState(null);
 
   //next step buttons designs out of time
@@ -26,7 +25,6 @@ function App() {
         <ChooseDesign
           selectedDesign={selectedDesign}
           onDesignSelect={setSelectedDesign}
-          onClick={() => setSelectedDesign()}
           nextStep={nextStep}
           prevStep={prevStep}
         />
@@ -34,7 +32,6 @@ function App() {
       {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
-          colorMap={colorMap}
           setColorMap={selectedDesign}
         />
       )}

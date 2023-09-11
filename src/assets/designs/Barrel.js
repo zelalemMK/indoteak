@@ -111,7 +111,7 @@ export default function Barrel({ colorMap, handlePolygonClick }) {
             fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
-            onClick={() => handlePolygonClick(id)}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

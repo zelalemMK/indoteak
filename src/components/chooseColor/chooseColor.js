@@ -4,17 +4,16 @@ import ColorGrid from "./color_grid";
 import "./chooseColor.css";
 
 function ChooseColor({ DesignComponent }) {
-
   const [selectedColor, setSelectedColor] = useState(null);
   const [colorMap, setColorMap] = useState({});
   const [eraseActive, setEraserActive] = useState(false);
 
-  const handlePolygonClick = (id) => {
+  function handlePolygonClick(id) {
     if (selectedColor) {
       // Update the colorMap with the new color for the clicked SVG element
       setColorMap({ ...colorMap, [id]: selectedColor });
     }
-  };
+  }
 
   const setColor = (id) => {
     if (selectedColor) {

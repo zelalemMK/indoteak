@@ -34,7 +34,7 @@ export default function Rectanlge({ colorMap, handlePolygonClick}) {
             stroke="black"
             strokeWidth="0.3"
             fill={colorMap?.[id] || "white"}
-            onClick={() => handlePolygonClick(id)}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

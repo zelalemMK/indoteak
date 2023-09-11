@@ -1,6 +1,7 @@
 import React from "react";
 import { nanoid } from "nanoid";
 import PropTypes from "prop-types";
+import { type } from "@testing-library/user-event/dist/type";
 
 export default function Amy({ colorMap, handlePolygonClick }) {
 
@@ -32,6 +33,7 @@ export default function Amy({ colorMap, handlePolygonClick }) {
     >
       {values.map((value, index) => {
         const id = `point-${index}`
+        console.log(typeof handlePolygonClick)
         return (
           <polygon
             key={nanoid()}
@@ -40,7 +42,7 @@ export default function Amy({ colorMap, handlePolygonClick }) {
             fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3863"
-            onClick={() => handlePolygonClick(id)}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

@@ -59,7 +59,7 @@ export default function Hex({ colorMap, handlePolygonClick }) {
             fill={colorMap?.[id] || "white"}
             stroke={"black"}
             strokeWidth={".3"}
-            onClick={() => handlePolygonClick(id)}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}
