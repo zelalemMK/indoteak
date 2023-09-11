@@ -1,20 +1,11 @@
-
 const ColorButton = ({ color, setSelectedColor }) => (
   <button
-    className="color-button"
-    style={{ backgroundColor: color }}
+    style={{ backgroundColor: color, width: "50px", height: "50px" }}
     onClick={() => setSelectedColor(color)}
-  >
-    <span style={{ opacity: 0 }}>•</span>
-  </button>
+  ></button>
 );
 
-export default function ColorGrid({
-  setSelectedColor,
-  resetColors,
-  setEraserActive,
-  eraserActive,
-}) {
+export default function ColorGrid({ setSelectedColor, resetColors, setEraserActive, eraserActive }) {
   const colors = [
     "#FF0000",
     "#FF6347",
@@ -48,7 +39,7 @@ export default function ColorGrid({
       <button onClick={resetColors}>Erase All Colors</button>
       <button onClick={() => setEraserActive((prev) => !prev)}>
         {eraserActive ? "Disable" : "Enable"} Eraser
-      </button>
+      </button> 
     </div>
   );
 }

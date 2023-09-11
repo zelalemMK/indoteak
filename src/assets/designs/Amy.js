@@ -1,7 +1,11 @@
 import React from "react";
 import { nanoid } from "nanoid";
+import PropTypes from "prop-types";
+import { type } from "@testing-library/user-event/dist/type";
 
-export default function Amy() {
+export default function Amy({ colorMap, handlePolygonClick }) {
+
+
   const values = [
     { points: "48.9 0.8 25.3 24.4 1.6 0.8 48.9 0.8" },
     { points: "24.5 25.2 0.9 48.8 0.9 1.5 24.5 25.2" },
@@ -27,14 +31,18 @@ export default function Amy() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {
+      {values.map((value, index) => {
+        const id = `point-${index}`
+        console.log(typeof handlePolygonClick)
         return (
           <polygon
             key={nanoid()}
+            id={id}
             points={value.points}
-            fill="white"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3863"
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

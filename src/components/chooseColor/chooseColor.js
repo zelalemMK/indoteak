@@ -3,72 +3,40 @@ import ColorGrid from "./color_grid";
 
 import "./chooseColor.css";
 
+function ChooseColor({ DesignComponent }) {
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [colorMap, setColorMap] = useState({});
+  const [eraseActive, setEraserActive] = useState(false);
 
-function ChooseColor({ DesignComponent}) {
-
-  return (
-    <>
-    <DesignComponent />
-    </>
-  )
-
-  // if (typeof DesignComponent === 'function') {
-  //   return (
-  //     <DesignComponent />
-  //   )
-  // } else {
-  //   return (
-  //     <>
-  //     {typeof DesignComponent}
-  //     </>
-  //   )
+  function handlePolygonClick(id) {
+    if (selectedColor) {
+      // Update the colorMap with the new color for the clicked SVG element
+      setColorMap({ ...colorMap, [id]: selectedColor });
+    }
   }
 
-  // const [selectedColor, setSelectedColor] = useState(null);
-  // const [eraserActive, setEraserActive] = useState(false);
-  
+  const resetColors = () => {
+    setColorMap({});
+  };
 
-  // const setColor = (id) => {
-  //   if (selectedColor) {
-  //     setColorMap((prev) => ({ ...prev, [id]: selectedColor }));
-  //   }
-  // };
-
-  // const resetColors = () => {
-  //   setColorMap({});
-  // };
-
-  // const eraseColor = (id) => {
-  //   setColorMap((prev) => {
-  //     const newState = { ...prev };
-  //     delete newState[id];
-  //     return newState;
-  //   });
-  // };
-
-  // const handlePolygonClick = (id) => {
-  //   if (eraserActive) {
-  //     eraseColor(id);
-  //   } else {
-  //     setColor(id);
-  //   }
-  // };
-
-  // return (
-  //   <div className="choose-color-container">
-  //     <div className="pattern">
-  //       <DesignComponent />
-  //     </div>
-  //     <div className="color-grid">
-  //       {/* <ColorGrid
-  //         setSelectedColor={setSelectedColor}
-  //         resetColors={resetColors}
-  //         setEraserActive={setEraserActive}
-  //         eraserActive={eraserActive}
-  //       /> */}
-  //     </div>
-  //   </div>
-  // );
-
+  return (
+    <div className="choose-color-container">
+      <div className="pattern">
+        <DesignComponent
+          colorMap={colorMap}
+          handlePolygonClick={handlePolygonClick}
+        />
+      </div>
+      <div className="color-grid">
+        <ColorGrid
+          setSelectedColor={setSelectedColor}
+          resetColors={resetColors}
+          setEraserActive={setEraserActive}
+          eraserActive={eraseActive}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default ChooseColor;

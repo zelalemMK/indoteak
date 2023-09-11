@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Frank() {
+export default function Frank({ colorMap, handlePolygonClick}) {
   const values = [
     { points: "0.9 80 19.9 99.1 0.9 99.1 0.9 80" },
     { points: "19.1 0.9 10.2 9.5 1.6 0.9 19.1 0.9" },
@@ -26,14 +26,17 @@ export default function Frank() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {
+      {values.map((value, index) => {
+        const id = `point-${index}`
         return (
           <polygon
             key={nanoid()}
+            id={id}
             points={value.points}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3863"
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

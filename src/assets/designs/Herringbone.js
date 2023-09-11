@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Herringbone() {
+export default function Herringbone({ colorMap, handlePolygonClick }) {
   const values = [
     { x: "-2.117", y: "13.5114", transform: "translate(-7.3586 14.9275) rotate(-45)", },
     { x: "21.6572", y: "18.0288", transform: "translate(50.3119 62.5672) rotate(-135)", },
@@ -43,18 +43,21 @@ export default function Herringbone() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {   
+      {values.map((value, index) => {  
+        const id = `rect-${index}` 
         return (
           <rect
             key={nanoid()}
+            id={id}
             x={value.x}
             y={value.y}
             width={"32.9136"}
             height={"5.6697"}
             transform={value.transform}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3863"
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}

@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import React from "react";
 
 
-export default function Hex() {
+export default function Hex({ colorMap, handlePolygonClick }) {
   const values = [
     { d:"M.9,13.3V21a.55.55,0,0,0,.3.5l6.6,3.8a.6375.6375,0,0,0,.6,0L15,21.5a.55.55,0,0,0,.3-.5V13.3a.55.55,0,0,0-.3-.5L8.5,8.9a.8542.8542,0,0,0-.7,0L1.2,12.7A.8643.8643,0,0,0,.9,13.3Z" },
     { d:"M16.1,13.3V21a.55.55,0,0,0,.3.5L23,25.3a.6375.6375,0,0,0,.6,0l6.6-3.8a.55.55,0,0,0,.3-.5V13.3a.55.55,0,0,0-.3-.5L23.6,9A.6375.6375,0,0,0,23,9l-6.6,3.8A.55.55,0,0,0,16.1,13.3Z" },
@@ -49,14 +49,17 @@ export default function Hex() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {
+      {values.map((value, index) => {
+        const id = `point-${index}`
         return (
           <path
             key={nanoid()}
+            id={id}
             d={value.d}
-            fill={"white"}
+            fill={colorMap?.[id] || "white"}
             stroke={"black"}
             strokeWidth={".3"}
+            onClick={() => handlePolygonClick?.(id)}
           />
         );
       })}
