@@ -10,26 +10,6 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
     { d: "M56.7,53V83.8a10.7787,10.7787,0,0,0-6.3,2.1c-2.9,2.2-5,3.1-7.4,3.1s-4.5-.9-7.4-3.1a10.9556,10.9556,0,0,0-6.3-2.1V53a10.7787,10.7787,0,0,0,6.3-2.1c2.9-2.2,5-3.1,7.4-3.1s4.5.9,7.4,3.1A11.6879,11.6879,0,0,0,56.7,53Z",},
     { d: "M85,53V83.8a10.7787,10.7787,0,0,0-6.3,2.1c-2.9,2.2-5,3.1-7.4,3.1s-4.5-.9-7.4-3.1a10.9556,10.9556,0,0,0-6.3-2.1V53a10.7787,10.7787,0,0,0,6.3-2.1c2.9-2.2,5-3.1,7.4-3.1s4.5.9,7.4,3.1A11.6879,11.6879,0,0,0,85,53Z",},
   ];
-
-  // return (
-  //   <svg
-  //     data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
-  //     xmlns="http://www.w3.org/2000/svg"
-  //     viewBox="0 0 100 100"
-  //   >
-  //     {values.map((value) => {
-  //       return (
-  //         <path
-  //           key={nanoid()}
-  //           d={value.d}
-  //           fill="white"
-  //           stroke="#000"
-  //           strokeWidth="0.3"
-  //         />
-  //       );
-  //     })}
-  //   </svg>
-  // );
   return (
     <svg
       data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
@@ -43,7 +23,7 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
             key={nanoid()}
             id={id}
             d={value.d}
-            fill={colorMap ? colorMap?.[id] || "white" : "white"}
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
             onClick={() => handlePolygonClick(id)}

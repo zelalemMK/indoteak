@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Tommy() {
+export default function Tommy({ colorMap, handlePolygonClick}) {
   const values = [
     { points: "12.6 29.3 47.9 49.6 0.9 49.6 12.6 29.3" },
     { points: "25.1 7.7 49.1 49.3 13 28.5 25.1 7.7" },
@@ -25,13 +25,16 @@ export default function Tommy() {
       viewBox="0 0 100 100"
     >
       {values.map((values) => {
+        const id = `point-${values.points}`;
         return (
           <polygon
             key={nanoid()}
+            id={id}
             points={values.points}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
+            onClick={() => handlePolygonClick(id)}
           />
         );
       })}

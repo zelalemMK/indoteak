@@ -1,7 +1,7 @@
 import React from "react";
 import { nanoid } from "nanoid";
 
-export default function Fields() {
+export default function Fields({ colorMap, handlePolygonClick}) {
     const values = [
       { x: "0", y: "20", width:"40" },
       { x: "42", y: "20", width:"40" },
@@ -21,17 +21,20 @@ export default function Fields() {
         stroke="black"
         stroke-wdith="0.1"
       >
-        {values.map((value) => {
+        {values.map((value, index) => {
+          const id = `rect-${index}`;
           return (
             <rect
               key={nanoid()}
+              id={id}
               x={value.x}
               y={value.y}
               width={value.width}
               height={13.5}
               stroke="black"
               strokeWidth="0.3"
-              fill="white"
+              fill={colorMap?.[id] || "white"}
+              onClick={() => handlePolygonClick(id)}
             />
           );
         })}

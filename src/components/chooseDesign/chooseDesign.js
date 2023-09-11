@@ -69,9 +69,8 @@ const ChooseDesign = ({ onDesignSelect, nextStep}) => {
               onClick={() => {
                 nextStep();
                 onDesignSelect(pattern.Component);
-                console.log(pattern.Component);
               }} >
-              <CurrentDesign setColor={() => console.log("color")} />
+              <CurrentDesign />
             </div>
           );
           })}

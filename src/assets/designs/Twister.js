@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Twister() {
+export default function Twister({ colorMap, handlePolygonClick}) {
   const values = [
     { d: "M24.9,25.4H2.8a22.3485,22.3485,0,0,1,22.1-22Z" },
     { d: "M47.7,25.4h-22V3.4A22.3284,22.3284,0,0,1,47.7,25.4Z" },
@@ -45,13 +45,16 @@ export default function Twister() {
       viewBox="0 0 100 100"
     >
       {values.map((values) => {
+        const id = `point-${values.d}`;
         return (
           <path
             key={nanoid()}
+            id={id}
             d={values.d}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
+            onClick={() => handlePolygonClick(id)}
           />
         );
       })}

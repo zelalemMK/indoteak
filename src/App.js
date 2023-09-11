@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Header from './components/header/header'
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 
-
-// import Taylor from './components/svg/patterns';
-import Barrel from "./assets/designs/Barrel";
-import Chevron from "./assets/designs/Chevron";
-import Emma from "./assets/designs/Emma";
-import Frank from "./assets/designs/Frank";
-import Herringbone from "./assets/designs/Herringbone";
-import Hex from "./assets/designs/Hex";
-import PennyRound from "./assets/designs/PennyRound";
-import Taylor from "./assets/designs/Taylor";
-import Tommy from "./assets/designs/Tommy";
-import Twister from "./assets/designs/Twister";
-import Rectanlge from "./assets/designs/Rectangle";
-import Fields from "./assets/designs/Fields";
 
 function App() {
 
@@ -34,11 +19,6 @@ function App() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  // function designSelect(design) {
-  //   setSelectedDesign(design);
-  //   setStep(2);
-  // }
-
   return (
     <div>
       {/* {<Header />} */}
@@ -48,6 +28,7 @@ function App() {
           onDesignSelect={setSelectedDesign}
           onClick={() => setSelectedDesign()}
           nextStep={nextStep}
+          prevStep={prevStep}
         />
       )}
       {step === 2 && selectedDesign && (

@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Taylor() {
+export default function Taylor({ colorMap, handlePolygonClick}) {
   const values = [
     { points: "24.4 99.3 0.6 99.3 0.6 52.1 24.4 99.3" },
     { points: "24.4 50.6 24.4 97.3 1 50.6 24.4 50.6" },
@@ -25,13 +25,17 @@ export default function Taylor() {
     <svg id="aaf0937a-9efc-4c47-ab2b-02d02e216d31" data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       {values.map((value) => {
+        const id  = `point-${value.points}`;
         return (
           <polygon
             key={nanoid()}
+            id={id}
             points={value.points}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
-            strokeWidth="0.3" />
+            strokeWidth="0.3" 
+            onClick={() => handlePolygonClick(id)}
+            />
         )}
       )}
     </svg>

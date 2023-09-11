@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function PennyRound() {
+export default function PennyRound({ colorMap, handlePolygonClick}) {
   const values = [
     { cx: "4.7", cy: "8.7" },
     { cx: "13.4", cy: "8.7" },
@@ -144,16 +144,19 @@ export default function PennyRound() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {
+      {values.map((value, index) => {
+        const id = `point-${index}`;
         return (
           <circle
             key={nanoid()}
+            id={id}
             cx={value.cx}
             cy={value.cy}
             r="3.8"
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
             strokeWidth="0.3"
+            onClick={() => handlePolygonClick(id)}
           />
         );
       })}

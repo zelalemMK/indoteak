@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Emma() {
+export default function Emma({colorMap, handlePolygonClick}) {
   const values = [
     { points: "49 0.9 25.4 24.5 1.7 0.9 49 0.9" },
     { points: "24.6 25.3 1 48.9 1 1.6 24.6 25.3" },
@@ -27,14 +27,17 @@ export default function Emma() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
     >
-      {values.map((value) => {
+      {values.map((value, index) => {
+        const id = `point-${index}`
         return (
           <polygon
             key={nanoid()}
+            id={id}
             points={value.points}
-            fill="#fff"
+            fill={colorMap?.[id] || "white"}
             stroke="#000"
-            strokeWidth="0.3863"
+            strokeWidth="0.3"
+            onClick={() => handlePolygonClick(id)}
           />
         );
       })}
