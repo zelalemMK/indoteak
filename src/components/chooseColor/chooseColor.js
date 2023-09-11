@@ -15,23 +15,8 @@ function ChooseColor({ DesignComponent }) {
     }
   }
 
-  const setColor = (id) => {
-    if (selectedColor) {
-      console.log(selectedColor);
-      setColorMap((prev) => ({ ...prev, [id]: selectedColor }));
-    }
-  };
-
   const resetColors = () => {
     setColorMap({});
-  };
-
-  const eraseColor = (id) => {
-    setColorMap((prev) => {
-      const newState = { ...prev };
-      delete newState[id];
-      return newState;
-    });
   };
 
   return (
