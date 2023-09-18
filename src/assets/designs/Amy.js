@@ -33,7 +33,6 @@ export default function Amy({ colorMap, handlePolygonClick }) {
     >
       {values.map((value, index) => {
         const id = `point-${index}`
-        console.log(typeof handlePolygonClick)
         return (
           <polygon
             key={nanoid()}

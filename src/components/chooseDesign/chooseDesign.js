@@ -18,7 +18,7 @@ import Twister from "../../assets/designs/Twister";
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
 
-const ChooseDesign = ({ onDesignSelect, nextStep}) => {
+const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
@@ -38,13 +38,12 @@ const ChooseDesign = ({ onDesignSelect, nextStep}) => {
     { id: "design13", Component: () => Tommy },
     { id: "design14", Component: () => Twister },
   ];
-  
+
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
   );
 
-  
   const nextPage = () => {
     if ((page + 1) * patternsPerPage < patterns.length) {
       setPage(page + 1);
@@ -58,36 +57,46 @@ const ChooseDesign = ({ onDesignSelect, nextStep}) => {
   };
 
   return (
-    <div className="design-container">
-      <div className="design-grid">
-        {displayedPatterns.map((pattern, index) => {
-          let CurrentDesign = pattern.Component();
-          return (
-            <div
-              className="design-item"
-              key={nanoid()}
-              onClick={() => {
-                nextStep();
-                onDesignSelect(pattern.Component);
-              }} >
-              <CurrentDesign />
-            </div>
-          );
-          })}
+    <>
+      <div className="display">
+      <h1>Choose a Design</h1>
+        <div className="design-container">
+          <div className="design-grid">
+            {displayedPatterns.map((pattern, index) => {
+              let CurrentDesign = pattern.Component();
+              return (
+                <div
+                  className="design-item"
+                  key={nanoid()}
+                  onClick={() => {
+                    nextStep();
+                    onDesignSelect(pattern.Component);
+                  }}
+                >
+                  <CurrentDesign />
+                </div>
+              );
+            })}
+          </div>
+          <div className="button-container">
+            <button
+              className="button"
+              onClick={previousPage}
+              disabled={page === 0}
+            >
+              Previous
+            </button>
+            <button
+              className="button"
+              onClick={nextPage}
+              disabled={(page + 1) * patternsPerPage >= patterns.length}
+            >
+              Next
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="button-container">
-        <button className="button" onClick={previousPage} disabled={page === 0}>
-          Previous
-        </button>
-        <button
-          className="button"
-          onClick={nextPage}
-          disabled={(page + 1) * patternsPerPage >= patterns.length}
-        >
-          Next
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 
