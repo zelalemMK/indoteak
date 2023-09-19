@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
-
+import ChooseFinish from "./components/chooseFinish/chooseFinish"
 function App() {
+  const [colorMap, setColorMap] = useState({});
+
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
 
@@ -24,23 +26,26 @@ function App() {
           selectedDesign={selectedDesign}
           onDesignSelect={setSelectedDesign}
           nextStep={nextStep}
-          prevStep={prevStep}
         />
       )}
       {step === 2 && selectedDesign && (
         <ChooseColor
           DesignComponent={selectedDesign}
-          setColorMap={selectedDesign}
+          colorMap={colorMap}
+          setColorMap={setColorMap}
+          // setColorMap={selectedDesign}
+          prevStep={prevStep}
+          nextStep={nextStep}
         />
       )}
-      {/* {step === 3 && selectedDesign && (
+      {step === 3 && selectedDesign && (
         <ChooseFinish
           DesignComponent={selectedDesign}
           colorMap={colorMap}
           nextStep={nextStep}
           prevStep={prevStep}
         />
-      )} */}
+      )}
     </div>
   );
 }

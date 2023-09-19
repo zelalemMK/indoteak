@@ -3,9 +3,8 @@ import ColorGrid from "./colorGrid";
 
 import "./chooseColor.css";
 
-function ChooseColor({ DesignComponent }) {
+function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
   const [selectedColor, setSelectedColor] = useState(null);
-  const [colorMap, setColorMap] = useState({});
   const [eraseActive, setEraserActive] = useState(false);
 
   function handlePolygonClick(id) {
@@ -34,6 +33,7 @@ function ChooseColor({ DesignComponent }) {
           setEraserActive={setEraserActive}
           eraserActive={eraseActive}
         />
+        <button onClick={nextStep} >Next</button>
       </div>
     </div>
   );
