@@ -17,7 +17,6 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
       viewBox="0 0 100 100"
     >
       {values.map((value, index) => {
-        console.log(typeof handlePolygonClick);
         const id = `path-${index}`;
         return (
           <path

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ColorGrid from "./color_grid";
+import ColorGrid from "./colorGrid";
 
 import "./chooseColor.css";
 
