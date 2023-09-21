@@ -1,7 +1,5 @@
 import React from "react";
 import { nanoid } from "nanoid";
-import PropTypes from "prop-types";
-import { type } from "@testing-library/user-event/dist/type";
 
 export default function Amy({ colorMap, handlePolygonClick }) {
 
