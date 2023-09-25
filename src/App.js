@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Header from "./components/header/header"
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div>
-      {/* {<Header />} */}
+      <Header />
       {step === 1 && (
         <ChooseDesign
           selectedDesign={selectedDesign}

@@ -1,54 +1,19 @@
+/* Desktop Display */
+
 .header {
   background-color: black;
-  padding-left: 15%;
+  height: 100px;
 }
 
-li {
-  display: inline-block;
-  list-style: none;
-}
-.logo {
-  width: 80%;
-} 
-
-@media screen and (max-width: 390px) {
-  .logo {
-    width: 50%;
-  }
-    li {
-      display: none;
-    }
-}
-
-
-/*
-.header {
-  background-color: black;
-  color: white;
-  font-family: 'Syne', sans-serif;
+.logo-container {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin-bottom: 3%;
+  /* border: 3px solid pink; */
 }
-
 .logo {
-  height: 50px;  
-}
+  /* border:3px solid pink; */
+  width: 300px;
 
-.menu-btn {
-  display: none;
 }
-
-.header-menus ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.header-menus li {
-  cursor: pointer;
-}
-*/
