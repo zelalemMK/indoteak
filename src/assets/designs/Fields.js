@@ -20,6 +20,7 @@ export default function Fields({ colorMap, handlePolygonClick}) {
         fill="white"
         stroke="black"
         stroke-wdith="0.1"
+        preserveAspectRatio="xMidYMid meet"
       >
         {values.map((value, index) => {
           const id = `rect-${index}`;

@@ -59,7 +59,6 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   return (
     <>
       <div className="display">
-      <h1>Choose a Design</h1>
         <div className="design-container">
           <div className="design-grid">
             {displayedPatterns.map((pattern, index) => {

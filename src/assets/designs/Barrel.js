@@ -100,6 +100,7 @@ export default function Barrel({ colorMap, handlePolygonClick }) {
       data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value, index) => {
         const id = `path-${index}`;

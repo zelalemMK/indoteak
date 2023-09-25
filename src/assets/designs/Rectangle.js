@@ -17,9 +17,7 @@ export default function Rectanlge({ colorMap, handlePolygonClick}) {
     <svg
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
-      stroke="black"
-      stroke-wdith="0.1"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value) => {
         const id = `rect-${value.x}-${value.y}`;

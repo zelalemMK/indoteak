@@ -39,12 +39,12 @@ export default function Herringbone({ colorMap, handlePolygonClick }) {
 
   return (
     <svg
-      id="bfb63e56-828b-4567-a33b-b8ff132d7a51"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
-      {values.map((value, index) => {  
-        const id = `rect-${index}` 
+      {values.map((value, index) => {
+        const id = `rect-${index}`;
         return (
           <rect
             key={nanoid()}

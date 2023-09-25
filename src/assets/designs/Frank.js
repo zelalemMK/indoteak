@@ -22,12 +22,12 @@ export default function Frank({ colorMap, handlePolygonClick}) {
 
   return (
     <svg
-      id="a38e51b1-efd2-456b-9654-01bff574064b"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value, index) => {
-        const id = `point-${index}`
+        const id = `point-${index}`;
         return (
           <polygon
             key={nanoid()}

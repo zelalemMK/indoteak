@@ -26,9 +26,10 @@ export default function Emma({colorMap, handlePolygonClick}) {
       id="b6eb7337-ea3d-4759-ae3a-27eea5528082"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value, index) => {
-        const id = `point-${index}`
+        const id = `point-${index}`;
         return (
           <polygon
             key={nanoid()}

@@ -139,10 +139,9 @@ export default function PennyRound({ colorMap, handlePolygonClick}) {
 
   return (
     <svg
-      id="a092b8c9-05e3-4b05-b43b-ac1b26260135"
-      data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value, index) => {
         const id = `point-${index}`;

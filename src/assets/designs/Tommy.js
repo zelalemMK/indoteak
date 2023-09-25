@@ -19,10 +19,9 @@ export default function Tommy({ colorMap, handlePolygonClick}) {
 
   return (
     <svg
-      id="a607e17b-3a57-4336-9262-e1f4f8ce4a43"
-      data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((values) => {
         const id = `point-${values.points}`;

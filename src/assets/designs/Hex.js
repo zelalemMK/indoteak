@@ -44,13 +44,12 @@ export default function Hex({ colorMap, handlePolygonClick }) {
 
   return (
     <svg
-      id="afff9cc0-f335-47c9-b52a-653c76ec8c7e"
-      data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
     >
       {values.map((value, index) => {
-        const id = `point-${index}`
+        const id = `point-${index}`;
         return (
           <path
             key={nanoid()}
