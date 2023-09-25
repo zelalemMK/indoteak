@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./App.css";
+
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
-import { Helmet } from "react-helmet";
 
+import "./App.css";
 
 
 function App() {
