@@ -8,3 +8,31 @@ body, html {
     box-sizing: border-box;
 }
 
+.app {
+    position: relative;
+}
+
+.cover {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.logo {
+    width: 400px; 
+}
+.display-none {
+    display: none;
+}
