@@ -9,6 +9,7 @@
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "nanoid": "^4.0.2",
+    "netlify-cli": "^16.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
