@@ -17,6 +17,8 @@ import Twister from "../../assets/designs/Twister";
 
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
@@ -59,41 +61,46 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   return (
     <>
       <div className="display">
-      <h1>Choose a Design</h1>
-        <div className="design-container">
-          <div className="design-grid">
-            {displayedPatterns.map((pattern, index) => {
-              let CurrentDesign = pattern.Component();
-              return (
-                <div
-                  className="design-item"
-                  key={nanoid()}
-                  onClick={() => {
-                    nextStep();
-                    onDesignSelect(pattern.Component);
-                  }}
-                >
-                  <CurrentDesign />
-                </div>
-              );
-            })}
+        <Container fluid col-sm-6>
+          <h1 className="text-center text">Choose a Design</h1>
+          <div className="design-container bg-secondary ">
+            <div className="design-grid ">
+              {displayedPatterns.map((pattern, index) => {
+                let CurrentDesign = pattern.Component();
+                return (
+                  <div
+                    className="design-item m-1 shadow"
+                    key={nanoid()}
+                    onClick={() => {
+                      nextStep();
+                      onDesignSelect(pattern.Component);
+                    }}
+                  >
+                    <CurrentDesign />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <div className="button-container">
-            <button
-              className="button"
-              onClick={previousPage}
-              disabled={page === 0}
-            >
-              Previous
-            </button>
-            <button
-              className="button"
-              onClick={nextPage}
-              disabled={(page + 1) * patternsPerPage >= patterns.length}
-            >
-              Next
-            </button>
-          </div>
+        </Container>
+
+        <div className="button-container container  ">
+          <Button
+            size="lg"
+            className="button btn btn-secondary  "
+            onClick={previousPage}
+            disabled={page === 0}
+          >
+            Previous
+          </Button>
+          <Button
+            size="lg"
+            className="button btn-secondary   "
+            onClick={nextPage}
+            disabled={(page + 1) * patternsPerPage >= patterns.length}
+          >
+            Next
+          </Button>
         </div>
       </div>
     </>

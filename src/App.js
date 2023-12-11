@@ -10,6 +10,8 @@ import logo from "./components/header/indoteak.png"
 import "./App.css";
 
 
+
+
 function App() {
 
   const [colorMap, setColorMap] = useState({});
