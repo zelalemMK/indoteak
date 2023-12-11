@@ -1,6 +1,8 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import React, { useRef } from "react";
+import "./chooseFinish.css"
+import Button from "react-bootstrap/Button";
 
 const saveSvgAsPdf = async (svgElement, name) => {
   const canvas = await html2canvas(svgElement);
@@ -28,13 +30,13 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
   console.log(colorMap);
   const svgRef = useRef(null);
   return (
-    <div style={divStyle}>
+    <div className="container-fluid pdf-style" style={divStyle}>
       <div ref={svgRef}>
         <DesignComponent colorMap={colorMap} />
       </div>
-      <button onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
+      <Button  className="text-bnt m-3" onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
         Save as PDF
-      </button>
+      </Button>
     </div>
   );
 };

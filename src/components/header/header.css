@@ -1,8 +1,14 @@
 /* Desktop Display */
-
+body{
+  margin: 0;
+}
 .header {
+  max-width: 100%;
   background-color: black;
   height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
 }
 
 .logo-container {

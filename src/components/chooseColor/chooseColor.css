@@ -1,3 +1,40 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
 .choose-color-container {
-    width: 50%;
+    max-width: 80%;
+    width: 70%;
+    justify-content: center;
+    bottom: 0px;
+    height: 100%;
+    
+    
+}
+.color-container {
+    justify-content: center;
+    width: 20%;
+    margin-top: 150px;
+}
+.pattern {
+    width: inherit;
+    position: cover;
+    
+}
+.color-btn:hover{
+    transform: scale(1.05)
+}
+.color-grid {
+}
+.button {
+    width: 40%;
+    margin: 2px
+}
+.next-btn {
+    width: inherit;
+    margin-left:15%;
+    width: 150px;
+    height: 50px;
+
+
 }

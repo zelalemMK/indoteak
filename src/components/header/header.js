@@ -4,8 +4,8 @@ import "./header.css";
 
 function Header() {
   return (
-    <header className="header">
-      <div className="logo-container">
+    <header className="header container-fluid">
+      <div className="logo-container ">
         <a href="https://indoteakdesign.com/" target="_blank" rel="noreferrer">
           <img src={logo} alt="logo" className="logo" />
         </a>
