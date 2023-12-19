@@ -17,8 +17,8 @@ const saveSvgAsPdf = async (svgElement, name) => {
 };
 
 const divStyle = {
-  width: "50vw",
-  height: "50vh",
+  width: "45vw",
+  height: "45vh",
 };
 
 const ChooseFinish = ({ DesignComponent, colorMap }) => {
@@ -34,7 +34,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
       <div ref={svgRef}>
         <DesignComponent colorMap={colorMap} />
       </div>
-      <Button  className="text-bnt m-3" onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
+      <Button  className=" text-bnt m-3" onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
         Save as PDF
       </Button>
     </div>
