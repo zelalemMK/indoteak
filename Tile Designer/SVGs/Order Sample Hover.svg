@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.84 35.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Syne-Bold, Syne;
+        font-size: 10px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #414142;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="107.84" height="35.78"/>
+  <text class="cls-1" transform="translate(7.5 21.46)"><tspan x="0" y="0">ORDER SAMPLE</tspan></text>
+</svg>
