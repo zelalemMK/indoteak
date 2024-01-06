@@ -35,15 +35,15 @@ function App() {
 
 
   // Handle when the initial animation has happened and set the display to none for the cover. 
-  useEffect(() => {
-    const node = coverRef.current;
-    const handleDisplayNone = () => setDisplayNone(true)
+  // useEffect(() => {
+  //   const node = coverRef.current;
+  //   const handleDisplayNone = () => setDisplayNone(true)
 
-    node.addEventListener("transitionend", handleDisplayNone);
-    return () => {
-      node.removeEventListener("transitionend", handleDisplayNone);
-    };
-  })
+  //   node.addEventListener("transitionend", handleDisplayNone);
+  //   return () => {
+  //     node.removeEventListener("transitionend", handleDisplayNone);
+  //   };
+  // })
 
 
   return (
