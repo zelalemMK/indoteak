@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header container-fluid">
       <div className="logo-container ">
-        <a href="https://indoteakdesign.com/" target="_blank" rel="noreferrer">
+        <a href="https://indoteakdesign.com/" target="_blank" rel="noopener noreferrer">
           <img src={logo} alt="logo" className="logo" />
         </a>
       </div>

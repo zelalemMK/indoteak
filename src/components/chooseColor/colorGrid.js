@@ -1,5 +1,6 @@
 
 import { Button } from "react-bootstrap";
+import React from "react";
 
 const ColorButton = ({ color, setSelectedColor }) => (
   <Button className="color-btn container-fluid"
