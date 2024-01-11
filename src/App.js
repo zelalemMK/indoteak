@@ -17,9 +17,9 @@ function App() {
   const [colorMap, setColorMap] = useState({});
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
-  const [fadeOut, setFadeOut] = useState(false)
+  // const [fadeOut, setFadeOut] = useState(false)
   // const [displayNone, setDisplayNone] = useState(false)
-  const coverRef = useRef(null)
+  // const coverRef = useRef(null)
   //next step buttons designs out of time
   const nextStep = () => {
     setStep((prevStep) => prevStep + 1);
