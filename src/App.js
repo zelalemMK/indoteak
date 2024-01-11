@@ -18,7 +18,7 @@ function App() {
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
   const [fadeOut, setFadeOut] = useState(false)
-  const [displayNone, setDisplayNone] = useState(false)
+  // const [displayNone, setDisplayNone] = useState(false)
   const coverRef = useRef(null)
   //next step buttons designs out of time
   const nextStep = () => {
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="app">
-      <div
+      {/* <div
         ref={coverRef}
         className={`cover ${fadeOut ? "fade-out" : ""} ${
           displayNone ? "display-none" : ""
@@ -56,7 +56,7 @@ function App() {
         onClick={handleFadeClick}
       >
         <img src={logo} alt="logo" className="logo" />
-      </div>
+      </div> */}
       <Header />
       {step === 1 && (
         <ChooseDesign
