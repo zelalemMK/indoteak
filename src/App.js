@@ -5,7 +5,7 @@ import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
-import logo from "./components/header/indoteak.png"
+// import logo from "./components/header/indoteak.png"
 
 import "./App.css";
 
@@ -29,9 +29,9 @@ function App() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  const handleFadeClick = () => {
-    setFadeOut(true)
-  }
+  // const handleFadeClick = () => {
+  //   setFadeOut(true)
+  // }
 
 
   // Handle when the initial animation has happened and set the display to none for the cover. 
