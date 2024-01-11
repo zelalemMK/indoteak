@@ -16,29 +16,41 @@ import Tommy from "../../assets/designs/Tommy";
 import Twister from "../../assets/designs/Twister";
 
 import { nanoid } from "nanoid";
+
 import "./chooseDesign.css";
 import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Carousel";
+import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Dropdown from "react-bootstrap/Dropdown";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Navigation } from "swiper/modules";
+import SwiperCore from "swiper";
+
+
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
 
   const patterns = [
-    { id: "design1", Component: () => Amsterdam },
-    { id: "design2", Component: () => Amy },
-    { id: "design3", Component: () => Barrel },
-    { id: "design4", Component: () => Chevron },
-    { id: "design5", Component: () => Emma },
-    { id: "design6", Component: () => Frank },
-    { id: "design7", Component: () => Fields },
-    { id: "design8", Component: () => Herringbone },
-    { id: "design9", Component: () => Hex },
-    { id: "design10", Component: () => PennyRound },
-    { id: "design11", Component: () => Rectanlge },
-    { id: "design12", Component: () => Taylor },
-    { id: "design13", Component: () => Tommy },
-    { id: "design14", Component: () => Twister },
+    { id: "AMSTERDAM", Component: () => Amsterdam },
+    { id: "AMY", Component: () => Amy },
+    { id: "BARREL", Component: () => Barrel },
+    { id: "CHEVON", Component: () => Chevron },
+    { id: "EMMA", Component: () => Emma },
+    { id: "FRANK", Component: () => Frank },
+    { id: "FIELDS", Component: () => Fields },
+    { id: "HERRINGBONE", Component: () => Herringbone },
+    { id: "HEX", Component: () => Hex },
+    { id: "PENNYROUND", Component: () => PennyRound },
+    { id:  "RECTANGLE", Component: () => Rectanlge },
+    { id: "TAYLOR", Component: () => Taylor },
+    { id: "TOMMY", Component: () => Tommy },
+    { id: "TWISTER", Component: () => Twister },
   ];
 
   const displayedPatterns = patterns.slice(
@@ -60,16 +72,38 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
   return (
     <>
-      <div className="display">
-        <Container fluid col-sm-6>
-          <h1 className="text-center text">Choose a Design</h1>
+      <div className="display ">
+        <Container className="gx-0">
+          <h1 className="text-center text ">Designe your own tiles </h1>
+          <Dropdown className="">
+            <Dropdown.Toggle
+              variant="success"
+              id="dropdown-basic"
+              className="btn show bg-white text-dark border-light w-100"
+            >
+              <p> How it works</p>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className="w-100 border-light shadow-sm  text-light">
+              <Dropdown.Item className="text-light" href="#/action-1">
+                1 Select your tiile preference.
+              </Dropdown.Item>
+              <Dropdown.Item className="text-light" href="#/action-2">
+                2. Choose your color style.
+              </Dropdown.Item>
+              <Dropdown.Item className="text-light" href="#/action-3">
+                3. Save as a PDF
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <div className="design-container  ">
             <div className="design-grid ">
               {displayedPatterns.map((pattern, index) => {
                 let CurrentDesign = pattern.Component();
+
                 return (
-                  <div
-                    className="design-item m-1 shadow"
+                  <Row
+                    className="design-it container  px-0 "
                     key={nanoid()}
                     onClick={() => {
                       nextStep();
@@ -77,30 +111,33 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                     }}
                   >
                     <CurrentDesign />
-                  </div>
+                    <p className="pattern-title text-center mt-2  px-0 ">
+                      {pattern.id}
+                    </p>
+                  </Row>
                 );
               })}
             </div>
           </div>
         </Container>
 
-        <div className="button-container container  ">
-          <Button
-            size="lg"
-            className="button btn btn-secondary  "
-            onClick={previousPage}
-            disabled={page === 0}
-          >
-            Previous
-          </Button>
-          <Button
-            size="lg"
-            className="button btn-secondary   "
-            onClick={nextPage}
-            disabled={(page + 1) * patternsPerPage >= patterns.length}
-          >
-            Next
-          </Button>
+        <div className="button-container container-fluid  ">
+          <span className="b-arrow  arrow">
+            <ArrowBackIosIcon onClick={previousPage} disabled={page === 0} />
+          </span>
+
+          <span className="f-arrow  arrow ">
+            <ArrowForwardIosIcon
+              onClick={nextPage}
+              disabled={(page + 1) * patternsPerPage >= patterns.length}
+            />
+          </span>
+        </div>
+
+        <div className="container-dots">
+          {Array.from({ length: 3 }).map((item, index) => (
+            <div className="dot"></div>
+          ))}
         </div>
       </div>
     </>

@@ -153,8 +153,8 @@ export default function PennyRound({ colorMap, handlePolygonClick}) {
             cx={value.cx}
             cy={value.cy}
             r="3.8"
-            fill={colorMap?.[id] || "white"}
-            stroke="#000"
+            fill={colorMap?.[id] || "#b4b4b4"}
+            stroke="#fff"
             strokeWidth="0.3"
             onClick={() => handlePolygonClick?.(id)}
           />

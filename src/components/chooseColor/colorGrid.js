@@ -1,9 +1,10 @@
 
 import { Button } from "react-bootstrap";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 const ColorButton = ({ color, setSelectedColor }) => (
-  <Button className="color-btn container-fluid"
-    style={{ backgroundColor: color, width: "50px", height: "20px",   justifyContent:"center" }}
+  <Button className="color-btn   container-fluid "
+    style={{ backgroundColor: color }}
     onClick={() => setSelectedColor(color)}
   ></Button>
 );
@@ -28,33 +29,36 @@ export default function ColorGrid({ setSelectedColor, resetColors, setEraserActi
     "#00BFFF",
   ]; // Blues
   return (
-    <div className="button-grid shadow ">
-      {colors.map((color, index) => (
-        <ColorButton
-          key={index}
-          color={color}
-          setSelectedColor={setSelectedColor}
-        />
-      ))}
-      <div className="mt-2">
-        <Button
-          className="btn-secondary mx-1 my-1"
-          onClick={() => setSelectedColor(null)}
-        >
-          Clear Color Selection
-        </Button>
-        <Button className="btn-secondary mx-1 my-1" onClick={resetColors}>
-          Erase All Colors
-        </Button>
-        <Button
-          className="btn-secondary mx-1 mb-1"
-          onClick={() => setEraserActive((prev) => !prev)}
-        >
-          {eraserActive ? "Disable" : "Enable"} Eraser
-        </Button>
+    <>
+      <Row xs={5} className="button-grid ">
+        {colors.map((color, index) => (
+          <div className="button-grid-col  ">
+            <ColorButton
+              key={index}
+              color={color}
+              // setSelectedColor={setSelectedColor}
+            />
+          </div>
+        ))}
 
-        
-      </div>
-    </div>
+        {/* <div className="mt-2">
+          <Button
+            className="btn-secondary mx-1 my-1"
+            onClick={() => setSelectedColor(null)}
+          >
+            Clear Color Selection
+          </Button>
+          <Button className="btn-secondary mx-1 my-1" onClick={resetColors}>
+            Erase All Colors
+          </Button>
+          <Button
+            className="btn-secondary mx-1 mb-1"
+            onClick={() => setEraserActive((prev) => !prev)}
+          >
+            {eraserActive ? "Disable" : "Enable"} Eraser
+          </Button>
+        </div> */}
+      </Row>
+    </>
   );
 }

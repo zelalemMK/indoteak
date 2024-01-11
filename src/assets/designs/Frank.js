@@ -33,8 +33,8 @@ export default function Frank({ colorMap, handlePolygonClick}) {
             key={nanoid()}
             id={id}
             points={value.points}
-            fill={colorMap?.[id] || "white"}
-            stroke="#000"
+            fill={colorMap?.[id] || "#b4b4b4"}
+            stroke="#fff"
             strokeWidth="0.3863"
             onClick={() => handlePolygonClick?.(id)}
           />

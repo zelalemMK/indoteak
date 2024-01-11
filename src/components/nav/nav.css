@@ -1,0 +1,46 @@
+.nav-title a{
+    font-size: .55rem;
+    font-family: Syne-Bold, Syne;
+    margin-top: 15px;
+    color: #b4b4b4;
+   
+    
+}
+.check-btn {
+    float: left;
+    line-height: 80px;
+    margin-top: 15px;
+    cursor: pointer;
+    
+ 
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* border: 3px solid pink; */
+  margin-top: 20px;
+}
+img.logo {
+  width: 30%;
+  float: left;
+  margin: 0;
+}
+a {
+  filter: invert(1);
+}
+nav a{
+      font-size: .7em !important;
+    font-family:Syne-Bold, Syne;
+    font-weight: 700;
+}
+.toggle{
+   filter: invert(1); 
+   border: 0px !important;
+ 
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}

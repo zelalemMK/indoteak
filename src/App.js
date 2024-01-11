@@ -7,7 +7,9 @@ import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
 import logo from "./components/header/indoteak.png"
 
+
 import "./App.css";
+import NavBar from "./components/nav/nav";
 
 
 
@@ -57,7 +59,9 @@ function App() {
       >
         <img src={logo} alt="logo" className="logo" />
       </div>
-      <Header />
+
+      {/* <Header /> */}
+      <NavBar />
       {step === 1 && (
         <ChooseDesign
           selectedDesign={selectedDesign}

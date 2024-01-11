@@ -23,8 +23,8 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
             key={nanoid()}
             id={id}
             d={value.d}
-            fill={colorMap?.[id] || "white"}
-            stroke="#000"
+            fill={colorMap?.[id] || "#b4b4b4"}
+            stroke="#fff"
             strokeWidth="0.3"
             onClick={() => handlePolygonClick?.(id)}
           />

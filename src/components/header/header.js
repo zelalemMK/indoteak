@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./indoteak.png";
-import "./header.css";
+// import "./header.css";
 
 function Header() {
   return (

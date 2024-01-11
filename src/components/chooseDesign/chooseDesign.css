@@ -3,34 +3,34 @@ body{
     
 }
 .display {
-    max-width: 85%;
-    width: 95%;
+   width: 50vw;
+   height: 90vh;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .text{
-    margin-top: 130px;
-    margin-bottom: 40px;
+    font-size: .7em;
+    font-family:Syne-Bold, Syne;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    
 }
 
-
-.design-item {
-width: inherit;
-align-item: center;
-position: cover;
-max-width: inherit;
-
+// dropdown style
+.dropdown-item a  {
+   color: black !important;
 }
+
 
 .design-container {
     width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px
+    margin-top: 10px
 
 }
 
@@ -38,31 +38,57 @@ max-width: inherit;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 20px;
-   margin: auto;
+.design-item {
+  align-item: center;
 }
-
 .design-item:hover {
-      transform: scale(1.15);
-}
-button {
-    padding: 15px 32px;
-    font-size: 16px;
-    
-    cursor: pointer;
-    bottom: 0px;
+      transform: scale(1.05);
+      }
+
+.pattern-title {
+     font-size: .4rem;
+    font-family:Syne-Bold, Syne;
+    font-weight: 200;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 
+.button-container.container  {
+   justify-content: center;
+    margin-top: 1%;
+
+   
+}
+
+.b-arrow{
+   
+    margin-left: 15%;
+}
+
+.f-arrow{
+margin-left: 50%;
+
+
+}
+.arrow{
+  color: #b4b4b4; 
+  width: 90%;
+ 
+}
+.container-dots {
+    width: 100%;
+    display: flex;
+}
+.dot {
+   width: 100px;  
+
+}
 
 
    

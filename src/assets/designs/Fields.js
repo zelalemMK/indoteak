@@ -31,9 +31,9 @@ export default function Fields({ colorMap, handlePolygonClick}) {
               y={value.y}
               width={value.width}
               height={13.5}
-              stroke="black"
+              stroke="#fff"
               strokeWidth="0.3"
-              fill={colorMap?.[id] || "white"}
+              fill={colorMap?.[id] || "#b4b4b4"}
               onClick={() => handlePolygonClick?.(id)}
             />
           );

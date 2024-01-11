@@ -54,8 +54,8 @@ export default function Herringbone({ colorMap, handlePolygonClick }) {
             width={"32.9136"}
             height={"5.6697"}
             transform={value.transform}
-            fill={colorMap?.[id] || "white"}
-            stroke="#000"
+            fill={colorMap?.[id] || "#b4b4b4"}
+            stroke="#fff"
             strokeWidth="0.3863"
             onClick={() => handlePolygonClick?.(id)}
           />

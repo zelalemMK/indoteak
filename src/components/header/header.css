@@ -1,25 +1,32 @@
 /* Desktop Display */
-body{
+body {
   margin: 0;
 }
 .header {
-  max-width: 100%;
-  background-color: black;
-  height: 100px;
+  max-width: 80%;
+  background-color: white;
+  height: 10px;
   position: fixed;
   width: 100%;
   top: 0px;
 }
 
 .logo-container {
-  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   /* border: 3px solid pink; */
+  margin-top: 20px;
+}
+img.logo {
+  width: 30%;
+  float: left;
+  margin: 0;
+}
+a {
+  filter: invert(1);
 }
 .logo {
   /* border:3px solid pink; */
-  width: 300px;
-
 }

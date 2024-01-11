@@ -13,7 +13,7 @@ body, html {
 
 .app {
     position: relative;
-    background-color: lightgray
+
 }
 
 .cover {
@@ -34,9 +34,7 @@ body, html {
     opacity: 0;
 }
 
-.logo {
-    width: 400px; 
-}
+
 .display-none {
     display: none;
 }

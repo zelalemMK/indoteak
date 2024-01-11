@@ -31,9 +31,9 @@ export default function Rectanlge({ colorMap, handlePolygonClick}) {
             y={value.y}
             width={23.5}
             height={49}
-            stroke="black"
+            stroke="#fff"
             strokeWidth="0.3"
-            fill={colorMap?.[id] || "white"}
+            fill={colorMap?.[id] || "#b4b4b4"}
             onClick={() => handlePolygonClick?.(id)}
           />
         );
