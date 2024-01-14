@@ -40,7 +40,8 @@ import "slick-carousel/slick/slick-theme.css";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { faDiamond } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faDiamond } from "@fortawesome/free-solid-svg-icons";
+  import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
@@ -183,60 +184,69 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
             id="dropdown-basic"
             className="btn show bg-white text-dark border-0  w-100"
           >
-            <p className="fs-6"> How it works</p>
+          
+              {/* <div class="fa-li">
+                <FontAwesomeIcon icon={faAngleDown} />
+              </div> */}
+              
+                <p className=""> How it works</p>
+            
+           
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="w-100  border-top-0  border-end-1 border-start-1 border-4 shadow-sm  text-light dropdown-menu-list d-flex">
-            <div className="dropdown-left-side-ordered-lists">
-              <ol class="fa-ul ">
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Select your tile preference.
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Choose your color style.
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Save as a PDF
-                </li>
-              </ol>
-            </div>
+          <Dropdown.Menu className="w-100 justify-content-center m-auto border-top-0  border-end-1 border-start-1 border-4 shadow-lg text-light dropdown-menu-list">
+            <div className=" d-flex ">
+              <div className="dropdown-left-side-ordered-lists">
+                <ol class="fa-ul ">
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Select your tile preference.
+                  </li>
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Choose your color style.
+                  </li>
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Save as a PDF
+                  </li>
+                </ol>
+              </div>
 
-            <div  dropdown-right-side-ordered-lists>
-              <ol class="fa-ul ">
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Lorem ipsum dolor sit elit.
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <FontAwesomeIcon icon={faDiamond} />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </li>
-              </ol>
+              <div dropdown-right-side-ordered-lists>
+                <ol class="fa-ul ">
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Lorem ipsum dolor sit elit.
+                  </li>
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li>
+                    <span class="fa-li">
+                      <FontAwesomeIcon icon={faDiamond} />
+                    </span>
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                </ol>
+              </div>
             </div>
           </Dropdown.Menu>
         </Dropdown>
@@ -253,7 +263,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
               return (
                 <div
-                  className="design-it container   w-10 shadow p-3 mb-5 bg-body rounded  border border-5"
+                  className="design-it container bg-white  w-10  p-3 mb-5 border border-5  border-light"
                   key={nanoid()}
                   onClick={() => {
                     nextStep();
@@ -268,8 +278,10 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                       <span>{pattern.id}</span>
                     </p>
                     <span className="circle-icon ">
-                      {" "}
-                      <PanoramaFishEyeIcon fontSize="" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCircle}
+                        className="border border-lightgray rounded"
+                      />
                     </span>
                   </div>
                   <p className="mb-0  fw-light">{pattern.Size}</p>
@@ -282,9 +294,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
         </div>
       </div>
 
-     
-
-      <div className="button-container container-fluid w-75  mt-5">
+      {/* <div className="button-container container-fluid w-75  mt-5">
         <Button
           className="back-arrow  arrow btn-secondary"
           onClick={previousPage}
@@ -300,7 +310,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
         >
           NEXT
         </Button>
-      </div>
+      </div> */}
 
       {/* <div className="container-dots">
           {Array.from({ length: 3 }).map((item, index) => (

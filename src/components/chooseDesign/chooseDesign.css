@@ -1,96 +1,94 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
+}
+.dropdown-menu-list {
+  margin-right: 100px;
 }
 
 li {
-   color: black !important;
-  font-size: .5rem;
+  color: black !important;
+  font-size: 0.5rem;
+  font-family: Syne-Bold, Syne;
+  font-weight: 200;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
 }
 
-span.fa-li{
-    width:4%;
-    color: blue;
-     
+span.fa-li {
+  width: 4%;
+  color: blue;
 }
 
-   .dropdown-left-side-ordered-lists {
-        margin-left: 13%;
-   }
-
-.dropdown-right-side-ordered-lists {
-        margin-left: 13%;
-   }
-
-   
-   .design-it {
-    margin-top:20%;
-   }
-
-   slick-slide > div {
-   
-   }
-
-
-   button.slick-next:before {
-    color: black;
-   
- }
-
- button.slick-next:hover{
-    color: blue;
- }
-
-
- button.slick-prev:before {
-  color: black; 
- }
-
- .current-design-container{
-    width: 40%;
-  
-
- }
- div.design-it.container {
-padding: 100px;
-gap: 4px;
-padding-top: 15px;
- }
-
-
-.current-design-container  {
-    margin-bottom: 25%;
-    margin-top: 0%;
-    
+.dropdown-left-side-ordered-lists {
+  margin-left: 23%;
 }
- p span {
-    font-size: .2rem ; 
-    padding-left: 100%;
- }
- 
- .pattern-title{
-    margin-top: 7%;
- }
+
+.design-it {
+  margin-top: 20%;
+  border-left: 10px solid white;
+}
+
+.design-how-down {
+  margin-left: 45%;
+}
+
+svg.svg-inline--fa.fa-li {
+  margin-left: 900%;
+}
+
+button.slick-next:before {
+  color: black;
+}
+
+button.slick-next:hover {
+  color: blue;
+}
+
+button.slick-prev:before {
+  color: black;
+}
+
+.current-design-container {
+  width: 40%;
+}
+div.design-it.container {
+  padding: 100px;
+  gap: 4px;
+  padding-top: 15px;
+}
+
+.current-design-container {
+  margin-bottom: 25%;
+  margin-top: 0%;
+}
+p span {
+  font-size: 0.2rem;
+  padding-left: 100%;
+}
+
+.pattern-title {
+  margin-top: 7%;
+}
 
 p {
-    font-size: .5rem;
-    }
+  font-size: 0.5rem;
+}
 
- span.circle-icon {
-    margin-left: 20%;
-    float: left;
-    margin-top:-15px ; 
+span.circle-icon {
+  margin-left: 20%;
+  float: left;
+  margin-top: -13px;
+
+  font-size: 0.5rem;
+  color: white;
 }
 
 .btn-primary.next-arrow {
-   float: right;
-   width: 25%;
-   
-   }
+  float: right;
+  width: 25%;
+}
 
-   .btn-primary.back-arrow{
-     width: 20%;
-   }
-
-   .button-container {
-    
-   }
+.btn-primary.back-arrow {
+  width: 20%;
+}
