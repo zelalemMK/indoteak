@@ -108,8 +108,8 @@ export default function Barrel({ colorMap, handlePolygonClick }) {
             key={nanoid()}
             id={id}
             d={value.d}
-            fill={colorMap?.[id] || "#b4b4b4"}
-            stroke="#fff"
+            fill={colorMap?.[id] || "#fff"}
+            stroke="#000"
             strokeWidth="0.3"
             onClick={() => handlePolygonClick?.(id)}
           />

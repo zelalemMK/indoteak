@@ -14,6 +14,7 @@ import NavBar from "./components/nav/nav";
 
 
 
+
 function App() {
 
   const [colorMap, setColorMap] = useState({});
@@ -62,6 +63,7 @@ function App() {
 
       {/* <Header /> */}
       <NavBar />
+     
       {step === 1 && (
         <ChooseDesign
           selectedDesign={selectedDesign}

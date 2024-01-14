@@ -34,8 +34,8 @@ export default function Emma({colorMap, handlePolygonClick}) {
             key={nanoid()}
             id={id}
             points={value.points}
-            fill={colorMap?.[id] || "#b4b4b4"}
-            stroke="#fff"
+            fill={colorMap?.[id] || "#fff"}
+            stroke="#000"
             strokeWidth="0.3"
             onClick={() => handlePolygonClick?.(id)}
           />

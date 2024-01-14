@@ -1,94 +1,96 @@
 body{
     margin: 0;
-    
-}
-.display {
-   width: 50vw;
-   height: 90vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.text{
-    font-size: .7em;
-    font-family:Syne-Bold, Syne;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    
 }
 
-// dropdown style
-.dropdown-item a  {
+li {
    color: black !important;
+  font-size: .5rem;
 }
 
-
-.design-container {
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 10px
-
+span.fa-li{
+    width:4%;
+    color: blue;
+     
 }
 
-.design-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
+   .dropdown-left-side-ordered-lists {
+        margin-left: 13%;
+   }
 
-.design-item {
-  align-item: center;
-}
-.design-item:hover {
-      transform: scale(1.05);
-      }
-
-.pattern-title {
-     font-size: .4rem;
-    font-family:Syne-Bold, Syne;
-    font-weight: 200;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-
-.button-container.container  {
-   justify-content: center;
-    margin-top: 1%;
+.dropdown-right-side-ordered-lists {
+        margin-left: 13%;
+   }
 
    
-}
+   .design-it {
+    margin-top:20%;
+   }
 
-.b-arrow{
+   slick-slide > div {
    
-    margin-left: 15%;
+   }
+
+
+   button.slick-next:before {
+    color: black;
+   
+ }
+
+ button.slick-next:hover{
+    color: blue;
+ }
+
+
+ button.slick-prev:before {
+  color: black; 
+ }
+
+ .current-design-container{
+    width: 40%;
+  
+
+ }
+ div.design-it.container {
+padding: 100px;
+gap: 4px;
+padding-top: 15px;
+ }
+
+
+.current-design-container  {
+    margin-bottom: 25%;
+    margin-top: 0%;
+    
 }
-
-.f-arrow{
-margin-left: 50%;
-
-
-}
-.arrow{
-  color: #b4b4b4; 
-  width: 90%;
+ p span {
+    font-size: .2rem ; 
+    padding-left: 100%;
+ }
  
-}
-.container-dots {
-    width: 100%;
-    display: flex;
-}
-.dot {
-   width: 100px;  
+ .pattern-title{
+    margin-top: 7%;
+ }
 
+p {
+    font-size: .5rem;
+    }
+
+ span.circle-icon {
+    margin-left: 20%;
+    float: left;
+    margin-top:-15px ; 
 }
 
-
+.btn-primary.next-arrow {
+   float: right;
+   width: 25%;
    
+   }
+
+   .btn-primary.back-arrow{
+     width: 20%;
+   }
+
+   .button-container {
+    
+   }
