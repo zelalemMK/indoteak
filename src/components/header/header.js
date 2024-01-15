@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "./header.svg";
 import "./header.css";
 
 function Header() {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-  function displayMenu() {
-    setIsMenuVisible(!isMenuVisible);
-    console.log(`isMenuVisible is set to ${isMenuVisible}`);
-  }
 
   return (
     <div className="header-container">
