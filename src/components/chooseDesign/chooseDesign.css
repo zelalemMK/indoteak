@@ -1,68 +1,72 @@
-body{
-    margin: 0;
-    
-}
+/* chooseDesign.css */
+
+/* Base styles */
 .display {
-    max-width: 85%;
-    width: 95%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.text{
-    margin-top: 130px;
-    margin-bottom: 40px;
+    padding: 10px;
 }
 
-
-.design-item {
-width: inherit;
-align-item: center;
-position: cover;
-max-width: inherit;
-
+.title h1 {
+    font-size: 2.986rem;
+    /* Responsive font size */
 }
 
 .design-container {
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px
-
+    margin-top: 20px;
 }
 
 .design-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row by default */
+    grid-gap: 10px;
 }
 
+.svg-design {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.svg-design:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
 
 .button-container {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 20px;
-   margin: auto;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
-.design-item:hover {
-      transform: scale(1.15);
-}
-button {
-    padding: 15px 32px;
-    font-size: 16px;
-    
-    cursor: pointer;
-    bottom: 0px;
+.button-container .btn {
+    font-size: 1rem;
+    /* Larger font size for buttons */
+    padding: 10px 20px;
+    /* Larger hit area */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .design-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row on medium screens */
+    }
 
+    .title h1 {
+        font-size: 1.5rem;
+    }
+}
 
-   
+@media (max-width: 480px) {
+    .design-grid {
+        grid-template-columns: 1fr;
+        /* 1 item per row on small screens */
+    }
+
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .button-container .btn {
+        font-size: 0.9rem;
+    }
+}
