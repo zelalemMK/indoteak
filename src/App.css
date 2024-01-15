@@ -13,7 +13,7 @@ body, html {
 
 .app {
     position: relative;
-    background-color: lightgray
+    background-color: rgb(255, 255, 255);
 }
 
 .cover {

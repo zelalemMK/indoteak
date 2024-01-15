@@ -65,7 +65,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
           <h1 className="text-center text">Choose a Design</h1>
           <div className="design-container  ">
             <div className="design-grid ">
-              {displayedPatterns.map((pattern, index) => {
+              {displayedPatterns.map((pattern) => {
                 let CurrentDesign = pattern.Component();
                 return (
                   <div

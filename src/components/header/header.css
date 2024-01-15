@@ -1,25 +1,35 @@
-/* Desktop Display */
-body{
-  margin: 0;
-}
-.header {
-  max-width: 100%;
-  background-color: black;
-  height: 100px;
-  position: fixed;
-  width: 100%;
-  top: 0px;
+.nav >*, .nav {
+  border: 1px solid black;
 }
 
-.logo-container {
-  height: 100%;
+.nav {
+  /* background-color: pink; */
+  width: 95%;
+  /* height: 100%; */
+
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 3px solid pink; */
-}
-.logo {
-  /* border:3px solid pink; */
-  width: 300px;
+  justify-content: space-between;
 
+  align-items: center;
+  align-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+
+  list-style: none;
+
+  display: flex;
+    width: 787px;
+    height: 131px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
 }
