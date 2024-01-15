@@ -1,28 +1,27 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import logo from "./header.svg";
 import "./header.css";
 
-
-
 function Header() {
-  
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  
+
   function displayMenu() {
-      setIsMenuVisible(!isMenuVisible);
-      console.log(`isMenuVisible is set to ${isMenuVisible}`)
-    }
+    setIsMenuVisible(!isMenuVisible);
+    console.log(`isMenuVisible is set to ${isMenuVisible}`);
+  }
 
   return (
     <div className="header-container">
-      <img className="header-logo" src={logo} alt="Logo" />
+      <a href="https://fennel-purple-dteb.squarespace.com">
+        <img className="header-logo" src={logo} alt="Logo" />
+      </a>
 
       {/* <input type="checkbox" id="burger-checkbox" className="burger-checkbox" /> */}
-      <label htmlFor="burger-checkbox" className="burger-menu">
+      {/* <label htmlFor="burger-checkbox" className="burger-menu">
         <span className="burger-icon" onClick={displayMenu}>
           
         </span>
-      </label>
+      </label> */}
 
       <div className="nav-items">
         <div className="nav-item">PRODUCTS</div>
