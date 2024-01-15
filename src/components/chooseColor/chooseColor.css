@@ -1,40 +1,53 @@
-.body {
-    margin: 0;
-    padding: 0;
-}
-.choose-color-container {
-    max-width: 80%;
-    width: 70%;
-    justify-content: center;
-    bottom: 0px;
+.chooseColor-display {
+    /* border: 1px solid black; */
+
+    display: flex;
     height: 100%;
-    
-    
+
 }
-.color-container {
+
+.color-editor {
+    /* border: 1px solid rgb(255, 0, 0); */
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.half-screen-display {
+    /* border: 1px solid rgb(0, 0, 255); */
+    width: 50%;
+
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+
+.display-svg {
+    width: 45%;
+    border: 1px solid black;
+
+
+    /* display: flex;
     justify-content: center;
-    width: 20%;
-    margin-top: 150px;
+    align-items: center; */
 }
-.pattern {
-    width: inherit;
-    position: cover;
-    
+
+.selected-svg {
+    height: 45%;
 }
-.color-btn:hover{
-    transform: scale(1.05)
+
+svg {
+    height: 100%;
 }
+
 .color-grid {
-}
-.button {
-    width: 40%;
-    margin: 2px
-}
-.next-btn {
-    width: inherit;
-    margin-left:15%;
-    width: 150px;
-    height: 50px;
-
-
+    width: 45%;
 }
