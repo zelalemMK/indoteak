@@ -30,18 +30,16 @@
 }
 
 .selected-svg {
-    height: 45%;
+    height: 50%;
 }
 
 svg {
     height: 100%;
 }
 
-.color-grid {
-    width: 45%;
-}
-
-/* Existing CSS... */
+/* .color-grid {
+    width: 100%;
+} */
 
 /* Add this at the end of your CSS file */
 @media (max-width: 767px) {
@@ -51,7 +49,12 @@ svg {
         display: none;
     }
 
+    .chooseColor-display {
+        height: 550px;
+    }
+
     .color-editor {
+        /* height: 100%; */
         align-items: center;
         justify-content: space-around;
     }
@@ -61,6 +64,10 @@ svg {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .color-grid-container {
+        padding: 5px;
     }
 
     .color-grid {

@@ -1,60 +1,87 @@
-
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
+import { nanoid } from "nanoid";
 import React from "react";
 
-const ColorButton = ({ color, setSelectedColor }) => (
-  <Button className="color-btn container-fluid"
-    style={{ backgroundColor: color, width: "50px", height: "20px",   justifyContent:"center" }}
-    onClick={() => setSelectedColor(color)}
-  ></Button>
-);
+import "./colorGrid.css";
 
-export default function ColorGrid({ setSelectedColor, resetColors, setEraserActive, eraserActive }) {
-  const colors = [
-    "#FF0000",
-    "#FF6347",
-    "#FF4500",
-    "#FF1493", // Reds and Pinks
-    "#C71585",
-    "#DB7093",
-    "#FF69B4",
-    "#FFB6C1", // Pinks and Purple
-    "#800080",
-    "#9370DB",
-    "#8A2BE2",
-    "#9400D3", // Purples and Blue
-    "#0000FF",
-    "#4169E1",
-    "#1E90FF",
-    "#00BFFF",
-  ]; // Blues
+
+
+export default function ColorGrid({
+  setSelectedColor,
+  resetColors,
+  setEraserActive,
+  eraserActive,
+}) {
+  const gradientRed = [
+    "#ff0000",
+    "#e20000",
+    "#c60000",
+    "#aa0000",
+    "#8d0000",
+    "#710000",
+    "#550000",
+    "#380000",
+    "#1c0000",
+    "#000000",
+  ];
+
+  const gradientBlue = [
+    "#0000ff",
+    "#0000e2",
+    "#0000c6",
+    "#0000aa",
+    "#00008d",
+    "#000071",
+    "#000055",
+    "#000038",
+    "#00001c",
+    "#000000",
+  ];
+
+  const gradientYellow = [
+    "#ffff00",
+    "#e2e200",
+    "#c6c600",
+    "#aaaa00",
+    "#8d8d00",
+    "#717100",
+    "#555500",
+    "#383800",
+    "#1c1c00",
+    "#000000",
+  ];
+
+  const combinedGradients = [
+    ...gradientRed,
+    ...gradientBlue,
+    ...gradientYellow,
+  ];
+
   return (
-    <div className="button-grid shadow ">
-      {colors.map((color, index) => (
-        <ColorButton
-          key={index}
-          color={color}
-          setSelectedColor={setSelectedColor}
-        />
-      ))}
-      <div className="mt-2">
-        <Button
-          className="btn-secondary mx-1 my-1"
-          onClick={() => setSelectedColor(null)}
-        >
+    <div className="color-grid-container">
+      <div className="color-grid">
+        {combinedGradients.map((color) => (
+          <button
+            className="color-grid-item"
+            key={nanoid()}
+            style={{ background: color }}
+            onClick={() => setSelectedColor(color)}
+          />
+        ))}
+      </div>
+      <div className="color-grid-buttons">
+        <button className="button-item" onClick={() => setSelectedColor(null)}>
           Clear Color Selection
-        </Button>
-        <Button className="btn-secondary mx-1 my-1" onClick={resetColors}>
+        </button>
+        <button className="button-item" onClick={resetColors}>
           Erase All Colors
-        </Button>
-        <Button
-          className="btn-secondary mx-1 mb-1"
+        </button>
+        <button
+          className="button-item"
           onClick={() => setEraserActive((prev) => !prev)}
         >
           {eraserActive ? "Disable" : "Enable"} Eraser
-        </Button>
-
-        
+        </button>
       </div>
     </div>
   );

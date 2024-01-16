@@ -17,33 +17,47 @@ import Twister from "../../assets/designs/Twister";
 
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
-import Button from "react-bootstrap/Button";
+
+
+
+
+const Button = ({ onClick, disabled, children }) => {
+  return (
+    <button onClick={onClick} disabled={disabled} className="custom-button">
+      {children}
+    </button>
+  );
+};
+
+
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 3;
 
-const patterns = [
-  { id: "design1", name: "Amsterdam", Component: () =>  Amsterdam },
-  { id: "design2", name: "Amy", Component: () =>  Amy },
-  { id: "design3", name: "Barrel", Component: () =>  Barrel },
-  { id: "design4", name: "Chevron", Component: () =>  Chevron },
-  { id: "design5", name: "Emma", Component: () =>  Emma },
-  { id: "design6", name: "Frank", Component: () =>  Frank },
-  { id: "design7", name: "Fields", Component: () =>  Fields },
-  { id: "design8", name: "Herringbone", Component: () =>  Herringbone },
-  { id: "design9", name: "Hex", Component: () =>  Hex },
-  { id: "design10", name: "Penny Round", Component: () =>  PennyRound },
-  { id: "design11", name: "Rectangle", Component: () =>  Rectanlge }, // Please note the spelling correction in the name
-  { id: "design12", name: "Taylor", Component: () =>  Taylor },
-  { id: "design13", name: "Tommy", Component: () =>  Tommy },
-  { id: "design14", name: "Twister", Component: () =>  Twister },
-];
+  const patterns = [
+    { id: "design1", name: "Amsterdam", Component: () => Amsterdam },
+    { id: "design2", name: "Amy", Component: () => Amy },
+    { id: "design3", name: "Barrel", Component: () => Barrel },
+    { id: "design4", name: "Chevron", Component: () => Chevron },
+    { id: "design5", name: "Emma", Component: () => Emma },
+    { id: "design6", name: "Frank", Component: () => Frank },
+    { id: "design7", name: "Fields", Component: () => Fields },
+    { id: "design8", name: "Herringbone", Component: () => Herringbone },
+    { id: "design9", name: "Hex", Component: () => Hex },
+    { id: "design10", name: "Penny Round", Component: () => PennyRound },
+    { id: "design11", name: "Rectangle", Component: () => Rectanlge }, // Please note the spelling correction in the name
+    { id: "design12", name: "Taylor", Component: () => Taylor },
+    { id: "design13", name: "Tommy", Component: () => Tommy },
+    { id: "design14", name: "Twister", Component: () => Twister },
+  ];
 
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
   );
+
+
 
   const nextPage = () => {
     if ((page + 1) * patternsPerPage < patterns.length) {
@@ -63,32 +77,28 @@ const patterns = [
         <div className="title">
           <h1 className="text-center text">Choose A Design</h1>
         </div>
-        {/* <div className="design-container "> */}
-          <div className="design-grid ">
-            {displayedPatterns.map((pattern) => {
-              let CurrentDesign = pattern.Component();
-              return (
-                <div
-                  className="svg-design"
-                  key={nanoid()}
-                  onClick={() => {
-                    nextStep();
-                    onDesignSelect(pattern.Component);
-                  }}
-                >
-                  <CurrentDesign />
-                  <h3 className="pattern-name">{pattern.name}</h3>
-                </div>
-              );
-            })}
-          </div>
+        <div className="design-grid ">
+          {displayedPatterns.map((pattern) => {
+            let CurrentDesign = pattern.Component();
+            return (
+              <div
+                className="svg-design"
+                key={nanoid()}
+                onClick={() => {
+                  nextStep();
+                  onDesignSelect(pattern.Component);
+                }}
+              >
+                <CurrentDesign />
+                <h3 className="pattern-name">{pattern.name}</h3>
+              </div>
+            );
+          })}
+        </div>
         {/* </div> */}
 
-        <div className="button-container container  ">
-          <Button
-            onClick={previousPage}
-            disabled={page === 0}
-          >
+        <div className="button-container container">
+          <Button onClick={previousPage} disabled={page === 0}>
             Back
           </Button>
           <Button

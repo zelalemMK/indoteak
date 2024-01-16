@@ -26,14 +26,12 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
             handlePolygonClick={handlePolygonClick}
           />
         </div>
-        <div className="color-grid">
-          <ColorGrid
-            setSelectedColor={setSelectedColor}
-            resetColors={resetColors}
-            setEraserActive={setEraserActive}
-            eraserActive={eraseActive}
-          />
-        </div>
+        <ColorGrid
+          setSelectedColor={setSelectedColor}
+          resetColors={resetColors}
+          setEraserActive={setEraserActive}
+          eraserActive={eraseActive}
+        />
       </div>
       <div className="half-screen-display">
         <div className="display-svg">
