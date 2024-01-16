@@ -58,7 +58,7 @@
 .svg-design {
     width: 30%;
     height: 70%;
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
     cursor: pointer;
     transition: transform 0.3s ease;
 

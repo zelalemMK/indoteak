@@ -8,7 +8,13 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
   const [eraseActive, setEraserActive] = useState(false);
 
   function handlePolygonClick(id) {
-    if (selectedColor) {
+    if (eraseActive) {
+      // Erase color for the selected polygon
+      const newColorMap = { ...colorMap };
+      delete newColorMap[id]; // Remove the color mapping for this polygon
+      setColorMap(newColorMap);
+    } else if (selectedColor) {
+      // Set the selected color for the polygon
       setColorMap({ ...colorMap, [id]: selectedColor });
     }
   }
