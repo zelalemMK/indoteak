@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Amsterdam from "../../assets/designs/Amsterdam";
 import Amy from "../../assets/designs/Amy";
@@ -33,7 +33,7 @@ const Button = ({ onClick, disabled, children }) => {
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
-  const patternsPerPage = 3;
+  // const patternsPerPage = 3;
 
   const patterns = [
     { id: "design1", name: "Amsterdam", Component: () => Amsterdam },
@@ -51,6 +51,29 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     { id: "design13", name: "Tommy", Component: () => Tommy },
     { id: "design14", name: "Twister", Component: () => Twister },
   ];
+
+    const [patternsPerPage, setPatternsPerPage] = useState(3);
+
+  // Function to update the patternsPerPage based on screen width
+  const updatePatternsPerPage = () => {
+    if (window.innerWidth < 600) { // Assuming 600px as the breakpoint for mobile view
+      setPatternsPerPage(6);
+    } else {
+      setPatternsPerPage(3);
+    }
+  };
+
+
+
+    useEffect(() => {
+      updatePatternsPerPage(); 
+      window.addEventListener("resize", updatePatternsPerPage);
+      
+      return () => {
+        window.removeEventListener("resize", updatePatternsPerPage);
+      };
+    }, []);
+
 
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
