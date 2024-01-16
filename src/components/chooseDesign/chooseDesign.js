@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Amsterdam from "../../assets/designs/Amsterdam";
 import Amy from "../../assets/designs/Amy";
@@ -19,33 +19,34 @@ import { nanoid } from "nanoid";
 
 import "./chooseDesign.css";
 import Button from "react-bootstrap/Button";
-import Carousel from "react-bootstrap/Carousel";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Dropdown from "react-bootstrap/Dropdown";
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from "swiper/modules";
-// import SwiperCore from "swiper";
-// import { CarouselCaption } from "react-bootstrap";
-// import DesignCarousel from "./designCarousel";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import ProgressBar from "react-bootstrap/ProgressBar";
 
-
-import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faDiamond } from "@fortawesome/free-solid-svg-icons";
-  import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import Circle from "./circle.js"
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
+  const [circle] = useState(5);
+  const [active, setActive] = useState(0);
+  const [width, setWidth] = useState(0);
+  console.log(active)
+  const arr = [];
+  
+  for (let i = 1; i < circle ; i++)
+    arr.push(<Circle className={i <= active ? "circle active" : "circle"} key={i} >{i}</Circle>);
+
+
+  useEffect(() => {
+    setWidth(100/(circle -1) * active);
+  }, [circle, active]);
 
   const patterns = [
     {
@@ -153,17 +154,17 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     (page + 1) * patternsPerPage
   );
 
-  const nextPage = () => {
-    if ((page + 1) * patternsPerPage < patterns.length) {
-      setPage(page + 1);
-    }
-  };
+  // const nextPage = () => {
+  //   if ((page + 1) * patternsPerPage < patterns.length) {
+  //     setPage(page + 1);
+  //   }
+  // };
 
-  const previousPage = () => {
-    if (page > 0) {
-      setPage(page - 1);
-    }
-  };
+  // const previousPage = () => {
+  //   if (page > 0) {
+  //     setPage(page - 1);
+  //   }
+  // };
 
   // slide show settings
   const settings = {
@@ -184,14 +185,9 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
             id="dropdown-basic"
             className="btn show bg-white text-dark border-0  w-100"
           >
-          
-              {/* <div class="fa-li">
-                <FontAwesomeIcon icon={faAngleDown} />
-              </div> */}
-              
-                <p className=""> How it works</p>
             
-           
+
+            <p className=""> How it works</p>
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="w-100 justify-content-center m-auto border-top-0  border-end-1 border-start-1 border-4 shadow-lg text-light dropdown-menu-list">
@@ -199,19 +195,19 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
               <div className="dropdown-left-side-ordered-lists">
                 <ol class="fa-ul ">
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Select your tile preference.
                   </li>
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Choose your color style.
                   </li>
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Save as a PDF
@@ -222,25 +218,25 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
               <div dropdown-right-side-ordered-lists>
                 <ol class="fa-ul ">
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Lorem ipsum dolor sit elit.
                   </li>
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Lorem ipsum dolor sit amet.
                   </li>
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Lorem ipsum dolor sit amet.
                   </li>
                   <li>
-                    <span class="fa-li">
+                    <span class="fa-li diamond-icon">
                       <FontAwesomeIcon icon={faDiamond} />
                     </span>
                     Lorem ipsum dolor sit amet.
@@ -252,6 +248,21 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
         </Dropdown>
       </div>
 
+      {/* progress section */}
+
+      <div className="progress-container">
+        <div className="progress-content w-50 m-auto">
+          <div className="progress-progress-bar">
+            <div
+              className="progress-progress"
+              style={{ width: width + "%" }}
+            ></div>
+            {arr}
+          </div>
+        </div>
+      </div>
+
+      {/* Design section */}
       <div
         className="design-container  activeIndex={index} onSelect={handleSelect} 
        w-75 m-auto  "
@@ -263,7 +274,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
               return (
                 <div
-                  className="design-it container bg-white  w-10  p-3 mb-5 border border-5  border-light"
+                  className="design-it container bg-white shadow w-10  p-3 mb-5 border border-5  border-light opacity-100"
                   key={nanoid()}
                   onClick={() => {
                     nextStep();
@@ -271,18 +282,20 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                   }}
                 >
                   <div className="d-flex ">
-                    <div className="current-design-container">
-                      <CurrentDesign />
+                    <div className="current-design-container  ">
+                      <CurrentDesign className="w-53" />
                     </div>
-                    <p className="pattern-title  fs-5 fw-light  ">
-                      <span>{pattern.id}</span>
-                    </p>
-                    <span className="circle-icon ">
-                      <FontAwesomeIcon
-                        icon={faCircle}
-                        className="border border-lightgray rounded"
-                      />
-                    </span>
+                    <div>
+                      <p className="pattern-title  fs-3  fw-light  ">
+                        <span className="design-name">{pattern.id}</span>
+                      </p>
+                      <span className="circle-icon ">
+                        <FontAwesomeIcon
+                          icon={faCircle}
+                          className="border border-dark rounded"
+                        />
+                      </span>
+                    </div>
                   </div>
                   <p className="mb-0  fw-light">{pattern.Size}</p>
                   <p className="mb-0 fw-light">{pattern.Thickness}</p>
@@ -294,29 +307,29 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
         </div>
       </div>
 
-      {/* <div className="button-container container-fluid w-75  mt-5">
+      <div className="button-container container-fluid w-75  mt-5">
         <Button
           className="back-arrow  arrow btn-secondary"
-          onClick={previousPage}
-          disabled={page === 0}
+          disabled={active > 0 ? false : true}
+          onClick={() => {
+            active <= 0 ? setActive(0) : setActive(active - 1);
+          }}
         >
           BACK
         </Button>
 
         <Button
           className="next-arrow  arrow btn-secondary"
-          onClick={nextPage}
-          disabled={(page + 1) * patternsPerPage >= patterns.length}
+          disabled={active >= circle - 1 ? true : false}
+          onClick={() => {
+            active >= circle ? setActive(circle) : setActive(active + 1);
+          }}
         >
           NEXT
         </Button>
-      </div> */}
+      </div>
 
-      {/* <div className="container-dots">
-          {Array.from({ length: 3 }).map((item, index) => (
-            <div className="dot"></div>
-          ))}
-        </div> */}
+    
     </>
   );
 };

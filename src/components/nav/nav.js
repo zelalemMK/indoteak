@@ -10,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 function NavBar() {
   return (
     <>
-      <Navbar className='' collapseOnSelect expand="md" bg="light" variant="dark">
+      <Navbar className='' collapseOnSelect expand="md" bg="white" variant="dark">
         <Container>
           <Navbar.Brand
             className="logo-container py-0"
