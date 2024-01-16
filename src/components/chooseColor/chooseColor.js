@@ -7,6 +7,7 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraseActive, setEraserActive] = useState(false);
 
+
   function handlePolygonClick(id) {
     if (eraseActive) {
       // Erase color for the selected polygon
@@ -26,12 +27,11 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
   return (
     <div className="chooseColor-display">
       <div className="color-editor">
-        <div className="selected-svg">
           <DesignComponent
+            className="selected-svg"
             colorMap={colorMap}
             handlePolygonClick={handlePolygonClick}
           />
-        </div>
         <ColorGrid
           setSelectedColor={setSelectedColor}
           resetColors={resetColors}

@@ -69,7 +69,7 @@ export default function ColorGrid({
           />
         ))}
       </div>
-      <div className="color-grid-buttons">
+      {/* <div className="color-grid-buttons">
         <button className="button-item" onClick={() => setSelectedColor(null)}>
           Clear Color Selection
         </button>
@@ -82,7 +82,7 @@ export default function ColorGrid({
         >
           {eraserActive ? "Disable" : "Enable"} Eraser
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

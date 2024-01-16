@@ -29,12 +29,13 @@
     border: 1px solid black;
 }
 
-.selected-svg {
+/* .selected-svg {
     height: 50%;
-}
+} */
 
 svg {
     height: 100%;
+    width: 95%;
 }
 
 /* .color-grid {
@@ -50,7 +51,8 @@ svg {
     }
 
     .chooseColor-display {
-        height: 550px;
+        /* height: 550px; */
+        height: 90vh;
     }
 
     .color-editor {
