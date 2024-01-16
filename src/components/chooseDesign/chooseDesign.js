@@ -56,7 +56,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
   // Function to update the patternsPerPage based on screen width
   const updatePatternsPerPage = () => {
-    if (window.innerWidth < 600) { // Assuming 600px as the breakpoint for mobile view
+    if (window.innerWidth < 778) { // Assuming 600px as the breakpoint for mobile view
       setPatternsPerPage(6);
     } else {
       setPatternsPerPage(3);
@@ -68,7 +68,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     useEffect(() => {
       updatePatternsPerPage(); 
       window.addEventListener("resize", updatePatternsPerPage);
-      
+
       return () => {
         window.removeEventListener("resize", updatePatternsPerPage);
       };

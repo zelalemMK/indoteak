@@ -42,11 +42,6 @@
 
 .design-grid {
     width: 90%;
-    /* border: 1px solid red; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* justify-content: space-around; */
-    /* align-items: center;*/
 
 
     display: flex;
@@ -128,3 +123,4 @@
         font-size: 0.9rem;
     }
 } */
+

@@ -8,9 +8,6 @@ import "./colorGrid.css";
 
 export default function ColorGrid({
   setSelectedColor,
-  resetColors,
-  setEraserActive,
-  eraserActive,
 }) {
   const gradientRed = [
     "#ff0000",
