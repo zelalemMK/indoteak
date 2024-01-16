@@ -1,14 +1,9 @@
-// import { Button } from "react-bootstrap";
 import { nanoid } from "nanoid";
-import React from "react";
+import React, { useState } from "react";
 
 import "./colorGrid.css";
 
-
-
-export default function ColorGrid({
-  setSelectedColor,
-}) {
+export default function ColorGrid({ setSelectedColor }) {
   const gradientRed = [
     "#ff0000",
     "#e20000",
@@ -54,32 +49,30 @@ export default function ColorGrid({
     ...gradientYellow,
   ];
 
+  const [selected, setSelected] = useState(null);
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color); // External function to set color
+    setSelected(color); // Internal state to track selected color
+  };
+
   return (
     <div className="color-grid-container">
       <div className="color-grid">
         {combinedGradients.map((color) => (
           <button
-            className="color-grid-item"
+            className={`color-grid-item ${
+              selected === color ? "selected" : ""
+            }`}
             key={nanoid()}
-            style={{ background: color }}
-            onClick={() => setSelectedColor(color)}
+            style={{
+              background: color,
+              transform: selected === color ? "scale(1.2)" : "scale(1)",
+            }}
+            onClick={() => handleColorSelect(color)}
           />
         ))}
       </div>
-      {/* <div className="color-grid-buttons">
-        <button className="button-item" onClick={() => setSelectedColor(null)}>
-          Clear Color Selection
-        </button>
-        <button className="button-item" onClick={resetColors}>
-          Erase All Colors
-        </button>
-        <button
-          className="button-item"
-          onClick={() => setEraserActive((prev) => !prev)}
-        >
-          {eraserActive ? "Disable" : "Enable"} Eraser
-        </button>
-      </div> */}
     </div>
   );
 }
