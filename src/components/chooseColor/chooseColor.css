@@ -21,21 +21,19 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-content: center;
 
 }
 
 .display-svg {
     width: 45%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-/* .selected-svg {
-    height: 50%;
-} */
 
 svg {
     height: 100%;
-    width: 95%;
+    width: 100%;
 }
 
 /* .color-grid {

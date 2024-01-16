@@ -24,6 +24,9 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
     setColorMap({});
   };
 
+
+
+
   return (
     <div className="chooseColor-display">
       <div className="color-editor">
