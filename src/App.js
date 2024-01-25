@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "./components/header/header"
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
@@ -14,14 +14,35 @@ function App() {
   const [step, setStep] = useState(1);
   const [selectedDesign, setSelectedDesign] = useState(null);
 
-  const nextStep = () => {
-    setStep((prevStep) => prevStep + 1);
+useEffect(() => {
+  // Function to handle back button navigation
+  const handleBackButton = (event) => {
+    // You can add more sophisticated logic here if needed
+    setStep(window.history.state?.step || 1);
   };
 
-  const prevStep = () => {
-    setStep((prevStep) => prevStep - 1);
-  };
+  window.addEventListener("popstate", handleBackButton);
 
+  return () => {
+    window.removeEventListener("popstate", handleBackButton);
+  };
+}, []);
+
+const nextStep = () => {
+  const newStep = step + 1;
+  setStep(newStep);
+  // Update browser history
+  window.history.pushState(
+    { step: newStep },
+    `Step ${newStep}`,
+    `/step${newStep}`
+  );
+};
+
+const prevStep = () => {
+  // This will trigger 'popstate' event
+  window.history.back();
+};
 
 
 
