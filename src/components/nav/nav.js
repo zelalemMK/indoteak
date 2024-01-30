@@ -10,10 +10,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 function NavBar() {
   return (
     <>
-      <Navbar className='' collapseOnSelect expand="md" bg="white" variant="dark">
-        <Container>
+      <Navbar
+        className=" "
+        collapseOnSelect
+        expand="md"
+        bg="white"
+        variant="dark"
+      >
+        <Container className="">
           <Navbar.Brand
-            className="logo-container py-0"
+            className="logo-container m-0 "
             href="https://indoteakdesign.com/"
             target="_blank"
             rel="noreferrer"
@@ -25,25 +31,36 @@ function NavBar() {
             aria-controls="responsive-navbar-nav"
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="justify-content-space-between ">
               <Nav.Item>
                 <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor-products">
                   PRODUCTS
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor">
-                  INSPIRATION
+                <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor-products">
+                  LOOKBOOK
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="link-2">TRADE</Nav.Link>
+                <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor">
+                  INSPIRATIONS
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="Link-3">SAMPLE</Nav.Link>
+                <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor-products">
+                  TRADE
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link eventKey="link-2">ABOUT</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="Link-4"> CONTACTS</Nav.Link>
+                <Nav.Link eventKey="Link-3">CONTACT</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="Link-4"> SEARCH</Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

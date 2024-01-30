@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
 }
-.choose-color-wrapper{
-    margin-top: 0;
+.choose-color-container {
+    margin-left: 20%;
+    justify-content: center;
+ 
 }
 .choose-color-container {
-    float: left;
+  
+   
     
 }
 .color-container {
@@ -19,9 +22,8 @@
   
 }
 .pattern1 {
-    width: 120%;
     position: cover;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
     justify-content: center;
     align-item: center;
@@ -29,19 +31,19 @@
 }
 .color-btn {
     display: grid; 
-     justify-Content: center;
+    grid-templete-columns: repeat(3, 1fr);
+    justify-Content: center;
     align-items: center;
     width: 40px;
     height: 30px;
-   
-    
      
 }
+
 .color-btn:hover{
     transform: scale(1.05)
 }
 .color-btn.btn {
-   width: 40px;
+   width: 45px;
     border: solid white;
     border-radius: 0px;
 
@@ -77,4 +79,11 @@
 }
 .backArrow {
     float: left;
+}
+
+/* choose color buttons*/
+
+ .choose-color-buttons span{
+ width: 50%;
+   
 }

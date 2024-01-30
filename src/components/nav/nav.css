@@ -3,7 +3,6 @@
     font-family: Syne-Bold, Syne;
     margin-top: 15px;
     color: #b4b4b4;
-   
     
 }
 .check-btn {
@@ -11,8 +10,6 @@
     line-height: 80px;
     margin-top: 15px;
     cursor: pointer;
-    
- 
 }
 
 .logo-container {
@@ -20,11 +17,10 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  /* border: 3px solid pink; */
   margin-top: 20px;
 }
 img.logo {
-  width: 30%;
+  width: 45%;
   float: left;
   margin: 0;
 }
@@ -32,7 +28,7 @@ a {
   filter: invert(1);
 }
 nav a{
-      font-size: .7em !important;
+    font-size: .7em !important;
     font-family:Syne-Bold, Syne;
     font-weight: 700;
 }

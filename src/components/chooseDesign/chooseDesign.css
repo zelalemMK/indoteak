@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 .design-text {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 7px;
   letter-spacing: 1px;
@@ -17,16 +17,60 @@ li {
   letter-spacing: 1px;
 }
 
-span.fa-li {
-  width: 4%;
-  color: blue;
+.dropdown-toggle::after {
+  display: none !important;
 }
-.diamond-icon {
-  margin-left: -15%;
+.design-how-underline{
+border-bottom: 1px solid lightgray;
+
+}
+.dropdown-menu-list {
+  border-top: 0 !important;
+  border-bottom: 4px solid lightgray !important;
 }
 
-.dropdown-left-side-ordered-lists {
-  margin-left: 23%;
+.chevron-down {
+  margin-left: 5%;
+}
+.chevron-down {
+  font-size: 0.8rem;
+}
+.design-dropdown .dropdown-toggle.active .chevron-down{
+ transform: rotate(180deg);
+}
+.chevron-down svg {
+  transition: transform 0.5s ease-in;
+}
+
+.dropdown-ordered-list {
+  margin-bottom: -3%;
+}
+.diamond-icon {
+  margin-left: -10%;
+  color: blue;
+  top: 10%;
+}
+
+.icon-number {
+  position: absolute;
+  color: white;
+  top: 10%;
+}
+.icon-number.num-1 {
+  left: -18%;
+}
+.icon-number.num-2 {
+  left: -19%;
+}
+.icon-number.num-3 {
+  left: -26%;
+}
+
+.fa-ul span {
+  z-index: 1;
+}
+.fa-ul span {
+  margin-top: 1%;
 }
 
 .design-it {
@@ -34,8 +78,8 @@ span.fa-li {
   border-left: 10px solid white;
 }
 
-.design-how-down {
-  margin-left: 45%;
+.design-how {
+  font-size: 0.7rem;
 }
 
 svg.svg-inline--fa.fa-li {
@@ -56,24 +100,24 @@ button.slick-next:before {
   height: 100vh;
   width: 100vw;
 }
+.progress-container {
+  margin-top: 8%;
+}
 
 .progress-content {
   align-items: center;
-  
 }
 .progress-progress-bar {
- display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  
-  
 }
 
 .progress-progress::before {
- content: "";
+  content: "";
   position: absolute;
-  background-color: blue!important;
+  background-color: blue !important;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -88,7 +132,7 @@ button.slick-next:before {
   background-color: light-blue;
   top: 50%;
   left: 0;
-  transform-translateY: (-50%);
+  transform-translatey: (-50%);
   border-radius: 5px;
   height: 4px;
   width: 50%;
@@ -112,61 +156,82 @@ button.slick-next:before {
   border-color: blue;
 }
 
-// styling slick buttens
+// styling slick buttons
+
 button.slick-next:hover {
   color: blue;
 }
 
-button.slick-prev:before {
-  color: black;
+button.slick-next:before {
+  color: blue;
 }
-
+button.slick-prev:before {
+  color: blue;
+}
 
 //styling select design
-.current-design-container {
-  width: 40%;
-}
-div.design-it.container {
-  padding: 100px;
-  padding-top: 15px;
-  
+
+.slick-slide {
+  position: relative;
 }
 
+.slick-slide > div {
+  margin: 0 -3px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.design-it {
+  margin-left: 103% !important;
+  border-radius: 10%;
+  width: 84% !important;
+  z-depth: 1;
+  overflow: hidden;
+}
+.design-it{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 3px 10px 0 rgba(0,0,0,0.19);
+  transform: translateY(-2px)
+}
+.design-container {
+  width: 75%;
+  margin: auto;
+  margin-top: 10%
+ }
 .current-design-container {
- width: 50%;
-  margin-bottom: 25%;
-  margin-top: 0%;
+  width: 50%;
+  margin-bottom: 15%;
+  
 }
 p span {
-  font-size: 0.2rem;
-  padding-left: 100%;
+  font-size: 0.4rem;
+  padding-left: 25%;
   font-family: Syne-Bold, Syne;
   font-weight: 700;
-  margin-bottom: 7px;
-  
+  margin-bottom: 0px;
 }
 
-
-.design-name{
-  font-size: 19%;
+.design-name {
+}
+.design-pattern-descriptions{
+  margin-top: -10%
 }
 
+.slick-arrow {
+}
 p {
   font-size: 0.5rem;
   font-family: Syne-Bold, Syne;
   font-weight: 700;
   margin-bottom: 7px;
-  letter-spacing: 1px;
 }
 
 span.circle-icon {
-  float: right;
-  margin-top: -60px;
-  font-size: 0.6rem;
+  font-size: 0.4rem;
   color: white;
 }
- .svg-inline--fa{
-  margin-left: 250%;
+span.circle-icon {
+  margin-left: 20%;
 }
 
 .btn-primary.next-arrow {
@@ -175,5 +240,5 @@ span.circle-icon {
 }
 
 .btn-primary.back-arrow {
-  width: 20%;
+  width: 25%;
 }

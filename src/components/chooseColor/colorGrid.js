@@ -2,6 +2,8 @@
 import { Button } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+
 const ColorButton = ({ color, setSelectedColor }) => (
   <Button className="color-btn   container-fluid "
     style={{ backgroundColor: color }}
@@ -36,29 +38,37 @@ export default function ColorGrid({ setSelectedColor, resetColors, setEraserActi
             <ColorButton
               key={index}
               color={color}
-              // setSelectedColor={setSelectedColor}
+              setSelectedColor={setSelectedColor}
             />
           </div>
         ))}
-
-        {/* <div className="mt-2">
+      </Row>
+      <div className="mt-4  choose-color-buttons d-grid ">
+        <div>
           <Button
-            className="btn-secondary mx-1 my-1"
+            className="btn-secondary mx-1 my-1    btn-block"
             onClick={() => setSelectedColor(null)}
           >
-            Clear Color Selection
+            Clear Color 
           </Button>
-          <Button className="btn-secondary mx-1 my-1" onClick={resetColors}>
-            Erase All Colors
-          </Button>
+        </div>
+        <span>
           <Button
-            className="btn-secondary mx-1 mb-1"
+            className="btn-secondary mx-1 my-1 btn-lg "
+            onClick={resetColors}
+          >
+            Erase All 
+          </Button>
+        </span>
+        <span>
+          <Button
+            className="btn-secondary mx-1 mb-1  btn-block "
             onClick={() => setEraserActive((prev) => !prev)}
           >
             {eraserActive ? "Disable" : "Enable"} Eraser
           </Button>
-        </div> */}
-      </Row>
+        </span>
+      </div>
     </>
   );
 }

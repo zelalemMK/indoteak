@@ -38,20 +38,20 @@ function App() {
 
 
   // Handle when the initial animation has happened and set the display to none for the cover. 
-  useEffect(() => {
-    const node = coverRef.current;
-    const handleDisplayNone = () => setDisplayNone(true)
+  // useEffect(() => {
+  //   const node = coverRef.current;
+  //   const handleDisplayNone = () => setDisplayNone(true)
 
-    node.addEventListener("transitionend", handleDisplayNone);
-    return () => {
-      node.removeEventListener("transitionend", handleDisplayNone);
-    };
-  })
+  //   node.addEventListener("transitionend", handleDisplayNone);
+  //   return () => {
+  //     node.removeEventListener("transitionend", handleDisplayNone);
+  //   };
+  // })
 
 
   return (
     <div className="app">
-      <div
+      {/* <div
         ref={coverRef}
         className={`cover ${fadeOut ? "fade-out" : ""} ${
           displayNone ? "display-none" : ""
@@ -59,7 +59,7 @@ function App() {
         onClick={handleFadeClick}
       >
         <img src={logo} alt="logo" className="logo" />
-      </div>
+      </div> */}
 
       {/* <Header /> */}
       <NavBar />
