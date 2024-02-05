@@ -6,6 +6,9 @@ import ChooseColor from "./components/chooseColor/chooseColor";
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
 import "./App.css";
+import "./square.css";
+// import "./components/"
+
 
 
 function App() {
