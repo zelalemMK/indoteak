@@ -17,17 +17,7 @@ import Twister from "../../assets/designs/Twister";
 
 import { nanoid } from "nanoid";
 import "./chooseDesign.css";
-
-
-
-
-const Button = ({ onClick, disabled, children }) => {
-  return (
-    <button onClick={onClick} disabled={disabled} className="custom-button">
-      {children}
-    </button>
-  );
-};
+import Button from "../button/button";
 
 
 

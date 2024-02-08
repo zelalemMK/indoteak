@@ -36,9 +36,11 @@ svg {
     width: 100%;
 }
 
-/* .color-grid {
-    width: 100%;
-} */
+.chooseColor-button-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Add this at the end of your CSS file */
 @media (max-width: 767px) {
