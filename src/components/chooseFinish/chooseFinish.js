@@ -4,11 +4,10 @@ import jsPDF from "jspdf";
 import React, { useRef } from "react";
 
 import OrderForm from "./orderForm/orderForm";
-import Button from "react-bootstrap/Button";
+import Button from "../button/button";
 
 import "./chooseFinish.css";
 import "./orderForm/orderForm.css";
-
 
 const saveSvgAsPdf = async (svgElement, name) => {
   const canvas = await html2canvas(svgElement);
@@ -30,21 +29,12 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
   const svgRef = useRef(null);
   return (
     <div className="choose-finish">
-      <div className="pdf-style">
-        <div ref={svgRef}>
-          <DesignComponent colorMap={colorMap} />
-        </div>
-        <Button
-          className="custom-button"
-          onClick={() => saveSvgAsPdf(svgRef.current, componentName)}
-        >
-          Save as PDF
-        </Button>
+      <div className="order-form">
+        <OrderForm />
       </div>
-      <div className="order-form-container">
-        <div>
-          <OrderForm />
-        </div>
+      <div className="tile-preview">
+        <DesignComponent colorMap={colorMap} />
+        <Button textContent={"Download PDF"}/>
       </div>
     </div>
   );

@@ -1,25 +1,12 @@
 .choose-finish {
-    border: 1px solid red;
-    /* width: 90%; */
-    height: 90vh;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
-.order-form-container, .pdf-style  {
+
+.order-form {
     width: 50%;
-    height: 90%;
 }
 
-.pdf-style {
-    border: 1px solid red;
-    /* max-width: 30%; */
-    /* margin-left: 25%; */
-    /* width: 75vw; */
-    /* margin-top: 150px; */
-    /* bottom: 20%; */
-    
-}
-
-.text-btn {
-    /* justify-content: center; */
+.tile-preview {
+    width: 50%;
 }

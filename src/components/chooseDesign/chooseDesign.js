@@ -19,8 +19,6 @@ import { nanoid } from "nanoid";
 import "./chooseDesign.css";
 import Button from "../button/button";
 
-
-
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   // const patternsPerPage = 3;
@@ -42,35 +40,31 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     { id: "design14", name: "Twister", Component: () => Twister },
   ];
 
-    const [patternsPerPage, setPatternsPerPage] = useState(3);
+  const [patternsPerPage, setPatternsPerPage] = useState(3);
 
   // Function to update the patternsPerPage based on screen width
   const updatePatternsPerPage = () => {
-    if (window.innerWidth < 778) { // Assuming 600px as the breakpoint for mobile view
+    if (window.innerWidth < 778) {
+      // Assuming 600px as the breakpoint for mobile view
       setPatternsPerPage(6);
     } else {
       setPatternsPerPage(3);
     }
   };
 
+  useEffect(() => {
+    updatePatternsPerPage();
+    window.addEventListener("resize", updatePatternsPerPage);
 
-
-    useEffect(() => {
-      updatePatternsPerPage(); 
-      window.addEventListener("resize", updatePatternsPerPage);
-
-      return () => {
-        window.removeEventListener("resize", updatePatternsPerPage);
-      };
-    }, []);
-
+    return () => {
+      window.removeEventListener("resize", updatePatternsPerPage);
+    };
+  }, []);
 
   const displayedPatterns = patterns.slice(
     page * patternsPerPage,
     (page + 1) * patternsPerPage
   );
-
-
 
   const nextPage = () => {
     if ((page + 1) * patternsPerPage < patterns.length) {
@@ -111,15 +105,16 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
         {/* </div> */}
 
         <div className="button-container container">
-          <Button onClick={previousPage} disabled={page === 0}>
-            Back
-          </Button>
           <Button
+            textContent={"Back"}
+            onClick={previousPage}
+            disabled={page === 0}
+          />
+          <Button
+            textContent={"Next"}
             onClick={nextPage}
             disabled={(page + 1) * patternsPerPage >= patterns.length}
-          >
-            Next
-          </Button>
+          />
         </div>
       </div>
     </>
