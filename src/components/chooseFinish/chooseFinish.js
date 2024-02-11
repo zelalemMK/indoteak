@@ -1,8 +1,14 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+
 import React, { useRef } from "react";
-import "./chooseFinish.css"
+
+import OrderForm from "./orderForm/orderForm";
 import Button from "react-bootstrap/Button";
+
+import "./chooseFinish.css";
+import "./orderForm/orderForm.css";
+
 
 const saveSvgAsPdf = async (svgElement, name) => {
   const canvas = await html2canvas(svgElement);
@@ -16,27 +22,30 @@ const saveSvgAsPdf = async (svgElement, name) => {
   pdf.save(`${name}.pdf`);
 };
 
-const divStyle = {
-  width: "45vw",
-  height: "45vh",
-};
-
 const ChooseFinish = ({ DesignComponent, colorMap }) => {
-      const componentName =
-        DesignComponent.name ||
-        DesignComponent.displayName ||
-        "UnnamedComponent";
+  const componentName =
+    DesignComponent.name || DesignComponent.displayName || "UnnamedComponent";
 
   console.log(colorMap);
   const svgRef = useRef(null);
   return (
-    <div className="container-fluid pdf-style" style={divStyle}>
-      <div ref={svgRef}>
-        <DesignComponent colorMap={colorMap} />
+    <div className="choose-finish">
+      <div className="pdf-style">
+        <div ref={svgRef}>
+          <DesignComponent colorMap={colorMap} />
+        </div>
+        <Button
+          className="custom-button"
+          onClick={() => saveSvgAsPdf(svgRef.current, componentName)}
+        >
+          Save as PDF
+        </Button>
       </div>
-      <Button  className=" text-bnt m-3" onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
-        Save as PDF
-      </Button>
+      <div className="order-form-container">
+        <div>
+          <OrderForm />
+        </div>
+      </div>
     </div>
   );
 };

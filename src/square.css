@@ -27,7 +27,7 @@ h1 {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: Belleza, sans-serif;
 	font-size: 56px;
 	font-style: normal;
@@ -51,7 +51,7 @@ h2 {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: Belleza, sans-serif;
 	font-size: 24px;
 	font-style: normal;
@@ -75,7 +75,7 @@ h3 {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: Syne, sans-serif;
 	font-size: 56px;
 	font-variant: normal;
@@ -98,7 +98,7 @@ h4 {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: Syne, sans-serif;
 	font-size: 26px;
 	font-variant: normal;
@@ -121,7 +121,7 @@ h4 {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: "DM Sans", sans-serif;
 	font-size: 17px;
 	font-style: normal;
@@ -146,7 +146,7 @@ p {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: "DM Sans", sans-serif;
 	font-size: 15px;
 	font-style: normal;
@@ -171,7 +171,7 @@ p {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: "DM Sans", sans-serif;
 	font-size: 13px;
 	font-style: italic;
@@ -208,7 +208,7 @@ p {
 	margin: 0;
 	padding: 0;
 	border-width: 0;
-	-epub-hyphens: none;
+	/* -epub-hyphens: none; */
 	font-family: Syne, sans-serif;
 	font-size: 15px;
 	font-variant: normal;

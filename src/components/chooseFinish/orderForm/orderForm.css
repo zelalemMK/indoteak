@@ -1,0 +1,112 @@
+/* Container for the form, assuming it's half the width of the parent container */
+.form-container {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Style the form elements */
+.sample-order-form {
+    background-color: #ffffff;
+    /* White background */
+    padding: 1rem;
+    /* Padding around the form content */
+    border-radius: 8px;
+    /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* Example font */
+}
+
+/* Headings for form sections */
+.sample-order-form h2 {
+    color: #333333;
+    /* Dark grey color for the text */
+    margin-bottom: 0.5rem;
+    /* Space below headings */
+    font-size: 1.5rem;
+    /* Size of the headings */
+}
+
+/* Style for labels */
+.sample-order-form label {
+    display: block;
+    /* Make labels block elements */
+    margin: 0.5rem 0;
+    /* Margin around labels */
+    color: #333333;
+    /* Text color */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+/* Style for input fields */
+.sample-order-form input[type="text"],
+.sample-order-form input[type="email"] {
+    width: 100%;
+    /* Input field should fill the container */
+    padding: 0.5rem;
+    /* Padding inside the input fields */
+    margin-bottom: 1rem;
+    /* Space below each field */
+    border: 1px solid #cccccc;
+    /* Light grey border */
+    border-radius: 4px;
+    /* Rounded corners for the input fields */
+}
+
+/* Required field asterisk style */
+.sample-order-form label::after {
+    content: "*";
+    /* Add an asterisk */
+    color: #ff0000;
+    /* Red color for emphasis */
+    margin-left: 0.25rem;
+    /* Space between label text and asterisk */
+}
+
+/* Style for optional fields to hide the asterisk */
+.sample-order-form label.optional::after {
+    content: none;
+    /* No content for optional labels */
+}
+
+/* Style for the submit button */
+.sample-order-form button {
+    background-color: #000000;
+    /* Black background for the button */
+    color: #ffffff;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 1rem 2rem;
+    /* Padding around the text */
+    text-transform: uppercase;
+    /* Uppercase text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    /* Rounded corners for the button */
+    font-size: 1rem;
+    /* Size of the button text */
+    margin-top: 1rem;
+    /* Space above the button */
+}
+
+/* Hover effect for the button */
+.sample-order-form button:hover {
+    background-color: #333333;
+    /* Darker background on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 100%;
+        /* Form should take full width on small screens */
+        padding: 1rem;
+    }
+}
