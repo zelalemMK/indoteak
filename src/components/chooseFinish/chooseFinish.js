@@ -34,7 +34,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
       </div>
       <div className="tile-preview">
         <DesignComponent colorMap={colorMap} />
-        <Button textContent={"Download PDF"}/>
+        <Button textContent={"Download PDF"} onClick={saveSvgAsPdf} />
       </div>
     </div>
   );

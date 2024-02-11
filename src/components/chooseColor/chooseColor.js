@@ -76,8 +76,7 @@ function ChooseColor({
       <div className="chooseColor-button-container">
         <Button
           onClick={nextStep}
-          children={"Button"}
-          className="button-element"
+          textContent={"Button"}
         />
       </div>
     </div>

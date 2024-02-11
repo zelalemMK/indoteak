@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./orderForm.css"
+import Button from "../../button/button";
 
 const OrderForm = () => {
   // State for form fields
@@ -28,6 +29,7 @@ const OrderForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Process form data here
+    // WIP
     console.log(form);
   };
 
@@ -115,7 +117,7 @@ const OrderForm = () => {
         />
       </label>
 
-      <button type="submit">Order Sample</button>
+      <Button textContent={"Submit"} onClick={handleSubmit} />
     </form>
   );
 };
