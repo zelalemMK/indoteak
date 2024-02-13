@@ -1,6 +1,6 @@
 .chooseColor-display {
     display: flex;
-    height: 100%;
+    /* height: 100%; */
 
 }
 
@@ -19,14 +19,31 @@
     width: 50%;
 
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
 
 }
 
+.svg-holder {
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Creates two columns */
+    grid-template-rows: 1fr 1fr;
+    /* Creates two rows */
+    gap: 1px;
+    width:100%
+}
+
+.chooseColor-button-container {
+    height: 10%;
+}
+
 .display-svg {
-    width: 45%;
+    width: 90%;
     /* border: 1px solid black; */
 }
 
@@ -36,11 +53,10 @@ svg {
     width: 100%;
 }
 
-.chooseColor-button-container {
-    display: flex;
-    justify-content: center;
-}
+.finish-button-container {
+    width: 10%;
 
+}
 
 /* Add this at the end of your CSS file */
 @media (max-width: 767px) {

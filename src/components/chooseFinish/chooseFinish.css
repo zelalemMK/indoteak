@@ -7,6 +7,11 @@
     width: 50%;
 }
 
+
 .tile-preview {
-    width: 50%;
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

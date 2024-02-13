@@ -31,53 +31,50 @@ function ChooseColor({
   };
 
   return (
-    <div>
-      <div className="chooseColor-display">
-        <div className="color-editor">
-          <DesignComponent
-            className="selected-svg"
-            colorMap={colorMap}
-            handlePolygonClick={handlePolygonClick}
-          />
-          <ColorGrid
-            setSelectedColor={setSelectedColor}
-            resetColors={resetColors}
-            setEraserActive={setEraserActive}
-            eraserActive={eraseActive}
-          />
-        </div>
-        <div className="half-screen-display">
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="chooseColor-button-container">
-        <Button
-          onClick={nextStep}
-          textContent={"Button"}
+    <div className="chooseColor-display">
+      <div className="color-editor">
+        <DesignComponent
+          className="selected-svg"
+          colorMap={colorMap}
+          handlePolygonClick={handlePolygonClick}
         />
+        <ColorGrid
+          setSelectedColor={setSelectedColor}
+          resetColors={resetColors}
+          setEraserActive={setEraserActive}
+          eraserActive={eraseActive}
+        />
+      </div>
+      <div className="half-screen-display">
+        <div className="svg-holder">
+          <div className="display-svg">
+            <DesignComponent
+              colorMap={colorMap}
+              handlePolygonClick={handlePolygonClick}
+            />
+          </div>
+          <div className="display-svg">
+            <DesignComponent
+              colorMap={colorMap}
+              handlePolygonClick={handlePolygonClick}
+            />
+          </div>
+          <div className="display-svg">
+            <DesignComponent
+              colorMap={colorMap}
+              handlePolygonClick={handlePolygonClick}
+            />
+          </div>
+          <div className="display-svg">
+            <DesignComponent
+              colorMap={colorMap}
+              handlePolygonClick={handlePolygonClick}
+            />
+          </div>
+        </div>
+        <div className="chooseColor-button-container">
+          <Button onClick={nextStep} textContent={"Finish"} />
+        </div>
       </div>
     </div>
   );

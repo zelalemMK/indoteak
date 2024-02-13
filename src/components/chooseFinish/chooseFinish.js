@@ -33,7 +33,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
         <OrderForm />
       </div>
       <div className="tile-preview">
-        <DesignComponent colorMap={colorMap} />
+        <DesignComponent colorMap={colorMap} className="display-svg" />
         <Button textContent={"Download PDF"} onClick={saveSvgAsPdf} />
       </div>
     </div>

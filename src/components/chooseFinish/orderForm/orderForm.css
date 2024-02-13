@@ -1,112 +1,103 @@
-/* Container for the form, assuming it's half the width of the parent container */
 .form-container {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns layout */
+    gap: 20px;
+    /* Space between grid items */
+    max-width: 50vw;
+    /* Half of the viewport width */
+    margin: auto;
+    /* Center the form in the page */
+    padding: 20px;
+    /* Padding around the form */
+    /* font-family: 'Arial', sans-serif; */
+    /* Font similar to the one in the image */
+
+
+    /* Center everythinf */
+    /* display: flex;
+    flex-direction: column; */
 }
 
-/* Style the form elements */
-.sample-order-form {
-    background-color: #ffffff;
-    /* White background */
-    padding: 1rem;
-    /* Padding around the form content */
-    border-radius: 8px;
-    /* Rounded corners for the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    /* Example font */
+h2 {
+    grid-column: span 2;
+    /* Heading spans both columns */
+    margin-bottom: 10px;
+    /* Spacing below headings */
+    /* font-size: 24px; */
+    /* Larger font for headings */
+    color: #333;
+    /* Dark color for text */
 }
 
-/* Headings for form sections */
-.sample-order-form h2 {
-    color: #333333;
-    /* Dark grey color for the text */
-    margin-bottom: 0.5rem;
-    /* Space below headings */
-    font-size: 1.5rem;
-    /* Size of the headings */
-}
-
-/* Style for labels */
-.sample-order-form label {
+label {
     display: block;
-    /* Make labels block elements */
-    margin: 0.5rem 0;
-    /* Margin around labels */
-    color: #333333;
-    /* Text color */
-    font-weight: bold;
-    /* Make text bold */
+    /* Make label a block to occupy full width */
+    margin-bottom: 5px;
+    /* Space between label and input */
+    color: #333;
+    /* Dark color for text */
 }
 
-/* Style for input fields */
-.sample-order-form input[type="text"],
-.sample-order-form input[type="email"] {
+input[type="text"],
+input[type="email"] {
     width: 100%;
-    /* Input field should fill the container */
-    padding: 0.5rem;
-    /* Padding inside the input fields */
-    margin-bottom: 1rem;
-    /* Space below each field */
-    border: 1px solid #cccccc;
+    /* Full width of the column */
+    padding: 8px;
+    /* Padding inside the input */
+    margin-bottom: 20px;
+    /* Space after each input */
+    border: 1px solid #ccc;
     /* Light grey border */
     border-radius: 4px;
-    /* Rounded corners for the input fields */
+    /* Slightly rounded corners */
 }
 
-/* Required field asterisk style */
-.sample-order-form label::after {
-    content: "*";
-    /* Add an asterisk */
-    color: #ff0000;
-    /* Red color for emphasis */
-    margin-left: 0.25rem;
-    /* Space between label text and asterisk */
+input[type="text"]:required,
+input[type="email"]:required {
+    background-color: #f8f8f8;
+    /* Light background for required fields */
 }
 
-/* Style for optional fields to hide the asterisk */
-.sample-order-form label.optional::after {
-    content: none;
-    /* No content for optional labels */
-}
-
-/* Style for the submit button */
-.sample-order-form button {
-    background-color: #000000;
-    /* Black background for the button */
-    color: #ffffff;
-    /* White text */
+input[type="submit"] {
+    padding: 10px 20px;
+    /* Padding inside the submit button */
     border: none;
-    /* No border */
-    padding: 1rem 2rem;
-    /* Padding around the text */
+    /* No border for the button */
+    background-color: #333;
+    /* Dark background for the button */
+    color: white;
+    /* White text for the button */
     text-transform: uppercase;
-    /* Uppercase text */
+    /* Uppercase text for the button */
     cursor: pointer;
     /* Pointer cursor on hover */
-    border-radius: 4px;
-    /* Rounded corners for the button */
-    font-size: 1rem;
-    /* Size of the button text */
-    margin-top: 1rem;
-    /* Space above the button */
 }
 
-/* Hover effect for the button */
-.sample-order-form button:hover {
-    background-color: #333333;
-    /* Darker background on hover */
+/* Adjustments for the submit button */
+.form-container input[type="submit"] {
+    grid-column: span 2;
+    /* Button spans both columns */
+    justify-self: center;
+    /* Center the button */
 }
 
-/* Responsive adjustments for smaller screens */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .form-container {
-        max-width: 100%;
-        /* Form should take full width on small screens */
-        padding: 1rem;
+        grid-template-columns: 1fr;
+        /* Single column layout for small screens */
+        max-width: 90vw;
+        /* Increase width to 90% of the viewport */
+    }
+
+    h2 {
+        grid-column: span 1;
+        /* Heading spans one column */
+    }
+
+    .form-container input[type="submit"] {
+        grid-column: span 1;
+        /* Button spans one column */
     }
 }
