@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Amsterdam from "../../assets/designs/Amsterdam";
 import Amy from "../../assets/designs/Amy";

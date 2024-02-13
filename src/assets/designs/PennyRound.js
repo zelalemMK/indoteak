@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+
 
 export default function PennyRound({ colorMap, handlePolygonClick}) {
   const values = [

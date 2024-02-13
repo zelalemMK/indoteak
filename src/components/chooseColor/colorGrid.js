@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import "./colorGrid.css";
 

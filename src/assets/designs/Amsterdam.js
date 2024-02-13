@@ -1,4 +1,4 @@
-import React from "react";
+
 import { nanoid } from "nanoid";
 
 export default function Amsterdam({colorMap, handlePolygonClick}) {
