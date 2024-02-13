@@ -1,9 +1,4 @@
 .form-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Two columns layout */
-    gap: 20px;
-    /* Space between grid items */
     max-width: 50vw;
     /* Half of the viewport width */
     margin: auto;
@@ -12,51 +7,34 @@
     /* Padding around the form */
     /* font-family: 'Arial', sans-serif; */
     /* Font similar to the one in the image */
-
-
-    /* Center everythinf */
-    /* display: flex;
-    flex-direction: column; */
 }
 
-h2 {
-    grid-column: span 2;
-    /* Heading spans both columns */
+.form-group {
+    display: flex;
+    /* Use flexbox to arrange label and input side by side */
     margin-bottom: 10px;
-    /* Spacing below headings */
-    /* font-size: 24px; */
-    /* Larger font for headings */
-    color: #333;
-    /* Dark color for text */
+    /* Space between form groups */
+    align-items: center;
+    /* Align items vertically */
 }
 
 label {
-    display: block;
-    /* Make label a block to occupy full width */
-    margin-bottom: 5px;
+    flex: 1;
+    /* Allocate space for the label */
+    margin-right: 10px;
     /* Space between label and input */
-    color: #333;
-    /* Dark color for text */
 }
 
 input[type="text"],
 input[type="email"] {
-    width: 100%;
-    /* Full width of the column */
+    flex: 2;
+    /* Allocate twice as much space for the input */
     padding: 8px;
     /* Padding inside the input */
-    margin-bottom: 20px;
-    /* Space after each input */
     border: 1px solid #ccc;
     /* Light grey border */
     border-radius: 4px;
     /* Slightly rounded corners */
-}
-
-input[type="text"]:required,
-input[type="email"]:required {
-    background-color: #f8f8f8;
-    /* Light background for required fields */
 }
 
 input[type="submit"] {
@@ -72,32 +50,28 @@ input[type="submit"] {
     /* Uppercase text for the button */
     cursor: pointer;
     /* Pointer cursor on hover */
-}
-
-/* Adjustments for the submit button */
-.form-container input[type="submit"] {
-    grid-column: span 2;
-    /* Button spans both columns */
-    justify-self: center;
-    /* Center the button */
+    width: 100%;
+    /* Full width of the column */
+    margin-top: 20px;
+    /* Space above the submit button */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .form-container {
-        grid-template-columns: 1fr;
-        /* Single column layout for small screens */
-        max-width: 90vw;
-        /* Increase width to 90% of the viewport */
+    .form-group {
+        flex-direction: column;
+        /* Stack label and input vertically on small screens */
     }
 
-    h2 {
-        grid-column: span 1;
-        /* Heading spans one column */
+    label {
+        margin-right: 0;
+        /* No space between label and input on small screens */
+        margin-bottom: 5px;
+        /* Space below the label on small screens */
     }
 
-    .form-container input[type="submit"] {
-        grid-column: span 1;
-        /* Button spans one column */
+    input[type="submit"] {
+        width: auto;
+        /* Auto width for the submit button on small screens */
     }
 }
