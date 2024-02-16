@@ -1,26 +1,7 @@
-
-
-@font-face {
-font-family: 'Belleza';
-src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e2c662d49ec143ead5773/1687039078335/Belleza-Regular.ttf)
-}
-@font-face {
-font-family: 'DMSans';
-src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bed00b8ff49d9297456/1686084589171/DMSans-Regular.ttf;)
-}
-@font-face {
-font-family: 'Syne';
-src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bd711d8681289da6e49/1686084568295/Syne-VariableFont_wght.ttf)
-}
-@font-face {
-font-family: 'Gotham-Bold';
-src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d5c76b93600c9fb636/1687041494190/Gotham+Bold.otf)
-}
-@font-face {
-font-family: 'Gotham-Book';
-src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d9fa95ba0a30d74de6/1687041497853/Gotham+Book.otf)
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 body {
   margin: 0;
   line-height: normal;
@@ -104,41 +85,28 @@ body {
 }
 
 
+/* */
 
-
-
-
-nav a{
-     font-family:Syne, sans-serif !important;
-    font-size: .6rem !important;
-    font-weight: 700 !important;
-    line-height: 24px !important;
-    letter-spacing: 0px;
-    color: #fff !important;
- }
-
- .design-text {
-    font-family:Syne, sans-serif !important;
-    font-size: 2rem !important; 
-    font-weight: 600 !important;
-    line-height: 40px important;
- }
-
-.design-how{
-   font-family: 'Gotham-Book';
-    font-size: 1rem !important;
-    font-weight: 400 !important;
-    line-height: 24px !important;
+@font-face {
+font-family: 'Belleza';
+src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e2c662d49ec143ead5773/1687039078335/Belleza-Regular.ttf)
 }
- .accordion-ordered-list ol li {
-
- }
-
-
-
-
-
-
+@font-face {
+font-family: 'DMSans';
+src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bed00b8ff49d9297456/1686084589171/DMSans-Regular.ttf;)
+}
+@font-face {
+font-family: 'Syne';
+src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bd711d8681289da6e49/1686084568295/Syne-VariableFont_wght.ttf)
+}
+@font-face {
+font-family: 'Gotham-Bold';
+src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d5c76b93600c9fb636/1687041494190/Gotham+Bold.otf)
+}
+@font-face {
+font-family: 'Gotham-Book';
+src: 		url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d9fa95ba0a30d74de6/1687041497853/Gotham+Book.otf)
+}
 
 h1 {
 	margin:0;
@@ -367,7 +335,7 @@ p{
 }
 
 .header-nav-folder-item {
-	padding-top: %;
+	padding-top: 2%;
     padding-bottom: 2%;
 }
 

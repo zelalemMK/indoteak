@@ -1,89 +1,114 @@
 body {
   margin: 0;
 }
+
 .design-text {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-  letter-spacing: 1px;
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.88rem;
+  font-weight: 600;
+  border-bottom: 1px solid gray;
+  }
+
+
+/*dropdown styling*/
+
+.dropdown {
+  width: 90%;
+  margin: auto;
+}
+.dropdown li {
+  list-style: none;
+  width: 100%;
+  background-color: #fff;
+  color: #111;
+  padding: 1rem;
+ ;
+}
+.dropdown li label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+   white-space: noWrap;
+  
+
+}
+.dropdown-line{
+  z-index: -1;
+  border-bottom: 1px solid gray;
 }
 
-li {
-  color: black !important;
-  font-size: 0.5rem;
-  font-family: Syne-Bold, Syne;
-  font-weight: 700;
-  margin-bottom: 7px;
-  letter-spacing: 1px;
+ input:checked + .dropdown-line{
+   border-bottom: none;
 }
-
-.dropdown-toggle::after {
-  display: none !important;
+.dropdown li label::after {
+  content: "\f078";
+  font-family: fontawesome;
+  margin-left: 0.6rem;
+  margin-top: -1.5%;
+  font-size: 15px;
 }
-.design-how-underline{
-border-bottom: 1px solid lightgray;
-
+.dropdown li input {
+  display: none;
 }
-.dropdown-menu-list {
-  border-top: 0 !important;
-  border-bottom: 4px solid lightgray !important;
+.dropdown .dropdown-content {
+  padding: 0 10px;
+  line-height: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s, padding 0.2s;
+  ;
 }
-
-.chevron-down {
-  margin-left: 5%;
+.dropdown-content {
+  justify-content: space-between;
 }
-.chevron-down {
-  font-size: 0.8rem;
+input:checked + label + .dropdown-content {
+  max-height: 100px;
+  padding: 20px 40px 10px;
+  border-radius: 0.5rem;
+  margin-top: -13px;
+  box-shadow: 0 4px 1px 1px rgba(0, 0, 0, 0.25);
+  z-index: -1;
+ 
 }
-.design-dropdown .dropdown-toggle.active .chevron-down{
- transform: rotate(180deg);
+input:checked + label::after {
+  content: "\f077";
 }
-.chevron-down svg {
-  transition: transform 0.5s ease-in;
+.dropdown-content-list span {
+  color: blue !important;
+    margin-top: 5%;
+ 
 }
-
-.dropdown-ordered-list {
-  margin-bottom: -3%;
+.dropdown-content {
+  counter-set: list-count;
 }
-.diamond-icon {
-  margin-left: -10%;
-  color: blue;
-  top: 10%;
-}
-
-.icon-number {
-  position: absolute;
+.dropdown-content-list span::after {
+  counter-increment: list-count;
+  content: counter(list-count);
   color: white;
-  top: 10%;
-}
-.icon-number.num-1 {
-  left: -18%;
-}
-.icon-number.num-2 {
-  left: -19%;
-}
-.icon-number.num-3 {
-  left: -26%;
+  font-size: .8rem;
+  margin-left: -15px;
+  position: absolute;
 }
 
-.fa-ul span {
-  z-index: 1;
+.dropdown-content-list span i {
+  font-size: 1.5rem;
+  
 }
-.fa-ul span {
-  margin-top: 1%;
+.dropdown-content-list span  {
+  margin-right:6%;
+  font-size: 1rem; 
 }
 
 .design-it {
   margin-top: 20%;
   border-left: 10px solid white;
-}
-
-.design-how {
-  font-size: 0.7rem;
-}
-
-svg.svg-inline--fa.fa-li {
-  margin-left: 900%;
 }
 
 button.slick-next:before {
@@ -101,7 +126,7 @@ button.slick-next:before {
   width: 100vw;
 }
 .progress-container {
-  margin-top: 8%;
+  margin-top: -10%;
 }
 
 .progress-content {
@@ -132,14 +157,43 @@ button.slick-next:before {
   background-color: light-blue;
   top: 50%;
   left: 0;
-  transform-translatey: (-50%);
+  transform: translateY(-50%);
   border-radius: 5px;
   height: 4px;
   width: 50%;
   z-index: -1;
   transition: 0.4s ease;
 }
-
+.progress1 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+.choose-design {
+  position: relative;
+  line-height: 1rem;
+  font-weight: 500;
+  z-index: 1;
+  margin-left: -1.94rem;
+}
+.save-design {
+  position: relative;
+  line-height: 1rem;
+  font-weight: 500;
+  z-index: 1;
+  margin-right: -1.94rem;
+}
+.choose-colors {
+  position: relative;
+  line-height: 1rem;
+  font-weight: 500;
+  z-index: 1;
+}
+.radio {
+  border-radius: 50%;
+}
 .circle {
   display: flex;
   background-color: #fff;
@@ -149,7 +203,7 @@ button.slick-next:before {
   width: 30px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0e0e0;
+  border: 2px solid var(--stroke);
   transition: 0.4s ease;
 }
 .circle.active {
@@ -163,7 +217,12 @@ button.slick-next:hover {
 }
 
 button.slick-next:before {
+  content: "\f054";
+  font-family: fontawesome;
   color: blue;
+  border: 1px solid blue;
+  border-radius: 50%;
+  
 }
 button.slick-prev:before {
   color: blue;
@@ -182,25 +241,38 @@ button.slick-prev:before {
   margin: 0 -10px;
 }
 
+
 .design-it {
+  margin-top: 6%;
   margin-left: 103% !important;
   border-radius: 10%;
   width: 84% !important;
-  z-depth: 1;
   overflow: hidden;
 }
-.design-it{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 3px 10px 0 rgba(0,0,0,0.19);
-  transform: translateY(-2px)
+.design-it {
+  align-self: stretch;
+  border-radius: 9.19px;
+  background-color: var(--neutral-white);
+  box-shadow: 5.5px 15.6px 22.97px rgba(87, 105, 125, 0.07),
+    0 3.7px 9.19px rgba(87, 105, 125, 0.14),
+    3.7px 0 34px -5.51px rgba(87, 105, 125, 0.12);
+  overflow: hidden;
+  padding: var(--padding-2xs) var(--padding-base) var(--padding-4xl)
+    var(--padding-xl);
+  gap: var(--gap-27xl);
 }
 .design-container {
   width: 75%;
   margin: auto;
-  margin-top: 10%
- }
+  margin-top: 7%;
+}
 .current-design-container {
   width: 50%;
-  margin-bottom: 15%;
+  margin-bottom:  10%;
+  float: left;
+}
+.design-name-and-radio {
+  float: right;
   
 }
 p span {
@@ -208,37 +280,38 @@ p span {
   padding-left: 25%;
   font-family: Syne-Bold, Syne;
   font-weight: 700;
-  margin-bottom: 0px;
+  margin-left: -28%;
 }
 
-.design-name {
+.pattern-title .design-name {
+  line-height: 1.21rem !important;
+  font-weight: 500 !important;
+  white-space: wrap;
 }
-.design-pattern-descriptions{
-  margin-top: -10%
+.pattern-title .design-name {
+  margin-right: -10%;
+ 
 }
-
-.slick-arrow {
+.design-pattern-descriptions {
+  float: left;
+  position: relative;
+  line-height: 1.21rem;
+  font-weight: 500;
 }
-p {
-  font-size: 0.5rem;
-  font-family: Syne-Bold, Syne;
-  font-weight: 700;
-  margin-bottom: 7px;
+.flexible {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
-
-span.circle-icon {
-  font-size: 0.4rem;
-  color: white;
-}
-span.circle-icon {
-  margin-left: 20%;
-}
-
 .btn-primary.next-arrow {
   float: right;
   width: 25%;
+  background-color: #57697d !important;
+  border: 1px solid #57697d !important;
 }
 
 .btn-primary.back-arrow {
   width: 25%;
+  background-color: #57697d !important;
+  border: 1px solid #57697d !important;
 }

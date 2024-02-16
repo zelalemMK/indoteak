@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Amsterdam from "../../assets/designs/Amsterdam";
 import Amy from "../../assets/designs/Amy";
 import Barrel from "../../assets/designs/Barrel";
@@ -14,41 +13,53 @@ import Rectanlge from "../../assets/designs/Rectangle";
 import Taylor from "../../assets/designs/Taylor";
 import Tommy from "../../assets/designs/Tommy";
 import Twister from "../../assets/designs/Twister";
-
 import { nanoid } from "nanoid";
-
 import "./chooseDesign.css";
 import Button from "react-bootstrap/Button";
-import Dropdown from "react-bootstrap/Dropdown";
 import Accordion from "react-bootstrap/Accordion";
-
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 // import ProgressBar from "react-bootstrap/ProgressBar";
 
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faDiamond, faChevronDown} from "@fortawesome/free-solid-svg-icons";
-import Circle from "./circle.js"
+import {
+  faCircle,
+  faDiamond,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+import Circle from "./circle.js";
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
   const patternsPerPage = 6;
-  const [circle] = useState(5);
+  const [circle] = useState(4);
   const [active, setActive] = useState(0);
   const [width, setWidth] = useState(0);
-  console.log(active)
+  const [pageNum, setPageNum] = useState(1);
+  const history = useNavigate();
+  console.log(active);
   const arr = [];
-  
-  for (let i = 1; i < circle ; i++)
-    arr.push(<Circle className={i <= active ? "circle active" : "circle"} key={i} >{i}</Circle>);
 
+  for (let i = 1; i < circle; i++)
+    arr.push(
+      <Circle className={i <= active ? "circle active" : "circle"} key={i}>
+        {i}
+      </Circle>
+    );
+
+  // const navigate = useNavigate();
+  const nextPageNumber = () => {
+    setPageNum((prevNum) => prevNum + 1);
+  };
+
+  const prevPageNumber = () => {
+    setPageNum((prevNum) => prevNum - 1);
+  };
 
   useEffect(() => {
-    setWidth(100/(circle -1) * active);
+    setWidth((100 / (circle - 1)) * active);
   }, [circle, active]);
 
   const patterns = [
@@ -168,8 +179,12 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
       setPage(page - 1);
     }
   };
+  const hundleBackclick = () => {
+    history(-1);
+  };
 
   // slide show settings
+
   const settings = {
     dots: true,
     infinite: true,
@@ -178,109 +193,51 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     slidesToScroll: 3,
   };
 
+
   return (
     <>
-      <div className="">
-        <h6 className="text-center design-text ">Designe your own tiles </h6>
-        <Dropdown className="design-dropdown mx-5  ">
-          <Dropdown.Toggle
-            variant="success"
-            id="dropdown-basic"
-            className=" d-flex btn show bg-white text-dark border-0  w-100 justify-content-center dropdown-toggle"
-          >
-            <p className="design-how "> How it works</p>
+      <div className="Design-wrapper">
+        <p className="text-center sqsrte-large ">Designe your own tiles </p>
 
-            <span className="chevron-down ">
-              <FontAwesomeIcon icon={faChevronDown} />
-            </span>
-          </Dropdown.Toggle>
-          <div className="design-how-underline my-1"></div>
+        <ul className="dropdown ">
+          <li>
+            <input type="checkbox" name="dropdown" id="first" />
 
-          <Dropdown.Menu className="w-100 justify-content-center m-auto  dropdown-menu-list">
-            <div className=" dropdown-ordered-list d-flex  justify-content-center    align-items-center ">
-              <ol class="fa-ul  d-flex ">
-                <li>
-                  <span className="icon-number num-1"> 1</span>
-                  <FontAwesomeIcon
-                    class="fa-li diamond-icon"
-                    icon={faDiamond}
-                  />
-                  <p className="mt-2"> Select your tile preference.</p>
-                </li>
-                <li className="mx-5">
-                  <span className="icon-number  num-2"> 2</span>
-                  <FontAwesomeIcon
-                    class="fa-li diamond-icon "
-                    icon={faDiamond}
-                  />
-                  <p className="mt-2"> Choose your color style.</p>
-                </li>
-                <li>
-                  <span className="icon-number num-3"> 3</span>
-                  <FontAwesomeIcon
-                    class="fa-li diamond-icon"
-                    icon={faDiamond}
-                  />
+            <label htmlFor="first" className="sqsrte-medium  dropdown-line">
+              <p>How it works</p>
+            </label>
 
-                  <p className="mt-2"> Save as a PDF</p>
-                </li>
-              </ol>
+            <div className="dropdown-content  d-flex ">
+              <div className="dropdown-content-list  d-flex">
+                <span>
+                  <i class="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small">Choose Design</p>
+              </div>
+              <div className="dropdown-content-list d-flex">
+                <span>
+                  <i class="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small">Choose Color</p>
+              </div>
+              <div className="dropdown-content-list d-flex ">
+                <span>
+                  <i className="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small">Save Design</p>
+              </div>
             </div>
-          </Dropdown.Menu>
-        </Dropdown>
+          </li>
+        </ul>
       </div>
 
       {/* progress section */}
 
-      {/* <div
-        className="design-container  activeIndex={index} onSelect={handleSelect} 
-       w-75 m-auto  "
-      >
-       
-        <Slider {...settings} className="design-grid ">
-          
-            {patterns.map((pattern, index) => {
-              let CurrentDesign = pattern.Component();
-
-              return (
-                <div
-                  className="design-it container bg-white  p-2 mb-5 border "
-                  key={nanoid()}
-                  onClick={() => {
-                    nextStep();
-                    onDesignSelect(pattern.Component);
-                  }}
-                >
-                  <div className="d-flex current-design-content ">
-                    <div className="current-design-container  ">
-                      <CurrentDesign className="" />
-                    </div>
-                    <div>
-                      <p className="pattern-title  fs-3  fw-light  ">
-                        <span className="design-name">{pattern.id}</span>
-                      </p>
-                      <span className="circle-icon  ">
-                        <FontAwesomeIcon
-                          icon={faCircle}
-                          className="border border-dark rounded mt-1 "
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <p className="mb-0  fw-light">{pattern.Size}</p>
-                  <p className="mb-0 fw-light">{pattern.Thickness}</p>
-                  <p className="mb-0 fw-light">{pattern.Price}</p>
-                </div>
-              );
-            })}
-          </Slider>
-       
-      </div> */}
       <div
         className="design-container  
         "
       >
-        <div className="progress-container">
+        <div className="progress-container ">
           <div className="progress-content w-50 m-auto">
             <div className="progress-progress-bar">
               <div
@@ -289,18 +246,23 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
               ></div>
               {arr}
             </div>
+            <div className="progress1">
+              <divc className="choose-design">Choose Design</divc>
+              <div className="choose-colors">Choose Colors</div>
+              <div className="save-design">Save Design</div>
+            </div>
           </div>
         </div>
         {/* Design section */}
         <div>
-          {" "}
-          <Slider {...settings}>
+         
+          <Slider {...settings} >
             {patterns.map((pattern, index) => {
               let CurrentDesign = pattern.Component();
 
               return (
                 <div className="design-it container bg-body rounded  p-2  mb-1">
-                  <div className="d-flex my-2 ">
+                  <div className=" ">
                     <div
                       className="current-design-container "
                       key={nanoid()}
@@ -309,26 +271,25 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                         onDesignSelect(pattern.Component);
                       }}
                     >
-                      <CurrentDesign className="" />
+                      <CurrentDesign />
+                      <div className="design-pattern-descriptions  mt-3">
+                        <p className="mb-0 sqsrte-small  ">{pattern.Size}</p>
+                        <p className="mb-0 sqsrte-small  ">
+                          {pattern.Thickness}
+                        </p>
+                        <p className="mb-0  sqsrte-small ">{pattern.Price}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="pattern-title  fs-3   ">
-                        <span className="design-name">{pattern.id}</span>
+                    <div className="flexible"></div>
+                    <div className="design-name-and-radio  d-sm-block">
+                      <label class="container ">
+                        <input type="radio" />
+                        <span class="checkmark "></span>
+                      </label>
+                      <p className=" ">
+                        <span className="design-name ">{pattern.id}</span>
                       </p>
                     </div>
-                    <div>
-                      <span className="circle-icon ">
-                        <FontAwesomeIcon
-                          icon={faCircle}
-                          className="border border-dark rounded mb-5"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <div className="design-pattern-descriptions">
-                    <p className="mb-0  ">{pattern.Size}</p>
-                    <p className="mb-0 ">{pattern.Thickness}</p>
-                    <p className="mb-0 ">{pattern.Price}</p>
                   </div>
                 </div>
               );
@@ -343,17 +304,19 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
             disabled={active > 0 ? false : true}
             onClick={() => {
               active <= 0 ? setActive(0) : setActive(active - 1);
+              prevPageNumber();
+              // hundleBackclick();
             }}
           >
             BACK
           </Button>
 
           <Button
-            className="next-arrow  arrow btn-secondary"
+            className="next-arrow  arrow "
             disabled={active >= circle - 1 ? true : false}
             onClick={() => {
               active >= circle ? setActive(circle) : setActive(active + 1);
-              nextPage();
+              nextPageNumber();
             }}
           >
             NEXT

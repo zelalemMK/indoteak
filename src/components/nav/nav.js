@@ -11,15 +11,15 @@ function NavBar() {
   return (
     <>
       <Navbar
-        className=" "
+        className=""
         collapseOnSelect
         expand="md"
         bg="white"
         variant="dark"
       >
-        <Container className="">
+        <Container className="navContainer ">
           <Navbar.Brand
-            className="logo-container m-0 "
+            className="logo-container m-0  "
             href="https://indoteakdesign.com/"
             target="_blank"
             rel="noreferrer"
@@ -30,9 +30,12 @@ function NavBar() {
             className="toggle"
             aria-controls="responsive-navbar-nav"
           />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="justify-content-space-between ">
-              <Nav.Item>
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="header-nav-wrapper header-nav-folder-title "
+          >
+            <Nav className="justify-content-space-between  header-nav-item header-nav-folder-item  header-nav-item ">
+              <Nav.Item className="">
                 <Nav.Link href="https://indoteakdesign.com/#popup-menu-anchor-products">
                   PRODUCTS
                 </Nav.Link>

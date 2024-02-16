@@ -1,32 +1,107 @@
-/* Desktop Display */
-body {
-  margin: 0;
-}
-.header {
-  max-width: 80%;
-  background-color: white;
-  height: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0px;
-}
 
-.logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  /* border: 3px solid pink; */
-  margin-top: 20px;
-}
-img.logo {
-  width: 30%;
-  float: left;
-  margin: 0;
-}
-a {
+image-1-icon {
+  height: 2.81rem;
+  width: 18.75rem;
+  position: relative;
+  object-fit: contain;
   filter: invert(1);
 }
-.logo {
-  /* border:3px solid pink; */
+.inspirations,
+.lookbook,
+.products {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
+.f-r-a-m-e-c-o-n-t-a-c-t-s-e-a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 1.88rem 0 0;
+}
+.trade {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.f-r-a-m-e-c-o-n-t-a-c-t-s-e-a1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs) 0 0;
+}
+.about,
+.contact {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.f-r-a-m-e-c-o-n-t-a-c-t-s-e-a2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-7xs) 0 0;
+}
+.search {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.f-r-a-m-e-i-n-s-p-i-r-a-t-i-o {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0.25rem 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-31xl);
+  max-width: 100%;
+}
+.f-r-a-m-e-i-n-d-o-t-i-l-e-d-e {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--medium-size);
+  color: var(--dark-dark);
+  font-family: var(--body-body-1-base);
+}
+.indo-tile-design-1 {
+  width: 100%;
+  position: relative;
+  background-color: var(--neutral-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-14xl) 4.25rem 2.63rem 3.31rem;
+  box-sizing: border-box;
+  gap: var(--gap-mid);
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .f-r-a-m-e-i-n-s-p-i-r-a-t-i-o {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .indo-tile-design-1 {
+    padding-left: var(--padding-7xl);
+    padding-right: var(--padding-15xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .f-r-a-m-e-i-n-s-p-i-r-a-t-i-o {
+    gap: var(--gap-31xl);
+  }
+}
+

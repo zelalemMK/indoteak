@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ColorGrid from "./colorGrid";
 
 import "./chooseColor.css";
 import Button from "react-bootstrap/Button";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import Circle from "../chooseDesign/circle";
+
 
 
 
 function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraseActive, setEraserActive] = useState(false);
-   const [circle] = useState(5);
+   const [circle] = useState(4);
    const [active, setActive] = useState(0);
-   const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0);
+  const history = useNavigate();
    console.log(active);
    const arr = [];
 
@@ -36,12 +38,53 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
     }
   }
 
+  const hundleBackclick = () => {
+    history(-1)
+  }
   const resetColors = () => {
     setColorMap({});
   };
 
   return (
     <>
+      {/* dropdown section */}
+      <div className="">
+        <p className="text-center sqsrte-large ">Designe your own tiles </p>
+
+        <ul className="dropdown ">
+          <li>
+            <input type="checkbox" name="dropdown" id="first" />
+
+            <label htmlFor="first" className="sqsrte-medium  dropdown-line">
+              How it works
+            </label>
+
+            <div className="dropdown-content  d-flex ">
+              <div className="dropdown-content-list d-flex">
+                <span>
+                  <i class="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small ">Choose Design</p>
+              </div>
+              <div className="dropdown-content-list d-flex">
+                <span>
+                  <i class="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small">Choose Color</p>
+              </div>
+              <div className="dropdown-content-list d-flex ">
+                <span>
+                  <i className="fa-solid fa-diamond"></i>
+                </span>
+                <p className="sqsrte-small">Save Design</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      {/* progress section */}
+
       <div className="progress-container my-1">
         <div className="progress-content w-50 m-auto">
           <div className="progress-progress-bar">
@@ -50,19 +93,22 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
               style={{ width: width + "%" }}
             ></div>
             {arr}
-          </div> 
+          </div>
         </div>
       </div>
 
-      <div className="choose-color-container container   w-75 m-auto d-flex">
-        <div className="container color-container w-25  ">
-          <div className="pattern  container ">
+      {/* choose color section */}
+
+      <div className="choose-color-container container d-flex">
+        <div className="color-container w-100 d-sm-flex  justify-content-center  ">
+          <div className="pattern     w-50  m-sm-auto">
             <DesignComponent
               colorMap={colorMap}
               handlePolygonClick={handlePolygonClick}
             />
           </div>
-          <div className="color-grid mb-3 ">
+
+          <div className="color-grid mb-3 m-sm-auto ">
             <ColorGrid
               setSelectedColor={setSelectedColor}
               resetColors={resetColors}
@@ -71,9 +117,9 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
             />
           </div>
         </div>
-        <div className="pattern1  w-50 ">
+        {/* <div className="pattern1  w-50 ">
           <DesignComponent />
-        </div>
+        </div> */}
       </div>
       {/* <div
         className="container-fluid next-btn d-block "
@@ -93,6 +139,7 @@ function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap}) {
           disabled={active > 0 ? false : true}
           onClick={() => {
             active <= 0 ? setActive(0) : setActive(active - 1);
+            //  hundleBackclick();
           }}
         >
           BACK

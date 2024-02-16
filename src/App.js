@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Route,Routes } from "react-router-dom";
 
 import Header from "./components/header/header"
 import ChooseDesign from "./components/chooseDesign/chooseDesign";
@@ -10,6 +11,7 @@ import logo from "./components/header/indoteak.png"
 
 import "./App.css";
 import NavBar from "./components/nav/nav";
+// import "<pathToYourLoader>/loader.js";
 
 
 
@@ -50,8 +52,43 @@ function App() {
 
 
   return (
-    <div className="app">
-      {/* <div
+    <>
+      <div className="app">
+        <NavBar />
+        {step === 1 && (
+          <ChooseDesign
+            selectedDesign={selectedDesign}
+            onDesignSelect={setSelectedDesign}
+            nextStep={nextStep}
+          />
+        )}
+        {step === 2 && selectedDesign && (
+          <ChooseColor
+            DesignComponent={selectedDesign}
+            colorMap={colorMap}
+            setColorMap={setColorMap}
+            // setColorMap={selectedDesign}
+            prevStep={prevStep}
+            nextStep={nextStep}
+          />
+        )}
+        {step === 3 && selectedDesign && (
+          <ChooseFinish
+            DesignComponent={selectedDesign}
+            colorMap={colorMap}
+            nextStep={nextStep}
+            prevStep={prevStep}
+          />
+        )}
+        {/* <Routes>
+          <Route path="/" element={<ChooseColor />} />
+          <Route path="/" element={<ChooseFinish />} />
+        </Routes> */}
+
+
+
+
+        {/* <div
         ref={coverRef}
         className={`cover ${fadeOut ? "fade-out" : ""} ${
           displayNone ? "display-none" : ""
@@ -61,35 +98,9 @@ function App() {
         <img src={logo} alt="logo" className="logo" />
       </div> */}
 
-      {/* <Header /> */}
-      <NavBar />
-     
-      {step === 1 && (
-        <ChooseDesign
-          selectedDesign={selectedDesign}
-          onDesignSelect={setSelectedDesign}
-          nextStep={nextStep}
-        />
-      )}
-      {step === 2 && selectedDesign && (
-        <ChooseColor
-          DesignComponent={selectedDesign}
-          colorMap={colorMap}
-          setColorMap={setColorMap}
-          // setColorMap={selectedDesign}
-          prevStep={prevStep}
-          nextStep={nextStep}
-        />
-      )}
-      {step === 3 && selectedDesign && (
-        <ChooseFinish
-          DesignComponent={selectedDesign}
-          colorMap={colorMap}
-          nextStep={nextStep}
-          prevStep={prevStep}
-        />
-      )}
-    </div>
+        {/* <Header /> */}
+      </div>
+    </>
   );
 }
 

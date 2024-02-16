@@ -32,42 +32,44 @@ export default function ColorGrid({ setSelectedColor, resetColors, setEraserActi
   ]; // Blues
   return (
     <>
-      <Row xs={5} className="button-grid ">
-        {colors.map((color, index) => (
-          <div className="button-grid-col  ">
-            <ColorButton
-              key={index}
-              color={color}
-              setSelectedColor={setSelectedColor}
-            />
+      <div className="choose-color-wrapper w-75 ">
+        <Row xs={5} className="button-grid m-sm-auto m-1 ">
+          {colors.map((color, index) => (
+            <div className="button-grid-col  ">
+              <ColorButton
+                key={index}
+                color={color}
+                setSelectedColor={setSelectedColor}
+              />
+            </div>
+          ))}
+        </Row>
+        <div className=" choose-color-buttons w-100 d-flex  mt-3">
+          <div>
+            <Button
+              className=" btn-block color-button btn-light"
+              onClick={() => setSelectedColor(null)}
+            >
+              Clear Color
+            </Button>
           </div>
-        ))}
-      </Row>
-      <div className="mt-4  choose-color-buttons d-grid ">
-        <div>
-          <Button
-            className="btn-secondary mx-1 my-1    btn-block"
-            onClick={() => setSelectedColor(null)}
-          >
-            Clear Color 
-          </Button>
+          <span>
+            <Button
+              className=" m-1 color-button btn-light "
+              onClick={resetColors}
+            >
+              Erase All
+            </Button>
+          </span>
+          <span>
+            <Button
+              className="  btn-light color-button  "
+              onClick={() => setEraserActive((prev) => !prev)}
+            >
+              {eraserActive ? "Disable" : "Enable"} Eraser
+            </Button>
+          </span>
         </div>
-        <span>
-          <Button
-            className="btn-secondary mx-1 my-1 btn-lg "
-            onClick={resetColors}
-          >
-            Erase All 
-          </Button>
-        </span>
-        <span>
-          <Button
-            className="btn-secondary mx-1 mb-1  btn-block "
-            onClick={() => setEraserActive((prev) => !prev)}
-          >
-            {eraserActive ? "Disable" : "Enable"} Eraser
-          </Button>
-        </span>
       </div>
     </>
   );
