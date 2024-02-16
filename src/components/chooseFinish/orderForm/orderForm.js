@@ -34,7 +34,7 @@ const OrderForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-container-container">
       <form onSubmit={handleSubmit} className="form-container">
         <h2>Project Information</h2>
 
@@ -134,8 +134,8 @@ const OrderForm = () => {
             />
           </label>
         </div>
+        <Button textContent={"Submit"} onClick={handleSubmit} />
       </form>
-      <Button textContent={"Submit"} onClick={handleSubmit} />
     </div>
   );
 };

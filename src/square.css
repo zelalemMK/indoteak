@@ -71,6 +71,31 @@ h2 {
 	widows: 1;
 }
 
+label {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Belleza, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+
+}
+
 h3 {
 	margin: 0;
 	padding: 0;
