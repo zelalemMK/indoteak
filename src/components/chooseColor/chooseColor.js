@@ -47,30 +47,26 @@ function ChooseColor({
       </div>
       <div className="half-screen-display">
         <div className="svg-holder">
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
-          <div className="display-svg">
-            <DesignComponent
-              colorMap={colorMap}
-              handlePolygonClick={handlePolygonClick}
-            />
-          </div>
+          <DesignComponent
+            className="display-svg"
+            colorMap={colorMap}
+            handlePolygonClick={handlePolygonClick}
+          />
+          <DesignComponent
+            className="display-svg"
+            colorMap={colorMap}
+            handlePolygonClick={handlePolygonClick}
+          />
+          <DesignComponent
+            className="display-svg"
+            colorMap={colorMap}
+            handlePolygonClick={handlePolygonClick}
+          />
+          <DesignComponent
+            className="display-svg"
+            colorMap={colorMap}
+            handlePolygonClick={handlePolygonClick}
+          />
         </div>
         <div className="chooseColor-button-container">
           <Button onClick={nextStep} textContent={"Finish"} />
