@@ -44,6 +44,9 @@ function ChooseColor({
           setEraserActive={setEraserActive}
           eraserActive={eraseActive}
         />
+        <div className="button-half-view">
+          <Button onClick={nextStep} textContent={"Finish"} />
+        </div>
       </div>
       <div className="half-screen-display">
         <div className="svg-holder">

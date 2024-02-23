@@ -1,36 +1,65 @@
 .form-container-container {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .form-container {
+    width: 90%;
+    /* Adjusted for mobile, allowing some margin */
     max-width: 50vw;
-    height: 80vh;
-    margin: auto;
+    /* Ensures form doesn't exceed 50% of viewport width on larger screens */
+    height: auto;
+    /* Changed to auto to accommodate content size */
+    margin: 20px auto;
+    /* Center form with automatic horizontal margins */
     padding: 20px;
-
-    border: 1px solid red;
-
+    box-sizing: border-box;
+    /* Ensures padding doesn't add to the width */
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 input {
-    /* background-color: red; */
-    width: 15em;
+    width: calc(100% - 4em);
+    /* Full width minus margin for consistent styling */
     height: 2em;
-    margin-left: 2em;
+    margin: 0.5em 2em;
+    /* Ensure margin is consistent and not too large */
+    box-sizing: border-box;
+    /* Ensures width calculation includes padding and border */
 }
 
 .form-group {
-    /* border: 1px solid red;
-     */
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    align-items: flex-start;
+    /* Align items to the start for a cleaner look */
+}
 
+@media (max-width: 767px) {
+    .form-container-container {
+        width: 100%;
+        /* Use 100% of the viewport width */
+        border: none;
+        /* Remove border or adjust as per your design */
+    }
+
+    .form-group {
+        flex-direction: row; /* Change direction to row for single-line layout */
+        justify-content: flex-start; /* Align items to the start */
+        margin-bottom: 10px; /* Add some space between form groups */
+    }
+
+    input,
+    .form-group label {
+        margin-left: 0;
+        /* Remove left margin for inputs and labels */
+        width: 100%;
+        /* Inputs take full width for better usability */
+    }
 }

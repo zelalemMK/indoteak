@@ -67,12 +67,25 @@ svg {
     width: 10%;
 }
 
+.button-half-view {
+    display: none;
+}
+
 /* Add this at the end of your CSS file */
 @media (max-width: 767px) {
+
+    .button-half-view {
+        display: block;
+    }
 
     /* Adjust the max-width as needed */
     .half-screen-display {
         display: none;
+    }
+
+    .chooseColor-button-containe {
+        width: 10vw;
+
     }
 
     .chooseColor-display {
