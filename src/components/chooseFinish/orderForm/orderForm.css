@@ -50,9 +50,12 @@ input {
     }
 
     .form-group {
-        flex-direction: row; /* Change direction to row for single-line layout */
-        justify-content: flex-start; /* Align items to the start */
-        margin-bottom: 10px; /* Add some space between form groups */
+        flex-direction: row;
+        /* Change direction to row for single-line layout */
+        justify-content: flex-start;
+        /* Align items to the start */
+        margin-bottom: 10px;
+        /* Add some space between form groups */
     }
 
     input,
