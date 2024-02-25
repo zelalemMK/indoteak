@@ -1,4 +1,7 @@
 .form-container-container {
+    width: 100%;
+    height: 90%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,44 +11,41 @@
 }
 
 .form-container {
-    width: 90%;
-    /* Adjusted for mobile, allowing some margin */
+
+    width: 80%;
+
     max-width: 50vw;
-    /* Ensures form doesn't exceed 50% of viewport width on larger screens */
+    height: 90%;
+
     height: auto;
-    /* Changed to auto to accommodate content size */
-    /* margin: 20px auto; */
-    /* Center form with automatic horizontal margins */
-    /* padding: 20px; */
     box-sizing: border-box;
-    /* Ensures padding doesn't add to the width */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 input {
+ 
     width: calc(100% - 4em);
-    /* Full width minus margin for consistent styling */
-    height: 2em;
-    /* margin: 0.5em 2em; */
-    /* Ensure margin is consistent and not too large */
+    height: 2em;    
     box-sizing: border-box;
-    /* Ensures width calculation includes padding and border */
+
 }
 
 .form-group {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* Align items to the start for a cleaner look */
-}
-.form-group > h4 {
-    width: 30%;
 }
 
-#submit-button {
-    margin:  0 auto;
+.form-group > h4 {
+    width: 35%;
+}
+
+.button-continare {
+    display: flex;
+    justify-content: center;
+
 }
 
 .form-headers {
@@ -66,8 +66,7 @@ input {
 
     .form-container {
         width: 100%;
-        max-width: 75vw;
-
+        max-width: 90vw;
         height: 100%;
     }
 

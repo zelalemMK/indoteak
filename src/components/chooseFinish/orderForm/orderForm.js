@@ -103,7 +103,7 @@ const OrderForm = () => {
           />
         </div>
         <div className="form-group">
-          <h4>State/Province*</h4>
+          <h4>State*</h4>
           <input
             type="text"
             name="state"
@@ -113,7 +113,7 @@ const OrderForm = () => {
           />
         </div>
         <div className="form-group">
-          <h4>ZIP/Postal Code*</h4>
+          <h4>ZIP Code*</h4>
           <input
             type="text"
             name="zip"
@@ -122,7 +122,13 @@ const OrderForm = () => {
             required
           />
         </div>
-        <Button textContent={"Submit"} onClick={handleSubmit} id="submit-button"/>
+        <div className="button-continare">
+          <Button
+            textContent={"Submit"}
+            onClick={handleSubmit}
+            id="submit-button"
+          />
+        </div>
       </form>
     </div>
   );
