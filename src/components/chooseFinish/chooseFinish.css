@@ -23,4 +23,8 @@
     .tile-preview {
         display: none;
     }
+    .order-form {
+        width: 100vw;
+        height: 90vh;
+    }
  }

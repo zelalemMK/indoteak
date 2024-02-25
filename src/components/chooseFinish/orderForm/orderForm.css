@@ -14,9 +14,9 @@
     /* Ensures form doesn't exceed 50% of viewport width on larger screens */
     height: auto;
     /* Changed to auto to accommodate content size */
-    margin: 20px auto;
+    /* margin: 20px auto; */
     /* Center form with automatic horizontal margins */
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
     /* Ensures padding doesn't add to the width */
     display: flex;
@@ -28,7 +28,7 @@ input {
     width: calc(100% - 4em);
     /* Full width minus margin for consistent styling */
     height: 2em;
-    margin: 0.5em 2em;
+    /* margin: 0.5em 2em; */
     /* Ensure margin is consistent and not too large */
     box-sizing: border-box;
     /* Ensures width calculation includes padding and border */
@@ -43,7 +43,8 @@ input {
 
 .form-headers {
     display: block;
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 @media (max-width: 767px) {
@@ -51,7 +52,15 @@ input {
         width: 100%;
         /* Use 100% of the viewport width */
         border: none;
+        height: 100%;
         /* Remove border or adjust as per your design */
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 75vw;
+
+        height: 100%;
     }
 
     .form-group {
