@@ -11,6 +11,15 @@ import "./App.css";
 
 
 
+window.onload = function () {
+  // Check if the navigation type indicates a reload
+  if (performance.getEntriesByType("navigation")[0].type === "reload") {
+    window.location.href = "/"; // Redirect to home page
+  }
+};
+
+
+
 function App() {
 
   const [colorMap, setColorMap] = useState({});
