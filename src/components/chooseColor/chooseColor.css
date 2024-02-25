@@ -79,9 +79,6 @@ svg {
     display: none;
 }
 
-.safar-half-display {
-
-}
 
 
 /* Add this at the end of your CSS file */
@@ -98,12 +95,10 @@ svg {
 
     .chooseColor-button-containe {
         width: 10vw;
-
     }
 
     .chooseColor-display {
-        /* height: 550px; */
-        height: 90vh;
+        height: 80vh;
     }
 
     .color-editor {

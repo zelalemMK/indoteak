@@ -83,7 +83,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .display {
-        height: 90vh;
+        height: 74vh;
     }
 
     .design-grid {
