@@ -122,7 +122,7 @@ const OrderForm = () => {
             required
           />
         </div>
-        <div className="button-continare">
+        <div className="button-continar">
           <Button
             textContent={"Submit"}
             onClick={handleSubmit}

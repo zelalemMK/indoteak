@@ -42,10 +42,11 @@ input {
     width: 35%;
 }
 
-.button-continare {
+.button-continar {
     display: flex;
     justify-content: center;
 
+    margin-top: 20px;
 }
 
 .form-headers {
