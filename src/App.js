@@ -5,9 +5,9 @@ import ChooseDesign from "./components/chooseDesign/chooseDesign";
 import ChooseColor from "./components/chooseColor/chooseColor";
 import ChooseFinish from "./components/chooseFinish/chooseFinish";
 
-import "./App.css";
+import "./reset.css"
 import "./square.css";
-// import "./components/"
+import "./App.css";
 
 
 

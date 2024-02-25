@@ -4,6 +4,16 @@ import ColorGrid from "./colorGrid";
 import "./chooseColor.css";
 import Button from "../button/button";
 
+document.addEventListener("DOMContentLoaded", function () {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  if (isSafari) {
+    const element = document.getElementsByClassName("svg-holder");
+    element.classList.add("mac-svg");
+  }
+});
+
+
 function ChooseColor({
   DesignComponent,
   nextStep,
@@ -25,6 +35,8 @@ function ChooseColor({
       setColorMap({ ...colorMap, [id]: selectedColor });
     }
   }
+
+
 
   const resetColors = () => {
     setColorMap({});
@@ -71,7 +83,7 @@ function ChooseColor({
             handlePolygonClick={handlePolygonClick}
           />
         </div>
-        <div className="chooseColor-button-container">
+        <div className="chooseColor-button-container" id="finish-button">
           <Button onClick={nextStep} textContent={"Finish"} />
         </div>
       </div>

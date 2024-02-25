@@ -1,3 +1,7 @@
+.mac-svg {
+    height: 50%;
+}
+
 .chooseColor-display {
     display: flex;
     height: 100%;
@@ -23,23 +27,27 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-
 }
 
 .svg-holder {
 
     /* background-color: red; */
-    height: 90%;
+    height: 85%;
     box-sizing: content-box;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    /* gap: 1px; */
+    
     justify-content: center;
     align-content: center;
 
-    width: 100%
+    width: 75%;
+}
+
+
+#finish-button {
+    padding-top: 30px;
 }
 
 
@@ -70,6 +78,11 @@ svg {
 .button-half-view {
     display: none;
 }
+
+.safar-half-display {
+
+}
+
 
 /* Add this at the end of your CSS file */
 @media (max-width: 767px) {
