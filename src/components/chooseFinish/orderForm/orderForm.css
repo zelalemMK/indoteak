@@ -36,9 +36,14 @@ input {
 
 .form-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     /* Align items to the start for a cleaner look */
+}
+
+.form-headers {
+    display: block;
+    padding: 2em;
 }
 
 @media (max-width: 767px) {

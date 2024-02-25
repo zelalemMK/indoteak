@@ -36,103 +36,91 @@ const OrderForm = () => {
   return (
     <div className="form-container-container">
       <form onSubmit={handleSubmit} className="form-container">
-        <h2>Project Information</h2>
-
-        <div className="form-group">
-          <label>
-            Name*
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Email*
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Firm
-            <input
-              type="text"
-              name="firm"
-              value={form.firm}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Project
-            <input
-              type="text"
-              name="project"
-              value={form.project}
-              onChange={handleChange}
-            />
-          </label>
+        <div className="form-headers">
+          <h2>Project Information</h2>
         </div>
 
-        <h2>Shipping Information</h2>
         <div className="form-group">
-          <label>
-            Address*
-            <input
-              type="text"
-              name="address"
-              value={form.address}
-              onChange={handleChange}
-              required
-            />
-          </label>
+          <h4>Name*</h4>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <label>
-            City*
-            <input
-              type="text"
-              name="city"
-              value={form.city}
-              onChange={handleChange}
-              required
-            />
-          </label>
+          <h4>Email*</h4>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <label>
-            State/Province*
-            <input
-              type="text"
-              name="state"
-              value={form.state}
-              onChange={handleChange}
-              required
-            />
-          </label>
+          <h4>Firm</h4>
+          <input
+            type="text"
+            name="firm"
+            value={form.firm}
+            onChange={handleChange}
+          />
         </div>
         <div className="form-group">
-          <label>
-            ZIP/Postal Code*
-            <input
-              type="text"
-              name="zip"
-              value={form.zip}
-              onChange={handleChange}
-              required
-            />
-          </label>
+          <h4>Project</h4>
+          <input
+            type="text"
+            name="project"
+            value={form.project}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-headers">
+          <h2>Shipping Information</h2>
+        </div>
+        <div className="form-group">
+          <h4>Address*</h4>
+          <input
+            type="text"
+            name="address"
+            value={form.address}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <h4>City*</h4>
+          <input
+            type="text"
+            name="city"
+            value={form.city}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <h4>State/Province*</h4>
+          <input
+            type="text"
+            name="state"
+            value={form.state}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <h4>ZIP/Postal Code*</h4>
+          <input
+            type="text"
+            name="zip"
+            value={form.zip}
+            onChange={handleChange}
+            required
+          />
         </div>
         <Button textContent={"Submit"} onClick={handleSubmit} />
       </form>
