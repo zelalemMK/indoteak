@@ -10,14 +10,24 @@ import "./square.css";
 import "./App.css";
 
 
-window.onload = function () {
-  console.log("reloading");
-  let navigationEntries = performance.getEntriesByType("navigation");
-  if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
-    console.log("reloaded")
-    window.location.href = "google.com";
-  }
-};
+// Listen for the load event to determine if the page was reloaded
+window.addEventListener("load", function () {
+    // Check if the page was reloaded
+    if (sessionStorage.getItem("isReloaded")) {
+        // Clear the session storage to prevent infinite loop
+        sessionStorage.removeItem("isReloaded");
+
+        // Redirect to home page only if the current path is not the home page
+        if (window.location.pathname !== "/") {
+            window.location.href = '/'; // Change '/' to your home page URL if different
+        }
+    }
+});
+
+// Listen for the beforeunload event to detect when the page is about to be left (refreshed or closed)
+window.addEventListener("beforeunload", function () {
+    sessionStorage.setItem("isReloaded", "true");
+});
 
 
 
