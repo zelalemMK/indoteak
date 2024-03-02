@@ -20,16 +20,17 @@
     font-family: Syne;
 }
 
+#root {
+    height: 100vh;
+    width: 100vw;
+}
 
 
 body, html {
   margin: 0;
   padding: 0;
-  width: 100vw; /* Viewport width */
+  width: 100vw; 
   height: 100vh;
-    /* height: 100%;
-    box-sizing: border-box; */
-    /* border: 1px solid rebeccapurple; */
     
 }
 

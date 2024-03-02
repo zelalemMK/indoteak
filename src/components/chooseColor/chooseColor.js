@@ -4,15 +4,6 @@ import ColorGrid from "./colorGrid";
 import "./chooseColor.css";
 import Button from "../button/button";
 
-document.addEventListener("DOMContentLoaded", function () {
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-  if (isSafari) {
-    const element = document.getElementsByClassName("svg-holder");
-    element.classList.add("mac-svg");
-  }
-});
-
 
 function ChooseColor({
   DesignComponent,

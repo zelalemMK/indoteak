@@ -4,6 +4,7 @@ import jsPDF from "jspdf";
 const saveSvgAsPdf = async (svgElement, name) => {
   const canvas = await html2canvas(svgElement);
   const imgData = canvas.toDataURL("image/png");
+  imgData.save();
 
   const pdf = new jsPDF();
 

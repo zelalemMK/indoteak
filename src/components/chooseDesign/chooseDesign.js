@@ -34,7 +34,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
     { id: "design8", name: "Herringbone", Component: () => Herringbone },
     { id: "design9", name: "Hex", Component: () => Hex },
     { id: "design10", name: "Penny Round", Component: () => PennyRound },
-    { id: "design11", name: "Rectangle", Component: () => Rectanlge }, 
+    { id: "design11", name: "Rectangle", Component: () => Rectanlge },
     { id: "design12", name: "Taylor", Component: () => Taylor },
     { id: "design13", name: "Tommy", Component: () => Tommy },
     { id: "design14", name: "Twister", Component: () => Twister },
@@ -49,7 +49,6 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
       setPatternsPerPage(6);
     } else {
       setPatternsPerPage(3);
-      //Spacing could be tighter, might need to think about a second breaking point
     }
   };
 
