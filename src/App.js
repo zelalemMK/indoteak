@@ -10,15 +10,15 @@ import "./square.css";
 import "./App.css";
 
 
-// When reloading while in the progress of designing tiles, go to home page. 
 window.onload = function () {
   console.log("reloading");
-  // Check if the page is being reloaded
-  if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-    // Redirect to the home page
+  let navigationEntries = performance.getEntriesByType("navigation");
+  if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
+    console.log("reloaded")
     window.location.href = "/";
   }
 };
+
 
 
 function App() {
