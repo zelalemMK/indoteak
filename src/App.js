@@ -15,7 +15,7 @@ window.onload = function () {
   let navigationEntries = performance.getEntriesByType("navigation");
   if (navigationEntries.length > 0 && navigationEntries[0].type === "reload") {
     console.log("reloaded")
-    window.location.href = "/";
+    window.location.href = "google.com";
   }
 };
 
