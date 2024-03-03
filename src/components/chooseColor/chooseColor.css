@@ -1,7 +1,3 @@
-.mac-svg {
-    height: 50%;
-}
-
 .chooseColor-display {
     display: flex;
     height: 100%;
@@ -36,10 +32,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    
+
     justify-content: center;
     align-content: center;
-
 }
 
 
@@ -58,16 +53,8 @@
 }
 
 svg {
-    /* display: block; */
     width: 100%;
-    /* height: 40%; */
 }
-
-.display-svg:nth-child(1) {
-    background-color: red;
-    /* Example background color for the first component */
-}
-
 
 .finish-button-container {
     width: 10%;
@@ -122,4 +109,86 @@ svg {
     .color-editor {
         width: 100%;
     }
+}
+
+
+/* Lining up SVGs that are not rectangle */
+
+/* Amsterdam */
+.svg-holder>.amsterdam:nth-child(1) {
+    margin-left: 15%;
+}
+
+.svg-holder>.amsterdam:nth-child(3) {
+    margin-top: -26%;
+    margin-left: 15%;
+}
+
+.svg-holder>.amsterdam:nth-child(4) {
+    margin-top: -26%;
+}
+
+/* barrel */
+
+.svg-holder>.barrel:nth-child(3),
+.svg-holder>.barrel:nth-child(4) {
+    margin-top: -16%;
+}
+
+.svg-holder>.barrel:nth-child(2),
+.svg-holder>.barrel:nth-child(4) {
+    margin-left: -2.5%;
+}
+
+/* Chevron */
+.svg-holder>.chevron:nth-child(3),
+.svg-holder>.chevron:nth-child(4) {
+    margin-top: -48%;
+}
+
+/* fields */
+.svg-holder>.fields:nth-child(3) {
+    margin-left: 16%;
+}
+
+.svg-holder>.fields:nth-child(1) {
+    margin-left: 16%;
+}
+
+.svg-holder>.fields:nth-child(3),
+.svg-holder>.fields:nth-child(4) {
+    margin-top: -38%;
+}
+
+/* Herringbone */
+.svg-holder>.herringbone:nth-child(1),
+.svg-holder>.herringbone:nth-child(3) {
+    margin-left: 5%;
+}
+
+.svg-holder>.herringbone:nth-child(3),
+.svg-holder>.herringbone:nth-child(4) {
+    margin-top: -28%;
+}
+
+/* Hex */
+.svg-holder>.hex:nth-child(1),
+.svg-holder>.hex:nth-child(3) {
+    margin-left: 8.5%;
+}
+
+.svg-holder>.hex:nth-child(3),
+.svg-holder>.hex:nth-child(4) {
+    margin-top: -21%;
+}
+
+/* PennyRound */
+.svg-holder>.PennyRound:nth-child(1),
+.svg-holder>.PennyRound:nth-child(3) {
+    margin-left: 5%;
+}
+
+.svg-holder>.PennyRound:nth-child(3),
+.svg-holder>.PennyRound:nth-child(4) {
+    margin-top: -10%;
 }

@@ -15,6 +15,7 @@ export default function Fields({ colorMap, handlePolygonClick}) {
 
     return (
       <svg
+        className="fields"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         fill="white"

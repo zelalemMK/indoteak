@@ -12,6 +12,7 @@ export default function Amsterdam({colorMap, handlePolygonClick}) {
   ];
   return (
     <svg
+    className="amsterdam"
       data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"

@@ -4,14 +4,7 @@ import ColorGrid from "./colorGrid";
 import "./chooseColor.css";
 import Button from "../button/button";
 
-
-function ChooseColor({
-  DesignComponent,
-  nextStep,
-  prevStep,
-  colorMap,
-  setColorMap,
-}) {
+function ChooseColor({ DesignComponent, nextStep, colorMap, setColorMap }) {
   const [selectedColor, setSelectedColor] = useState(null);
   const [eraseActive, setEraserActive] = useState(false);
 
@@ -26,8 +19,6 @@ function ChooseColor({
       setColorMap({ ...colorMap, [id]: selectedColor });
     }
   }
-
-
 
   const resetColors = () => {
     setColorMap({});
@@ -58,16 +49,19 @@ function ChooseColor({
             colorMap={colorMap}
             handlePolygonClick={handlePolygonClick}
           />
+
           <DesignComponent
             className="display-svg"
             colorMap={colorMap}
             handlePolygonClick={handlePolygonClick}
           />
+
           <DesignComponent
             className="display-svg"
             colorMap={colorMap}
             handlePolygonClick={handlePolygonClick}
           />
+
           <DesignComponent
             className="display-svg"
             colorMap={colorMap}
