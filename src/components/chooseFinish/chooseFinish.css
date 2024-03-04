@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.tile-preview {
+.tile-preview-holder {
     width: 45%;
     height: 82vh;
 
@@ -24,7 +24,7 @@
 
 
 @media (max-width: 767px) {
-    .tile-preview {
+    .tile-preview-holder {
         display: none;
     }
     .order-form {

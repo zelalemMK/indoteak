@@ -1,14 +1,13 @@
 .custom-button {
-    /* display: flex; */
-    /* width: 235px; */
+
+    width: 10em;
+    height: 2em;
+
+    color: white;
     padding: 1px 1px;
-    justify-content: center;
-    align-items: center;
     font-size: 1.7em;
-    /* gap: 12px; */
 
     margin-top: 5px;
 
-    /* border-radius: 8px; */
-    background: rgba(255, 244, 227, 0.89);
+    background: rgba(0, 0, 0, 0.89);
 }

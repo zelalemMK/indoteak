@@ -10,13 +10,6 @@ function Header() {
         <img className="header-logo" src={logo} alt="Logo" />
       </a>
 
-      {/* <input type="checkbox" id="burger-checkbox" className="burger-checkbox" /> */}
-      {/* <label htmlFor="burger-checkbox" className="burger-menu">
-        <span className="burger-icon" onClick={displayMenu}>
-          
-        </span>
-      </label> */}
-
       <div className="nav-items">
         <div className="nav-item">PRODUCTS</div>
         <div className="nav-item">INSPIRATIONS</div>

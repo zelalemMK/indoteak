@@ -24,10 +24,11 @@
 .nav-item {
   text-align: center;
   color: black;
-  font-size: 16px;
+  font-size: 19px;
   font-family: "Syne", sans-serif;
-  font-weight: 700;
-  line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
   text-wrap: wrap;
 }
 
@@ -68,9 +69,4 @@
     display: flex;
     /* Show nav items when checkbox is checked */
   }
-}
-
-/* Additional Styles for Burger Menu */
-.burger-icon {
-  /* Style your burger icon here */
 }
