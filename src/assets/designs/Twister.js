@@ -39,6 +39,7 @@ export default function Twister({ colorMap, handlePolygonClick}) {
 
   return (
     <svg
+      className="twister"
       id="a965c6f8-ac70-4d3b-bed8-03194a92ac9b"
       data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"

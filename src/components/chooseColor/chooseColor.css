@@ -192,3 +192,9 @@ svg {
 .svg-holder>.PennyRound:nth-child(4) {
     margin-top: -10%;
 }
+
+/* twister */
+.svg-holder>.twister:nth-child(3),
+.svg-holder>.twister:nth-child(4) {
+    margin-top: -2%;
+}   
