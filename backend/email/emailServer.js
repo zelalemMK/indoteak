@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cros = require("cors");
+const password = require("./password");
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -9,7 +10,7 @@ const port = process.env.PORT || 3001;
 
 // Replace the following with your own email details
 const EMAIL_USER = "zelliott33@gmail.com";
-const EMAIL_PASS = "yeqy qmmg idia pxhe";
+const EMAIL_PASS = password;
 const RECEIVER_EMAIL = "mekonnenzs99@gmail.com";
 
 app.use(bodyParser.json());
