@@ -13,7 +13,7 @@ const saveSvgAsPdf = async (svgElement, name) => {
   const svgHeightMm = svgHeightPx * (25.4 / 96); // Convert pixels to mm
   const yOffset = pageHeight - svgHeightMm; // Calculate Y offset
 
-  pdf.text(name, 105, 20, { align: "center" }); // Add centered header at the top
+  pdf.text(`${name} Order Sample`, 105, 20, { align: "center" }); // Add centered header at the top
   await pdf.svg(svgElement, 10, yOffset, 180, svgHeightMm); // Adjust width and X offset as needed
   pdf.save(`${name}.pdf`);
 };
