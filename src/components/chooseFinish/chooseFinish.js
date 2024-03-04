@@ -14,13 +14,13 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
     <div className="choose-finish">
       <div className="order-form">
         <OrderForm />
-      </div>
-      <div className="tile-preview-holder" ref={svgRef}>
-        <DesignComponent colorMap={colorMap} className="tile-preview" />
         <Button
           textContent={"Download PDF"}
           onClick={() => saveSvgAsPdf(svgRef.current, DesignComponent.name)}
         />
+      </div>
+      <div className="tile-preview-holder" ref={svgRef}>
+        <DesignComponent colorMap={colorMap} className="tile-preview" />
       </div>
     </div>
   );

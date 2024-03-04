@@ -123,11 +123,13 @@ const OrderForm = () => {
           />
         </div>
         <div className="button-continar">
-          <Button
-            textContent={"Submit"}
-            onClick={handleSubmit}
+          <button
+            className="submit-button"
             id="submit-button"
-          />
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>

@@ -1,6 +1,6 @@
 .form-container-container {
     width: 100%;
-    height: 90%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -12,10 +12,10 @@
 
 .form-container {
 
-    width: 80%;
+    width: 90%;
 
     max-width: 50vw;
-    height: 90%;
+    height: 100%;
 
     height: auto;
     box-sizing: border-box;
@@ -47,6 +47,20 @@ input {
     justify-content: center;
 
     margin-top: 20px;
+}
+/* #submit-button {
+    display: block;
+    width: 5em;
+    height: 2em;
+} */
+.submit-button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+
+    width: 10em;
+    height: 3em;
 }
 
 .form-headers {
