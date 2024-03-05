@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./orderForm.css";
 
-const OrderForm = () => {
+const OrderForm = ({ setSubmitted }) => {
   // State for form fields and form errors
   const [form, setForm] = useState({
     name: "",
@@ -54,6 +54,7 @@ const OrderForm = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitted(true);
     if (validateForm()) {
       try {
         const response = await fetch("http://localhost:3001/send-form", {
