@@ -2,11 +2,11 @@ import { jsPDF } from "jspdf";
 import "svg2pdf.js";
 
 const saveSvgAsPdf = async (svgElement, name) => {
-
+  
   // A4 PDF page in jsPDF is 210 mm wide and 297 mm high
   const pdf = new jsPDF();
   svgElement = svgElement.querySelector("svg");
-  
+
   // Header
   pdf.setFont("Syne");
   pdf.setFontSize(24)
