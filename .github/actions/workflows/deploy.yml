@@ -24,4 +24,4 @@ jobs:
           npm run build
 
       - name: Deploy to S3
-        run: aws s3 sync build/ s3://your-bucket-name --delete
+        run: aws s3 sync build/ s3://indoteak --delete
