@@ -1,68 +1,105 @@
-body{
-    margin: 0;
-    
-}
+/* Base styles */
 .display {
-    max-width: 85%;
-    width: 95%;
-    margin: auto;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
-.text{
-    margin-top: 130px;
-    margin-bottom: 40px;
+
+.title h1 {
+    font-size: 2.986rem;
+    /* Responsive font size */
 }
 
 
-.design-item {
-width: inherit;
-align-item: center;
-position: cover;
-max-width: inherit;
-
-}
-
-.design-container {
-    width: inherit;
+.custom-button {
     display: flex;
-    flex-direction: column;
+    width: 235px;
+    padding: 16px 32px;
     justify-content: center;
-    margin-top: 20px
+    align-items: center;
+    gap: 12px;
 
+    border-radius: 8px;
+    background: rgba(255, 244, 227, 0.89);
 }
 
 .design-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px;
+    width: 90%;
+
+
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+
 }
 
+.svg-design {
+    width: 30%;
+    height: 70%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.svg-design:hover {
+    transform: scale(1.05);
+}
 
 .button-container {
+    width: 90%;
+
     display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 20px;
-   margin: auto;
+
+    justify-content: space-around;
+    padding: 20px 0;
 }
 
-.design-item:hover {
-      transform: scale(1.15);
-}
-button {
-    padding: 15px 32px;
-    font-size: 16px;
-    
-    cursor: pointer;
-    bottom: 0px;
+.button-container .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: red;
 }
 
+.pattern-name {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display {
+        height: 74vh;
+    }
+
+    .design-grid {
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .svg-design {
+        width: 90%;
+        height: 90%;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    .title h1 {
+        font-size: 2rem;
+    }
+}
 
 
-   

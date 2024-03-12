@@ -1,40 +1,215 @@
-.body {
-    margin: 0;
-    padding: 0;
-}
-.choose-color-container {
-    max-width: 80%;
-    width: 70%;
+.title {
+    display: flex;
     justify-content: center;
-    bottom: 0px;
+}
+
+.title h1 {
+    font-size: 2.7rem;
+    /* Responsive font size */
+}
+
+
+.chooseColor-display {
+    display: flex;
     height: 100%;
-    
-    
+
 }
-.color-container {
+
+.color-editor {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.half-screen-display {
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.svg-holder {
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
     justify-content: center;
-    width: 20%;
-    margin-top: 150px;
+    align-content: center;
 }
-.pattern {
-    width: inherit;
-    position: cover;
-    
-}
-.color-btn:hover{
-    transform: scale(1.05)
-}
-.color-grid {
-}
-.button {
-    width: 40%;
-    margin: 2px
-}
-.next-btn {
-    width: inherit;
-    margin-left:15%;
-    width: 150px;
-    height: 50px;
 
 
+#finish-button {
+    padding-top: 30px;
+}
+
+
+.chooseColor-button-container {
+    height: 10%;
+}
+
+.display-svg {
+    width: 25%;
+    height: 25%;
+}
+
+svg {
+    width: 100%;
+}
+
+.finish-button-container {
+    width: 10%;
+}
+
+.button-half-view {
+    display: none;
+}
+
+
+
+/* Add this at the end of your CSS file */
+@media (max-width: 767px) {
+
+    .button-half-view {
+        display: block;
+    }
+
+    /* Adjust the max-width as needed */
+    .half-screen-display {
+        display: none;
+    }
+
+    .chooseColor-button-containe {
+        width: 10vw;
+    }
+
+    .chooseColor-display {
+        height: 80vh;
+    }
+
+    .color-editor {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .selected-svg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .color-grid-container {
+        padding: 5px;
+    }
+
+    .color-grid {
+        width: 100%;
+    }
+
+    .color-editor {
+        width: 100%;
+    }
+
+    .title h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* Lining up SVGs that are not rectangle */
+
+/* Amsterdam */
+.svg-holder>.amsterdam:nth-child(1) {
+    margin-left: 15%;
+}
+
+.svg-holder>.amsterdam:nth-child(3) {
+    margin-top: -26%;
+    margin-left: 15%;
+}
+
+.svg-holder>.amsterdam:nth-child(4) {
+    margin-top: -26%;
+}
+
+/* barrel */
+
+.svg-holder>.barrel:nth-child(3),
+.svg-holder>.barrel:nth-child(4) {
+    margin-top: -16%;
+}
+
+.svg-holder>.barrel:nth-child(2),
+.svg-holder>.barrel:nth-child(4) {
+    margin-left: -2.5%;
+}
+
+/* Chevron */
+.svg-holder>.chevron:nth-child(3),
+.svg-holder>.chevron:nth-child(4) {
+    margin-top: -48%;
+}
+
+/* fields */
+.svg-holder>.fields:nth-child(3) {
+    margin-left: 16%;
+}
+
+.svg-holder>.fields:nth-child(1) {
+    margin-left: 16%;
+}
+
+.svg-holder>.fields:nth-child(3),
+.svg-holder>.fields:nth-child(4) {
+    margin-top: -38%;
+}
+
+/* Herringbone */
+.svg-holder>.herringbone:nth-child(1),
+.svg-holder>.herringbone:nth-child(3) {
+    margin-left: 5%;
+}
+
+.svg-holder>.herringbone:nth-child(3),
+.svg-holder>.herringbone:nth-child(4) {
+    margin-top: -28%;
+}
+
+/* Hex */
+.svg-holder>.hex:nth-child(1),
+.svg-holder>.hex:nth-child(3) {
+    margin-left: 8.5%;
+}
+
+.svg-holder>.hex:nth-child(3),
+.svg-holder>.hex:nth-child(4) {
+    margin-top: -21%;
+}
+
+/* PennyRound */
+.svg-holder>.PennyRound:nth-child(1),
+.svg-holder>.PennyRound:nth-child(3) {
+    margin-left: 5%;
+}
+
+.svg-holder>.PennyRound:nth-child(3),
+.svg-holder>.PennyRound:nth-child(4) {
+    margin-top: -10%;
+}
+
+/* twister */
+.svg-holder>.twister:nth-child(3),
+.svg-holder>.twister:nth-child(4) {
+    margin-top: -2%;
 }

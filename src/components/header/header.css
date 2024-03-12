@@ -1,25 +1,72 @@
-/* Desktop Display */
-body{
-  margin: 0;
-}
-.header {
-  max-width: 100%;
-  background-color: black;
-  height: 100px;
-  position: fixed;
+/* header.css */
+
+.header-container {
   width: 100%;
-  top: 0px;
-}
-
-.logo-container {
-  height: 100%;
+  padding: 0 52px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  /* border: 3px solid pink; */
 }
-.logo {
-  /* border:3px solid pink; */
-  width: 300px;
 
+.header-logo {
+  width: 299px;
+  height: 45.4px;
+}
+
+.nav-items {
+  width: 787px;
+  height: 131px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  text-align: center;
+  color: black;
+  font-size: 19px;
+  font-family: "Syne", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  text-wrap: wrap;
+}
+
+.burger-menu {
+  display: none;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+  }
+
+  .nav-items {
+    display: none;
+    /* Hide nav items initially */
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .burger-checkbox {
+    display: none;
+    /* Hide the actual checkbox */
+  }
+
+  .burger-menu {
+    display: block;
+    /* Show burger icon */
+    cursor: pointer;
+  }
+
+  .burger-checkbox:checked+.nav-items {
+    display: flex;
+    /* Show nav items when checkbox is checked */
+  }
 }

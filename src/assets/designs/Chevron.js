@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+
 
 
 export default function Chevron({ colorMap, handlePolygonClick }) {
@@ -26,6 +26,7 @@ export default function Chevron({ colorMap, handlePolygonClick }) {
 
   return (
     <svg
+    className="chevron"
       id="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"

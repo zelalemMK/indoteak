@@ -1,43 +1,43 @@
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
-import React, { useRef } from "react";
-import "./chooseFinish.css"
-import Button from "react-bootstrap/Button";
+import { useRef, useState } from "react";
 
-const saveSvgAsPdf = async (svgElement, name) => {
-  const canvas = await html2canvas(svgElement);
-  const imgData = canvas.toDataURL("image/png");
+import saveSvgAsPdf from "../../utils/pdfUtls";
+import OrderForm from "./orderForm/orderForm";
+import Button from "../button/button";
 
-  const pdf = new jsPDF();
-
-  pdf.addImage(imgData, "PNG", 0, 0, canvas.width * 0.1, canvas.height * 0.1);
-
-  // Save the PDF
-  pdf.save(`${name}.pdf`);
-};
-
-const divStyle = {
-  width: "45vw",
-  height: "45vh",
-};
+import "./chooseFinish.css";
+import "./orderForm/orderForm.css";
 
 const ChooseFinish = ({ DesignComponent, colorMap }) => {
-      const componentName =
-        DesignComponent.name ||
-        DesignComponent.displayName ||
-        "UnnamedComponent";
+  const svgRef = useRef(DesignComponent);
+  const [submitted, setSubmitted] = useState(false);
 
-  console.log(colorMap);
-  const svgRef = useRef(null);
   return (
-    <div className="container-fluid pdf-style" style={divStyle}>
-      <div ref={svgRef}>
-        <DesignComponent colorMap={colorMap} />
+    <>
+      <div className="title">
+        <h1 className="text-center text">Order Sample</h1>
       </div>
-      <Button  className=" text-bnt m-3" onClick={() => saveSvgAsPdf(svgRef.current, componentName)}>
-        Save as PDF
-      </Button>
-    </div>
+      <div className="choose-finish">
+        <div className="order-form">
+          <OrderForm setSubmitted={setSubmitted} />
+          {/* They can download PDF only after submitting form
+          We will inplement ordering samples after words. */}
+          <div className="download-holder">
+            {submitted && (
+              <Button
+                textContent={"Download PDF"}
+                onClick={() => {
+                  saveSvgAsPdf(svgRef.current, DesignComponent.name);
+                  setSubmitted(true);
+                }}
+              />
+            )}
+          </div>
+        </div>
+        <div className="tile-preview-holder" ref={svgRef}>
+          <DesignComponent colorMap={colorMap} className="tile-preview" />
+        </div>
+      </div>
+    </>
   );
 };
 

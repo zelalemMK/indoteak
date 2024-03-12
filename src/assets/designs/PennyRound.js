@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+
 
 export default function PennyRound({ colorMap, handlePolygonClick}) {
   const values = [
@@ -139,6 +139,7 @@ export default function PennyRound({ colorMap, handlePolygonClick}) {
 
   return (
     <svg
+      className="PennyRound"
       id="a092b8c9-05e3-4b05-b43b-ac1b26260135"
       data-name="a525e934-690d-4aef-a897-9e683fe4aae0"
       xmlns="http://www.w3.org/2000/svg"

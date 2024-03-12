@@ -24,3 +24,7 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+
+#password for gmail, to be changed in prod
+backend/email/password.js

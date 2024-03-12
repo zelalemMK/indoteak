@@ -1,0 +1,103 @@
+.form-container-container {
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+
+    width: 90%;
+
+    max-width: 50vw;
+    height: 100%;
+
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+ 
+    width: calc(100% - 4em);
+    height: 2em;    
+    box-sizing: border-box;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.form-group > h4 {
+    width: 35%;
+}
+
+.button-continar {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+/* #submit-button {
+    display: block;
+    width: 5em;
+    height: 2em;
+} */
+.submit-button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+
+    width: 10em;
+    height: 3em;
+}
+
+.form-headers {
+    display: block;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+}
+
+@media (max-width: 767px) {
+    .form-container-container {
+        width: 100%;
+        /* Use 100% of the viewport width */
+        border: none;
+        height: 73%;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 90vw;
+        height: 100%;
+    }
+
+    .form-group {
+        flex-direction: row;
+        /* Change direction to row for single-line layout */
+        justify-content: flex-start;
+        /* Align items to the start */
+        margin-bottom: 10px;
+        /* Add some space between form groups */
+    }
+
+    input,
+    .form-group label {
+        margin-left: 0;
+        /* Remove left margin for inputs and labels */
+        width: 100%;
+        /* Inputs take full width for better usability */
+    }
+}

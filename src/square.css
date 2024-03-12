@@ -1,0 +1,297 @@
+@font-face {
+	font-family: 'Belleza';
+	src: url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e2c662d49ec143ead5773/1687039078335/Belleza-Regular.ttf)
+}
+
+@font-face {
+	font-family: 'DMSans';
+	src: url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bed00b8ff49d9297456/1686084589171/DMSans-Regular.ttf;)
+}
+
+@font-face {
+	font-family: 'Syne';
+	src: url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/647f9bd711d8681289da6e49/1686084568295/Syne-VariableFont_wght.ttf)
+}
+
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d5c76b93600c9fb636/1687041494190/Gotham+Bold.otf)
+}
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url(https://static1.squarespace.com/static/645e5849f44502019dc85bb0/t/648e35d9fa95ba0a30d74de6/1687041497853/Gotham+Book.otf)
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Belleza, sans-serif;
+	font-size: 56px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Belleza, sans-serif;
+	font-size: 34px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+}
+
+label {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Belleza, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Syne, sans-serif;
+	font-size: 56px;
+	font-variant: normal;
+	font-variation-settings: "wght" 700;
+	line-height: 1.25;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+}
+
+h4 {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Syne, sans-serif;
+	font-size: 26px;
+	font-variant: normal;
+	font-variation-settings: "wght" 700;
+	line-height: 1.25;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	widows: 1;
+}
+
+.sqsrte-large {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: "DM Sans", sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 1.429;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: none;
+	widows: 1;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: "DM Sans", sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.684;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 7px;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: none;
+	widows: 1;
+}
+
+.sqsrte-small {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: "DM Sans", sans-serif;
+	font-size: 13px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.647;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 7px;
+	orphans: 1;
+	page-break-after: auto;
+	page-break-before: auto;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: none;
+	widows: 1;
+}
+
+/* // Site Title // */
+.header-title-text a {
+	font-family: Syne !important;
+}
+
+.sqs-block-button a,
+[class*='button'],
+[class*='btn'] {
+	font-family: Syne !important;
+}
+
+/* Site Navigation Styling */
+.header-nav-item a {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* -epub-hyphens: none; */
+	font-family: Syne, sans-serif;
+	font-size: 15px;
+	font-variant: normal;
+	font-variation-settings: "wght" 700;
+	line-height: 1.25;
+	text-transform: uppercase;
+	widows: 1;
+}
+
+/* Remove Navigation Link Underline - Active */
+.header-nav-item--active a,
+.header-nav-folder-item--active .header-nav-folder-item-content {
+	background: none !important;
+}
+
+/* Active Styles for Folder Header and Items */
+.header-nav-item--active .header-nav-folder-title,
+:not(.header-nav-item--folder).header-nav-item--active a,
+.header-nav-folder-item--active>a {
+	color: #9c867b !important;
+}
+
+/* Header Hover Effect */
+.header-nav-wrapper a:hover {
+	transform: scale(1.025);
+}
+
+/* Make Nav Folder Titles Not Clickable */
+.header-nav-folder-title {
+	pointer-events: none;
+}
+
+/* Navigation Folder Content Styling */
+.header-nav-folder-content {
+	border-radius: 15px !important;
+	transition: max-height 0.25s ease-in-out, visibility 0.25s ease-in-out, opacity 0.25s ease-in-outc !important;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.header-nav-folder-item {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/* Active Styles for Navigation Folder Content */
+.header-nav-folder-content.active,
+.header-nav-item:hover .header-nav-folder-content {
+	max-height: 200px !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Transition when Hover Ends for Navigation Folder Content */
+.header-nav-item:not(:hover) .header-nav-folder-content {
+	max-height: 0 !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}

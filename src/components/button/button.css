@@ -1,0 +1,13 @@
+.custom-button {
+
+    width: 10em;
+    height: 2em;
+
+    color: white;
+    padding: 1px 1px;
+    font-size: 1.7em;
+
+    margin-top: 5px;
+
+    background: rgba(0, 0, 0, 0.89);
+}
