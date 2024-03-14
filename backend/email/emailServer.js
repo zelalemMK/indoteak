@@ -24,6 +24,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
+
 app.post("/send-form", (req, res) => {
   const { name, email, firm, project, address, city, state, zip } = req.body;
   const mailOptions = {
@@ -31,16 +33,86 @@ app.post("/send-form", (req, res) => {
     to: RECEIVER_EMAIL,
     subject: "New Form Submission",
     html: `
-            <h1>Form Details</h1>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Firm:</strong> ${firm}</p>
-            <p><strong>Project:</strong> ${project}</p>
-            <p><strong>Address:</strong> ${address}</p>
-            <p><strong>City:</strong> ${city}</p>
-            <p><strong>State:</strong> ${state}</p>
-            <p><strong>ZIP:</strong> ${zip}</p>
-        `,
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Form Submission Details</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        line-height: 1.6;
+                        color: #333;
+                        padding: 20px;
+                        background-color: #f4f4f4;
+                    }
+                    h1 {
+                        color: #333;
+                        margin-bottom: 20px;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-top: 20px;
+                    }
+                    th, td {
+                        padding: 10px;
+                        text-align: left;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    th {
+                        background-color: #333;
+                        color: white;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Form Submission Details</h1>
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Name</strong></td>
+                        <td>${name}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td>${email}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firm</strong></td>
+                        <td>${firm}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Project</strong></td>
+                        <td>${project}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address</strong></td>
+                        <td>${address}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>City</strong></td>
+                        <td>${city}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>State</strong></td>
+                        <td>${state}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ZIP</strong></td>
+                        <td>${zip}</td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+          `,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -49,6 +121,7 @@ app.post("/send-form", (req, res) => {
       return res.status(500).send("Error sending email");
     }
     res.status(200).send("Email sent successfully: " + info.response);
+    console.log("Email sent");
   });
 });
 
