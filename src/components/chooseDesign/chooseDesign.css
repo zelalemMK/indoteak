@@ -76,7 +76,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 423px) {
     .display {
         height: 74vh;
     }

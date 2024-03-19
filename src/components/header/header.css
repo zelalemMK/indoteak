@@ -43,7 +43,7 @@ a {
 }
 
 /* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1220px) {
   .header-container {
     flex-direction: row;
     display: flex;
