@@ -78,7 +78,8 @@
 /* Responsive Design */
 @media (max-width: 423px) {
     .display {
-        height: 74vh;
+        height: 70vh;
+        margin-top: 70px;
     }
 
     .design-grid {

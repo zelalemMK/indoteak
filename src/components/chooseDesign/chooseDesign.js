@@ -45,7 +45,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
   // Function to update the patternsPerPage based on screen width
   const updatePatternsPerPage = () => {
-    if (window.innerWidth < 778) {
+    if (window.innerWidth < 423) {
       // Assuming 778 px as the breakpoint for mobile view
       setPatternsPerPage(6);
     } else {
