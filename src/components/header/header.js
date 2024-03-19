@@ -1,9 +1,7 @@
-
 import logo from "./header.svg";
 import "./header.css";
 
 function Header() {
-
   return (
     <div className="header-container">
       <a href="https://fennel-purple-dteb.squarespace.com">
@@ -11,11 +9,34 @@ function Header() {
       </a>
 
       <div className="nav-items">
-        <div className="nav-item">PRODUCTS</div>
-        <div className="nav-item">INSPIRATIONS</div>
-        <div className="nav-item">TILE DIRECT</div>
-        <div className="nav-item">TRADE</div>
-        <div className="nav-item">SAMPLES</div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/inspirations">
+            PRODUCTS
+          </a>
+        </div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/inspirations">
+            INSPIRATIONS
+          </a>
+        </div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/tile-direct">
+            TILE DIRECT
+          </a>
+        </div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/trade">TRADE</a>
+        </div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/samples">
+            SAMPLES
+          </a>
+        </div>
+        <div className="nav-item">
+          <a href="https://fennel-purple-dteb.squarespace.com/partner">
+            PARTNER PORTAL
+          </a>
+        </div>
       </div>
     </div>
   );
