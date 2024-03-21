@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'DMSans';
-    src: local('DMSans'), url('./assets/fonts/DMSans.ttc') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Syne';
-    src: local('Syne'), url('./assets/fonts/Syne.ttc') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+/*  */
 
 
 * {
@@ -66,33 +54,6 @@ body, html {
 }
 
 
-/* Font Standard */
-html {
-    font-size: 16px;
-}
-
-body {
-    font-size: 1rem;
-    /* 16px */
-    line-height: 1.6;
-}
-
-h1 {
-    /* font-size: 2.441rem; */
-    /* Major Third Scale */
-}
-
-h2 {
-    font-size: 1.953rem;
-}
-
-h3 {
-    font-size: 1.563rem;
-}
-
-h4 {
-    font-size: 1.25rem;
-}
 
 @media screen and (max-width: 767px) {
     body {

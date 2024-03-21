@@ -98,7 +98,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                 }}
               >
                 <CurrentDesign />
-                <h3 className="pattern-name">{pattern.name}</h3>
+                <h4 className="pattern-name">{pattern.name}</h4>
               </div>
             );
           })}
