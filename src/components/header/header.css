@@ -22,15 +22,30 @@
   align-items: center;
 }
 
-.nav-item {
+/* .nav-item {
   text-align: center;
   color: black;
   font-size: 19px;
   font-family: "Syne", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 19px;
   text-wrap: wrap;
+} */
+
+/* Site Navigation Styling */
+.nav-item {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  /* -epub-hyphens: none; */
+  font-family: Syne, sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  font-variation-settings: "wght" 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  widows: 1;
 }
 
 a {
