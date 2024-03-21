@@ -20,7 +20,7 @@
     align-items: center;
     gap: 12px;
 
-    /* border-radius: 8px; */
+    border-radius: 8px;
     background: rgba(255, 244, 227, 0.89);
 }
 
@@ -50,6 +50,10 @@
 
 .svg-design:hover {
     transform: scale(1.05);
+}
+
+.svg-design > h3 {
+    margin-top: 5px;
 }
 
 .button-container {

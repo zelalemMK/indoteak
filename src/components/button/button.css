@@ -12,6 +12,10 @@
 
     background: #FFF4E3;
 }
+.custom-button:hover {
+    transform: scale(1.05);
+}
+
 
 /* .sqrte-large {
     margin: 0;
