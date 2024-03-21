@@ -3,11 +3,6 @@
     justify-content: center;
 }
 
-.title h1 {
-    font-size: 2.7rem;
-    /* Responsive font size */
-}
-
 
 .chooseColor-display {
     display: flex;
