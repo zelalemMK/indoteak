@@ -20,7 +20,7 @@
     align-items: center;
     gap: 12px;
 
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background: rgba(255, 244, 227, 0.89);
 }
 
@@ -67,9 +67,7 @@
     background-color: red;
 }
 
-.pattern-name {
-    font-size: 1em;
-}
+
 
 /* Responsive Design */
 @media (max-width: 423px) {

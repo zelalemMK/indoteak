@@ -268,7 +268,7 @@ p {
 
 /* Navigation Folder Content Styling */
 .header-nav-folder-content {
-	border-radius: 15px !important;
+	/* border-radius: 15px !important; */
 	transition: max-height 0.25s ease-in-out, visibility 0.25s ease-in-out, opacity 0.25s ease-in-outc !important;
 	max-height: 0;
 	overflow: hidden;
