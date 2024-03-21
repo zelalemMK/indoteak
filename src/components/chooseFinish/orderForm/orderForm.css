@@ -73,7 +73,6 @@ input {
 @media (max-width: 767px) {
     .form-container-container {
         width: 100%;
-        /* Use 100% of the viewport width */
         border: none;
         height: 73%;
     }
@@ -99,5 +98,8 @@ input {
         /* Remove left margin for inputs and labels */
         width: 100%;
         /* Inputs take full width for better usability */
+    }
+    .button-container {
+        width: 90vw;
     }
 }

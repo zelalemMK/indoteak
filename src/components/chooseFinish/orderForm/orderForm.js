@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./orderForm.css";
 
 const OrderForm = ({ setSubmitted }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // State for form fields and form errors
   const [form, setForm] = useState({
     name: "",
@@ -55,6 +56,7 @@ const OrderForm = ({ setSubmitted }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitted(true);
+    setIsSubmitting(true);
     if (validateForm()) {
       try {
         const response = await fetch("http://localhost:3001/send-form", {
@@ -183,9 +185,11 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="button-container">
-          <button type="submit" className="submit-button" id="submit-button">
-            Submit
-          </button>
+          {!isSubmitting && (
+            <button type="submit" className="submit-button" id="submit-button">
+              Submit
+            </button>
+          )}
         </div>
       </form>
     </div>
