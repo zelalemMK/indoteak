@@ -10,6 +10,7 @@
 
 
 .header-logo {
+  background-image: url("./header.svg");
   width: 299px;
   height: 45.4px;
 }
@@ -75,19 +76,15 @@ a {
     height: auto;
   }
 
-  .burger-checkbox {
-    display: none;
-    /* Hide the actual checkbox */
+  .header-logo {
+    /* background-image: url("./header.svg"); */
+
+    box-sizing: content-box;
+    background-color: black;
+    background-image: url("./indoteak.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .burger-menu {
-    display: block;
-    /* Show burger icon */
-    cursor: pointer;
-  }
-
-  .burger-checkbox:checked+.nav-items {
-    display: flex;
-    /* Show nav items when checkbox is checked */
-  }
 }

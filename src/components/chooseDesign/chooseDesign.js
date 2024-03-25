@@ -22,7 +22,6 @@ import Button from "../button/button";
 
 const ChooseDesign = ({ onDesignSelect, nextStep }) => {
   const [page, setPage] = useState(0);
-  // const patternsPerPage = 3;
 
   const patterns = [
     { id: "design1", name: "Amsterdam", Component: () => Amsterdam },
@@ -45,7 +44,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
 
   // Function to update the patternsPerPage based on screen width
   const updatePatternsPerPage = () => {
-    if (window.innerWidth < 423) {
+    if (window.innerWidth < 431) {
       // Assuming 778 px as the breakpoint for mobile view
       setPatternsPerPage(6);
     } else {
@@ -98,7 +97,7 @@ const ChooseDesign = ({ onDesignSelect, nextStep }) => {
                 }}
               >
                 <CurrentDesign />
-                <h4 className="pattern-name">{pattern.name}</h4>
+                <p className="pattern-name">{pattern.name}</p>
               </div>
             );
           })}

@@ -1,6 +1,7 @@
 .title {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 
@@ -114,6 +115,10 @@ svg {
 
     .color-editor {
         width: 100%;
+    }
+
+    .color-editor>svg {
+        width: 95%;
     }
 
     .title h1 {

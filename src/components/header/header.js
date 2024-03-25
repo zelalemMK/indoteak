@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="header-container">
       <a href="https://fennel-purple-dteb.squarespace.com">
-        <img className="header-logo" src={logo} alt="Logo" />
+        <div className="header-logo" alt="Logo"></div>
       </a>
 
       <div className="nav-items">

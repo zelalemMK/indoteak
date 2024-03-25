@@ -85,11 +85,11 @@ const OrderForm = ({ setSubmitted }) => {
     <div className="form-container-container">
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form-headers">
-          <h2>Project Information</h2>
+          <h4>Project Information</h4>
         </div>
 
         <div className="form-group">
-          <h4>Name*</h4>
+          <p>Name*</p>
           <input
             type="text"
             name="name"
@@ -101,7 +101,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>Email*</h4>
+          <p>Email*</p>
           <input
             type="email"
             name="email"
@@ -113,7 +113,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>Firm</h4>
+          <p>Firm</p>
           <input
             type="text"
             name="firm"
@@ -123,7 +123,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>Project</h4>
+          <p>Project</p>
           <input
             type="text"
             name="project"
@@ -133,11 +133,11 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-headers">
-          <h2>Shipping Information</h2>
+          <h4>Shipping Information</h4>
         </div>
 
         <div className="form-group">
-          <h4>Address*</h4>
+          <p>Address*</p>
           <input
             type="text"
             name="address"
@@ -149,7 +149,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>City*</h4>
+          <p>City*</p>
           <input
             type="text"
             name="city"
@@ -161,7 +161,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>State*</h4>
+          <p>State*</p>
           <input
             type="text"
             name="state"
@@ -173,7 +173,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-group">
-          <h4>ZIP Code*</h4>
+          <p>ZIP Code*</p>
           <input
             type="text"
             name="zip"
@@ -284,7 +284,7 @@ export default OrderForm;
 //         </div>
 
 //         <div className="form-group">
-//           <h4>Name*</h4>
+//           <p>Name*</p>
 //           <input
 //             type="text"
 //             name="name"
@@ -294,7 +294,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>Email*</h4>
+//           <p>Email*</p>
 //           <input
 //             type="email"
 //             name="email"
@@ -304,7 +304,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>Firm</h4>
+//           <p>Firm</p>
 //           <input
 //             type="text"
 //             name="firm"
@@ -313,7 +313,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>Project</h4>
+//           <p>Project</p>
 //           <input
 //             type="text"
 //             name="project"
@@ -326,7 +326,7 @@ export default OrderForm;
 //           <h2>Shipping Information</h2>
 //         </div>
 //         <div className="form-group">
-//           <h4>Address*</h4>
+//           <p>Address*</p>
 //           <input
 //             type="text"
 //             name="address"
@@ -336,7 +336,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>City*</h4>
+//           <p>City*</p>
 //           <input
 //             type="text"
 //             name="city"
@@ -346,7 +346,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>State*</h4>
+//           <p>State*</p>
 //           <input
 //             type="text"
 //             name="state"
@@ -356,7 +356,7 @@ export default OrderForm;
 //           />
 //         </div>
 //         <div className="form-group">
-//           <h4>ZIP Code*</h4>
+//           <p>ZIP Code*</p>
 //           <input
 //             type="text"
 //             name="zip"
