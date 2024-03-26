@@ -25,11 +25,16 @@
 }
 
 input {
- 
+
     width: calc(100% - 4em);
-    height: 2em;    
+    height: 2em;
     box-sizing: border-box;
 
+}
+
+.form-sub-header {
+    font-family: Belleza,
+        sans-serif;
 }
 
 .form-group {
@@ -38,9 +43,7 @@ input {
     align-items: flex-start;
 }
 
-.form-group > h4 {
-    width: 35%;
-}
+
 
 .button-continar {
     display: flex;
@@ -48,19 +51,29 @@ input {
 
     margin-top: 20px;
 }
+
 /* #submit-button {
     display: block;
     width: 5em;
     height: 2em;
 } */
 .submit-button {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: 16px;
-    /* border-radius: 2px; */
 
-    width: 10em;
-    height: 3em;
+    width: 6em;
+    height: 2em;
+    border: none;
+
+    color: rgb(0, 0, 0);
+    padding: 1px 1px;
+    font-size: 1.7em;
+
+    /* margin-top: 5px; */
+
+    background: #FFF4E3;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
 }
 
 .form-headers {
@@ -95,10 +108,10 @@ input {
     input,
     .form-group label {
         margin-left: 0;
-        /* Remove left margin for inputs and labels */
-        width: 100%;
-        /* Inputs take full width for better usability */
+        width: 80%;
+        margin-left: auto;
     }
+
     .button-container {
         width: 90vw;
     }

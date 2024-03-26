@@ -85,7 +85,7 @@ const OrderForm = ({ setSubmitted }) => {
     <div className="form-container-container">
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form-headers">
-          <h4>Project Information</h4>
+          <h4 className="form-sub-header">Project Information</h4>
         </div>
 
         <div className="form-group">
@@ -133,7 +133,7 @@ const OrderForm = ({ setSubmitted }) => {
         </div>
 
         <div className="form-headers">
-          <h4>Shipping Information</h4>
+          <h4 className="form-sub-header">Shipping Information</h4>
         </div>
 
         <div className="form-group">

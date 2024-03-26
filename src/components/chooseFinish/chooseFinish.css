@@ -37,5 +37,9 @@
         width: 100vw;
         height: 690px;
     }
+    .text-center {
+        /* color: red; */
+        font-size: 56px;
+    }
 
  }

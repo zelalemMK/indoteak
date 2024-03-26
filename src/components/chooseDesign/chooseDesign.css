@@ -80,7 +80,7 @@
 
     .design-grid {
         box-sizing: content-box;
-        width: 100%;
+        width: 80%;
         height: 70vh;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
