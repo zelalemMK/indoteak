@@ -50,11 +50,6 @@ input {
     margin-top: 20px;
 }
 
-/* #submit-button {
-    display: block;
-    width: 5em;
-    height: 2em;
-} */
 .submit-button {
 
     width: 6em;
@@ -63,9 +58,7 @@ input {
 
     color: rgb(0, 0, 0);
     padding: 1px 1px;
-    /* font-size: 1.7em;
-
-    /* margin-top: 5px; */
+    font-size: 1.3em;
 
     background: #FFF4E3;
 }
@@ -96,11 +89,8 @@ input {
 
     .form-group {
         flex-direction: row;
-        /* Change direction to row for single-line layout */
         justify-content: flex-start;
-        /* Align items to the start */
         margin-bottom: 10px;
-        /* Add some space between form groups */
     }
 
     input,
