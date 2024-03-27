@@ -11,6 +11,9 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
   const svgRef = useRef(DesignComponent);
   const [submitted, setSubmitted] = useState(false);
 
+  const designName = DesignComponent.name;
+  console.log(`Tile name at chooseFinish:17 ${designName}`);
+
   return (
     <>
       <div className="title">
@@ -26,7 +29,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
               <Button
                 textContent={"Download PDF"}
                 onClick={() => {
-                  saveSvgAsPdf(svgRef.current, DesignComponent.name);
+                  saveSvgAsPdf(svgRef.current, designName);
                   setSubmitted(true);
                 }}
               />

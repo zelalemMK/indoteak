@@ -11,6 +11,10 @@ const saveSvgAsPdf = async (svgElement, name) => {
   pdf.setFont("Syne");
   pdf.setFontSize(24)
   pdf.text(`${name} Order Sample`, 60, 20);
+  
+
+  console.log(name);
+  console.log("printed in pdfUtils");
 
 
   pdf
