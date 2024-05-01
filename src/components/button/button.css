@@ -8,42 +8,9 @@
     padding: 1px 1px;
     font-size: 1.7em;
 
-    /* margin-top: 5px; */
-
     background: #FFF4E3;
 }
 .custom-button:hover {
     transform: scale(1.05);
+    transition: transform 0.4s ease;
 }
-
-
-/* .sqrte-large {
-    margin: 0;
-    padding: 0;
-    border-width: 0;
-    /* -epub-hyphens: none; 
-    font-family: "DM Sans", sans-serif;
-    font-size: 17px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: bold;
-    line-height: 1.429;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    orphans: 1;
-    page-break-after: auto;
-    page-break-before: auto;
-    text-align: justify;
-    text-decoration: none;
-    text-indent: 0;
-    text-transform: none;
-    widows: 1;
-}
-
-.sqrte-small {
-    margin: 0;
-    padding: 0;
-    border-width: 0;
-} */
