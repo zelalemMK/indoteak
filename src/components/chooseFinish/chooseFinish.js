@@ -17,7 +17,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
   return (
     <>
       <div className="title">
-        <h1 className="text-center text">Order Sample</h1>
+        <h1>Order Sample</h1>
       </div>
       <div className="choose-finish">
         <div className="order-form">

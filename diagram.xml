@@ -1,0 +1,84 @@
+
+<diagram name="Statsd Flow Diagram" id="2a6e8c90-1584-45d7-a69e-d44b39228573">
+    <mxGraphModel dx="865" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <root>
+            <mxCell id="0"/>
+            <mxCell id="1" parent="0"/>
+            <mxCell id="2" value="Initialization" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="220" y="50" width="120" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="3" value="Prepare for Launch" style="shape=image;image=https://emojicdn.elk.sh/rocket?style=apple;html=1;" vertex="1" parent="1">
+                <mxGeometry x="150" y="120" width="80" height="80" as="geometry"/>
+            </mxCell>
+            <mxCell id="4" value="Initialize 50,000 Event Queues for LogEvents" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="160" y="230" width="240" height="60" as="geometry"/>
+            </mxCell>
+            <mxCell id="5" value="Initialize UidMap, logEventFilter, StatsService" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="150" y="340" width="240" height="60" as="geometry"/>
+            </mxCell>
+            <mxCell id="6" value="StatsService Initialization" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="220" y="450" width="120" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="7" value="Initialize statsSocketListener" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="180" y="560" width="200" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="8" value="Start Listening" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="220" y="670" width="120" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="9" value="Process Incoming Socket Data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="180" y="780" width="200" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="10" value="Convert to LogEvent" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="220" y="890" width="120" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="11" value="Filter LogEvent by logFilter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="180" y="1000" width="200" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="12" value="Send Filtered LogEvent to relevant system based on Uid" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="150" y="1110" width="240" height="60" as="geometry"/>
+            </mxCell>
+            <mxCell id="13" value="Mission Accomplished!" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxGeometry x="180" y="1220" width="200" height="40" as="geometry"/>
+            </mxCell>
+            <mxCell id="14" value="" style="shape=image;image=https://emojicdn.elk.sh/checkered_flag?style=apple;html=1;" vertex="1" parent="1">
+                <mxGeometry x="200" y="1270" width="160" height="160" as="geometry"/>
+            </mxCell>
+            <mxCell id="15" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="2" target="3">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="16" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="3" target="4">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="17" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="4" target="5">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="18" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="5" target="6">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="19" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="6" target="7">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="20" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="7" target="8">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="21" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="8" target="9">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="22" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="9" target="10">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="23" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="10" target="11">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="24" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="11" target="12">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="25" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="12" target="13">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+            <mxCell id="26" value="" style="endArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="13" target="14">
+                <mxGeometry relative="1" as="geometry"/>
+            </mxCell>
+        </root>
+    </mxGraphModel>
+</diagram>
