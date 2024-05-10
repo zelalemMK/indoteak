@@ -194,55 +194,6 @@ svg {
     #finish-button {
         padding-top: 0;
     }
-/* 
-    .button-half-view {
-        display: block;
-    }
-
-    /* Adjust the max-width as needed 
-    .half-screen-display {
-        display: none;
-    }
-
-    .chooseColor-button-containe {
-        width: 10vw;
-    }
-
-    .chooseColor-display {
-        height: 80vh;
-    }
-
-    .color-editor {
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .selected-svg {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .color-grid-container {
-        padding: 5px;
-    }
-
-    .color-grid {
-        width: 80%;
-    }
-
-    .color-editor {
-        width: 100%;
-    }
-
-    .color-editor>svg {
-        width: 95%;
-    }
-
-    .title-CCh1 {
-        font-size: 2.2rem;
-    } */
 }
 
 
