@@ -24,7 +24,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
           <OrderForm setSubmitted={setSubmitted} />
           {/* They can download PDF only after submitting form
           We will inplement ordering samples after words. */}
-          <div className="download-holder">
+          {/* <div className="download-holder">
             {submitted && (
               <Button
                 textContent={"Download PDF"}
@@ -34,7 +34,7 @@ const ChooseFinish = ({ DesignComponent, colorMap }) => {
                 }}
               />
             )}
-          </div>
+          </div> */}
         </div>
         <div className="tile-preview-holder" ref={svgRef}>
           <DesignComponent colorMap={colorMap} className="tile-preview" />

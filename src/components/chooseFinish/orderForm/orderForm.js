@@ -132,7 +132,7 @@ const OrderForm = ({ setSubmitted }) => {
           />
         </div>
 
-        <div className="form-headers">
+        <div className="form-headers shipping-heaader">
           <h4 className="form-sub-header">Shipping Information</h4>
         </div>
 
@@ -186,7 +186,11 @@ const OrderForm = ({ setSubmitted }) => {
 
         <div className="button-container">
           {!isSubmitting && (
-            <button type="submit" className="submit-button" id="submit-button">
+            <button
+              type="submit"
+              className=" custom-button submit-button"
+              id="submit-button"
+            >
               Submit
             </button>
           )}

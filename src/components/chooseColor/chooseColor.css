@@ -251,20 +251,20 @@ svg {
 /* Amsterdam */
 .svg-holder>.amsterdam:nth-child(1) {
     margin-top: 9.5%;
-    margin-left: 19%;
+        margin-left: 19%;
 }
 .svg-holder>.amsterdam:nth-child(2) {
     margin-top: 9.5%;
-    margin-left: -26.5%;
+        margin-left: -39.25%
 }
 .svg-holder>.amsterdam:nth-child(3) {
-    margin-top: -7%;
-    margin-left: 19%;;
+    margin-top: -3.5%;
+        margin-left: 19%;
 }
 
 .svg-holder>.amsterdam:nth-child(4) {
-    margin-top: -7%;
-    margin-left: -26.5%;
+    margin-top: -3.5%;
+        margin-left: -39.25%;
 }
 
 /* barrel */

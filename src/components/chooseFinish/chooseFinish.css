@@ -1,23 +1,29 @@
+.title {
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+
+}
+
 .choose-finish {
     display: flex;
     flex-direction: row;
 }
-.title {
-    display: flex;
-    justify-content: center;
-}
 .order-form {
     width: 50%;
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
+    align-items: space-between; */
 }
-
+.form-container {
+    width: 70%;
+}
 .tile-preview-holder {
     width: 45%;
-    height: 82vh;
+    height: 65vh;
 
     display: flex;
     flex-direction: column;
@@ -39,10 +45,15 @@
     .order-form {
         width: 100vw;
         height: 690px;
+
+        margin-top: 10vh;
     }
     .text-center {
         /* color: red; */
         font-size: 56px;
     }
+        .form-container {
+            width: 90%;
+        } 
 
  }
