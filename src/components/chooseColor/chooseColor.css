@@ -23,7 +23,6 @@ Create a new breakpoint, only for big screen.
  */
 /* ============= Bone strucuture ============ */
 .choose-color-display {
-    border: 2px solid black;
     margin-top: 2.5vh;
     box-sizing: border-box;
     width: 100%;
@@ -35,13 +34,11 @@ Create a new breakpoint, only for big screen.
 }
 
 .title-container-CC {
-    border: 2px solid red;
     width: 100%;
     height: 10vh;
 }
 
 .design-containers {
-    border: 2px solid blue;
     margin-top: 5vh;
     display: flex;
     flex-direction: row;
@@ -50,12 +47,12 @@ Create a new breakpoint, only for big screen.
 }
 
 .design-coloring {
-    border: 2px solid pink;
     width: 50%;
     height: 100%;
 }
 
 .design-preview {
+    /* border: 1px solid red; */
     width: 50%;
     height: 100%;
 }
@@ -133,18 +130,28 @@ svg {
 
 .svg-holder {
 
-    box-sizing: border-box;
-    max-width: 100%;
-    max-height: 100%;
+    width: 412px;
+    height: 100%;
+
+    /* box-sizing: content-box; */
+
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns of equal width */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows of equal height */
+    gap: 0;
+    /* No gap between grid items */
+    padding: 0;
+    margin: 0 auto;
 }
 
+.display-svg {
+    width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+}
 
 #finish-button {
     padding-top: 30px;
@@ -155,11 +162,7 @@ svg {
     height: 10%;
 }
 
-.display-svg {
-    border: 12px solid pink;
-    width: 25%;
-    height: 25%;
-}
+
 
 .finish-button-container {
     width: 10%;
@@ -172,7 +175,7 @@ svg {
 
 
 /* Add this at the end of your CSS file */
-@media (max-width: 1575px) {
+@media (max-width: 1200px) {
 
     .design-coloring {
         flex: 1 0 100%;
@@ -199,30 +202,26 @@ svg {
 
 /* Lining up SVGs that are not rectangle */
 
-/* Amsterdam */
+ /* Amsterdam  */
 .svg-holder>.amsterdam:nth-child(1) {
-    margin-top: 9.5%;
-        margin-left: 19%;
+    transform: translate(5%, 10%);
 }
+
 .svg-holder>.amsterdam:nth-child(2) {
-    margin-top: 9.5%;
-        margin-left: -39.25%
+    transform: translate(-9.5%, 10%);
 }
 .svg-holder>.amsterdam:nth-child(3) {
-    margin-top: -3.5%;
-        margin-left: 19%;
+    transform: translate(5%, -20%);
 }
 
 .svg-holder>.amsterdam:nth-child(4) {
-    margin-top: -3.5%;
-        margin-left: -39.25%;
+transform: translate(-9.5%, -20%);
 }
 
-/* barrel */
-
+/* barrel  */
 .svg-holder>.barrel:nth-child(3),
 .svg-holder>.barrel:nth-child(4) {
-    margin-top: -16%;
+    margin-top: -20%;
 }
 
 .svg-holder>.barrel:nth-child(2),
@@ -230,27 +229,27 @@ svg {
     margin-left: -2.5%;
 }
 
-/* Chevron */
+/* Chevron  */
 .svg-holder>.chevron:nth-child(3),
 .svg-holder>.chevron:nth-child(4) {
-    margin-top: -48%;
+    margin-top: -52%;
 }
 
-/* fields */
+ /* fields  */
 .svg-holder>.fields:nth-child(3) {
-    margin-left: 16%;
+    margin-left: 17%;
 }
 
 .svg-holder>.fields:nth-child(1) {
-    margin-left: 16%;
+    margin-left: 17%;
 }
 
 .svg-holder>.fields:nth-child(3),
 .svg-holder>.fields:nth-child(4) {
-    margin-top: -38%;
+    margin-top: -43%;
 }
 
-/* Herringbone */
+/* Herringbone  */
 .svg-holder>.herringbone:nth-child(1),
 .svg-holder>.herringbone:nth-child(3) {
     margin-left: 5%;
@@ -258,10 +257,10 @@ svg {
 
 .svg-holder>.herringbone:nth-child(3),
 .svg-holder>.herringbone:nth-child(4) {
-    margin-top: -28%;
+    margin-top: -32.5%;
 }
 
-/* Hex */
+/* Hex  */
 .svg-holder>.hex:nth-child(1),
 .svg-holder>.hex:nth-child(3) {
     margin-left: 8.5%;
@@ -269,10 +268,10 @@ svg {
 
 .svg-holder>.hex:nth-child(3),
 .svg-holder>.hex:nth-child(4) {
-    margin-top: -21%;
+    margin-top: -26%;
 }
 
-/* PennyRound */
+/* PennyRound  */
 .svg-holder>.PennyRound:nth-child(1),
 .svg-holder>.PennyRound:nth-child(3) {
     margin-left: 5%;
@@ -280,11 +279,11 @@ svg {
 
 .svg-holder>.PennyRound:nth-child(3),
 .svg-holder>.PennyRound:nth-child(4) {
-    margin-top: -10%;
+    margin-top: -14%;
 }
 
-/* twister */
+/* twister  */
 .svg-holder>.twister:nth-child(3),
 .svg-holder>.twister:nth-child(4) {
-    margin-top: -2%;
+    margin-top: -6.5%;
 }
