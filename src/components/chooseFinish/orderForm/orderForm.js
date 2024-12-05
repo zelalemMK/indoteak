@@ -59,7 +59,7 @@ const OrderForm = ({ setSubmitted }) => {
     setIsSubmitting(true);
     if (validateForm()) {
       try {
-        const response = await fetch("http://localhost:3001/send-form", {
+        const response = await fetch("email.project-place-holder.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
